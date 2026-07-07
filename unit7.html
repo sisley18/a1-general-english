@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 7: Clothes and Shopping — A1 English Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header"><div class="container"><a href="index.html" class="logo">🌍 A1 <span>English Course</span></a><nav class="navigation"><div class="dropdown"><button class="dropdown-btn">📚 Units <span class="arrow">▼</span></button><div class="dropdown-content"><a href="unit1.html" class="dropdown-item">Unit 1: Hello! Nice to Meet You</a><a href="unit2.html" class="dropdown-item">Unit 2: My Family</a><a href="unit3.html" class="dropdown-item">Unit 3: My Daily Routine</a><a href="unit4.html" class="dropdown-item">Unit 4: Food and Drink</a><a href="unit5.html" class="dropdown-item">Unit 5: My Home</a><a href="unit6.html" class="dropdown-item">Unit 6: Around Town</a><a href="unit7.html" class="dropdown-item">Unit 7: Clothes and Shopping</a><a href="unit8.html" class="dropdown-item">Unit 8: Free Time and Hobbies</a></div></div><a href="index.html" class="nav-link">Home</a><div class="dropdown"><button class="dropdown-btn" style="font-size:0.85rem">📄 Export <span class="arrow">▼</span></button><div class="dropdown-content"><a href="#" onclick="copyClassContent()" class="dropdown-item">📋 Copy All</a><a href="#" onclick="exportCompleteClass()" class="dropdown-item">📄 Export to Word</a><a href="#" onclick="printSection('main')" class="dropdown-item">🖨️ Print</a></div></div></nav></div></header>
+
+    <section class="hero"><div class="container"><span class="hero-badge">📘 Unit 7 of 8</span><h1 class="hero-title">Clothes and Shopping</h1><p class="hero-description">Learn clothes vocabulary, colors, sizes, how to shop, and the Present Continuous tense (what are you wearing now?).</p></div></section>
+
+    <main id="main"><div class="container">
+
+        <!-- VOCABULARY -->
+        <section class="section-wrapper" id="vocabulary-section">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Clothes</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card"><div class="vocab-word">T-shirt</div><div class="vocab-definition">A casual top with short sleeves</div><div class="vocab-example">"I am wearing a blue T-shirt."</div><button class="audio-btn small" onclick="speakText('I am wearing a blue T-shirt.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Jeans</div><div class="vocab-definition">Casual pants made of denim</div><div class="vocab-example">"She is wearing jeans and sneakers."</div><button class="audio-btn small" onclick="speakText('She is wearing jeans and sneakers.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Dress</div><div class="vocab-definition">A piece of clothing for women/girls</div><div class="vocab-example">"The red dress is very beautiful."</div><button class="audio-btn small" onclick="speakText('The red dress is very beautiful.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Jacket / Coat</div><div class="vocab-definition">You wear it when it is cold</div><div class="vocab-example">"Put on your jacket. It is cold outside."</div><button class="audio-btn small" onclick="speakText('Put on your jacket. It is cold outside.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Shoes / Sneakers</div><div class="vocab-definition">You wear them on your feet</div><div class="vocab-example">"I need new shoes for school."</div><button class="audio-btn small" onclick="speakText('I need new shoes for school.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Skirt</div><div class="vocab-definition">A piece of clothing that hangs from the waist</div><div class="vocab-example">"She has a black skirt."</div><button class="audio-btn small" onclick="speakText('She has a black skirt.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Shirt</div><div class="vocab-definition">A more formal top with buttons</div><div class="vocab-example">"He is wearing a white shirt."</div><button class="audio-btn small" onclick="speakText('He is wearing a white shirt.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Hat / Cap</div><div class="vocab-definition">You wear it on your head</div><div class="vocab-example">"He always wears a baseball cap."</div><button class="audio-btn small" onclick="speakText('He always wears a baseball cap.')">🔊</button></div>
+            </div>
+
+            <h3 style="color:var(--accent-indigo);margin:2rem 0 1rem">Colors</h3>
+            <div class="vocabulary-grid">
+                <div class="vocab-card"><div class="vocab-word">Red, Blue, Green, Yellow</div><div class="vocab-example">"I like the blue shirt."</div><button class="audio-btn small" onclick="speakText('Red. Blue. Green. Yellow. I like the blue shirt.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Black, White, Brown, Pink</div><div class="vocab-example">"She has a pink dress."</div><button class="audio-btn small" onclick="speakText('Black. White. Brown. Pink. She has a pink dress.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Orange, Purple, Gray</div><div class="vocab-example">"The orange jacket is nice."</div><button class="audio-btn small" onclick="speakText('Orange. Purple. Gray. The orange jacket is nice.')">🔊</button></div>
+            </div>
+
+            <h3 style="color:var(--accent-indigo);margin:2rem 0 1rem">Shopping Phrases</h3>
+            <div class="vocabulary-grid">
+                <div class="vocab-card"><div class="vocab-word">How much is it?</div><div class="vocab-example">"How much is this T-shirt?"</div><button class="audio-btn small" onclick="speakText('How much is this T-shirt?')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Can I try it on?</div><div class="vocab-example">"Can I try on the blue one?"</div><button class="audio-btn small" onclick="speakText('Can I try on the blue one?')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">It's too big / too small</div><div class="vocab-example">"This is too small. Do you have a large?"</div><button class="audio-btn small" onclick="speakText('This is too small. Do you have a large?')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">I'll take it</div><div class="vocab-example">"I like it. I'll take it!"</div><button class="audio-btn small" onclick="speakText('I like it. I will take it!')">🔊</button></div>
+            </div>
+        </section>
+
+        <!-- GRAMMAR -->
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Present Continuous — What Are You Wearing?</h2>
+            <div class="grammar-rule">
+                <strong>I am wearing</strong> (I'm wearing) a blue T-shirt.<br>
+                <strong>She is wearing</strong> (She's wearing) a red dress.<br>
+                <strong>They are wearing</strong> (They're wearing) jeans.
+            </div>
+            <div class="grammar-rule">
+                <strong>Questions:</strong> <span class="grammar-example">What are you wearing? Is she wearing a hat?</span><br>
+                <strong>Negatives:</strong> <span class="grammar-example">I'm not wearing shoes. He isn't wearing a jacket.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Present Continuous = NOW:</strong> <span class="grammar-example">I am sitting. She is reading. They are talking.</span>
+            </div>
+            <div style="margin-top:1rem">
+                <button class="audio-btn" onclick="speakText('I am wearing a blue T-shirt. She is wearing a red dress. They are wearing jeans. What are you wearing? Is she wearing a hat? I am not wearing shoes. He is not wearing a jacket.')">🔊 Listen</button>
+                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+            </div>
+        </section>
+
+        <!-- LISTENING -->
+        <section class="listening-section" id="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">Listening Comprehension</h2>
+            <div class="listening-exercise">
+                <h3>🔊 Audio 1: Shopping for Clothes</h3>
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakText('Good morning. Can I help you? Yes, I am looking for a T-shirt. What color would you like? Blue, please. What size? Medium, please. Here you are. How much is it? It is fifteen dollars. Can I try it on? Of course. The fitting room is over there. It fits perfectly. I will take it. Great. Would you like anything else? No, thank you. That is all. That will be fifteen dollars, please. Here you are. Thank you. Have a nice day!')">🔊 Listen</button>
+                    <button class="audio-btn" onclick="speakTextSlow('Good morning. Can I help you? Yes, I am looking for a T-shirt. What color would you like? Blue, please. What size? Medium, please. Here you are. How much is it? It is fifteen dollars. Can I try it on? Of course. The fitting room is over there. It fits perfectly. I will take it. Great. Would you like anything else? No, thank you. That is all. That will be fifteen dollars, please. Here you are. Thank you. Have a nice day!')">🐢 Slow</button>
+                    <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Shop assistant:</strong> Good morning. Can I help you?</p>
+                    <p><strong>Customer:</strong> Yes, I am looking for a T-shirt.</p>
+                    <p><strong>Shop assistant:</strong> What color would you like?</p>
+                    <p><strong>Customer:</strong> Blue, please.</p>
+                    <p><strong>Shop assistant:</strong> What size? </p>
+                    <p><strong>Customer:</strong> Medium, please.</p>
+                    <p><strong>Shop assistant:</strong> Here you are. </p>
+                    <p><strong>Customer:</strong> How much is it?</p>
+                    <p><strong>Shop assistant:</strong> It is fifteen dollars.</p>
+                    <p><strong>Customer:</strong> Can I try it on?</p>
+                    <p><strong>Shop assistant:</strong> Of course. The fitting room is over there.</p>
+                    <p><strong>Customer:</strong> It fits perfectly. I'll take it.</p>
+                </div>
+                <p><strong>Answer:</strong></p>
+                <ul style="margin:1rem 0;line-height:2.2">
+                    <li>1. What is the customer looking for? _____</li>
+                    <li>2. What color? _____</li>
+                    <li>3. What size? _____</li>
+                    <li>4. How much is it? _____</li>
+                    <li>5. Does the customer buy it? _____</li>
+                </ul>
+            </div>
+
+            <div class="listening-exercise">
+                <h3>🔊 Audio 2: What Are They Wearing?</h3>
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakText('Look at the three people in the park. The first person is a woman. She is wearing a green jacket, blue jeans, and white sneakers. She is also wearing a yellow hat. The second person is a man. He is wearing a black shirt, gray pants, and brown shoes. He is not wearing a hat. The third person is a girl. She is wearing a pink dress and red shoes. She is carrying a small purple bag.')">🔊 Listen</button>
+                    <button class="audio-btn" onclick="speakTextSlow('Look at the three people in the park. The first person is a woman. She is wearing a green jacket, blue jeans, and white sneakers. She is also wearing a yellow hat. The second person is a man. He is wearing a black shirt, gray pants, and brown shoes. He is not wearing a hat. The third person is a girl. She is wearing a pink dress and red shoes. She is carrying a small purple bag.')">🐢 Slow</button>
+                    <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+                </div>
+                <p><strong>Complete the description:</strong></p>
+                <ul style="margin:1rem 0;line-height:2.2">
+                    <li>Woman: _____ jacket, _____ jeans, _____ hat</li>
+                    <li>Man: _____ shirt, _____ pants, _____ shoes</li>
+                    <li>Girl: _____ dress, _____ shoes, _____ bag</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SPEAKING -->
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <h3 style="color:#9d174d;margin-bottom:1rem">Role Play: At the Clothes Shop</h3>
+            <div class="dialogue-box">
+                <div class="dialogue-line"><span class="speaker-label">Assistant:</span><span class="speaker-text">Can I help you?</span></div>
+                <div class="dialogue-line"><span class="speaker-label">Customer:</span><span class="speaker-text">Yes, I am looking for a ______.</span></div>
+                <div class="dialogue-line"><span class="speaker-label">Assistant:</span><span class="speaker-text">What color?</span></div>
+                <div class="dialogue-line"><span class="speaker-label">Customer:</span><span class="speaker-text">______, please.</span></div>
+                <div class="dialogue-line"><span class="speaker-label">Assistant:</span><span class="speaker-text">Here you are. It is ______ dollars.</span></div>
+                <div class="dialogue-line"><span class="speaker-label">Customer:</span><span class="speaker-text">Can I try it on? / I'll take it. / It's too ______.</span></div>
+            </div>
+            <div style="margin-top:1.5rem">
+                <button class="audio-btn" onclick="speakText('Can I help you? Yes, I am looking for a jacket. What color? Black, please. Here you are. It is forty-five dollars. Can I try it on? Of course. It fits well. I will take it.')">🔊 Model</button>
+                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+            </div>
+
+            <div class="task-box" style="margin-top:1.5rem">
+                <h3>🎯 Speaking Task: Describe Your Partner</h3>
+                <p>Look at your partner and describe what they are wearing NOW. Use the Present Continuous: "She is wearing..."</p>
+            </div>
+        </section>
+
+        <!-- READING -->
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">Reading Comprehension</h2>
+            <div class="reading-passage">
+                <p><strong>Fashion Around the World</strong></p>
+                <p>People wear different clothes in different countries. In Japan, people sometimes wear a kimono for special events. A kimono is a long, beautiful dress. In Scotland, men sometimes wear a kilt. A kilt looks like a skirt.</p>
+                <p>In cold countries like Russia, people wear warm coats, hats, and boots in winter. In hot countries like Brazil, people wear T-shirts, shorts, and sandals.</p>
+                <p>Today, many people around the world wear jeans and T-shirts. Jeans are the most popular clothes in the world! Young people like sneakers and caps. Everyone has their own style.</p>
+            </div>
+            <div style="margin:1.5rem 0">
+                <button class="audio-btn" onclick="speakText('People wear different clothes in different countries. In Japan, people sometimes wear a kimono for special events. A kimono is a long, beautiful dress. In Scotland, men sometimes wear a kilt. A kilt looks like a skirt. In cold countries like Russia, people wear warm coats, hats, and boots in winter. In hot countries like Brazil, people wear T-shirts, shorts, and sandals. Today, many people around the world wear jeans and T-shirts. Jeans are the most popular clothes in the world! Young people like sneakers and caps. Everyone has their own style.')">🔊 Listen</button>
+                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+            </div>
+            <div class="reading-question">1. What is a kimono? _____</div>
+            <div class="reading-question">2. What do people wear in cold countries? _____</div>
+            <div class="reading-question">3. What are the most popular clothes in the world? _____</div>
+            <div class="reading-question">4. What do people wear in hot countries? _____</div>
+        </section>
+
+        <!-- WRITING -->
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <div class="writing-template">
+                <h4>📝 Describe what you are wearing TODAY:</h4>
+                <p style="line-height:2.5">
+                    Today, I am wearing ______. <br>
+                    My ______ is/are ______ (color). <br>
+                    On my feet, I am wearing ______. <br>
+                    My favorite clothes are ______ because ______.
+                </p>
+            </div>
+            <div class="writing-prompt">
+                <h4>✏️ Extra Task: Describe a Photo</h4>
+                <p>Find a photo of a person (magazine, internet, or a friend) and write what they are wearing. Use colors and the Present Continuous.</p>
+            </div>
+        </section>
+
+        <!-- QUIZ -->
+        <section class="practice-section" id="practice-section">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Vocabulary Check</h2>
+            <div class="exercise-question" data-question="u7q1">
+                <p><strong>1.</strong> "She ______ wearing a red dress." (present continuous)</p>
+                <div class="exercise-dropdown"><select data-correct="is"><option value="">Choose...</option><option value="am">am</option><option value="is">is</option><option value="are">are</option><option value="do">do</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u7q1')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u7q2">
+                <p><strong>2.</strong> "How ______ is this jacket?"</p>
+                <div class="exercise-dropdown"><select data-correct="much"><option value="">Choose...</option><option value="many">many</option><option value="much">much</option><option value="long">long</option><option value="big">big</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u7q2')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u7q3">
+                <p><strong>3.</strong> You wear these on your feet:</p>
+                <div class="exercise-dropdown"><select data-correct="Shoes"><option value="">Choose...</option><option value="Hat">Hat</option><option value="Gloves">Gloves</option><option value="Shoes">Shoes</option><option value="Scarf">Scarf</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u7q3')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u7q4">
+                <p><strong>4.</strong> "I ______ wearing a jacket right now." (negative)</p>
+                <div class="exercise-dropdown"><select data-correct="am not"><option value="">Choose...</option><option value="don't">don't</option><option value="am not">am not</option><option value="isn't">isn't</option><option value="doesn't">doesn't</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u7q4')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div style="margin-top:1.5rem;text-align:center">
+                <button onclick="checkAllExercises()" style="background:linear-gradient(135deg,#22c55e,#16a34a);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;margin-right:1rem">✓ Check All</button>
+                <button onclick="resetAllExercises()" style="background:linear-gradient(135deg,#64748b,#475569);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold">↻ Reset</button>
+            </div>
+        </section>
+
+    </div></main>
+    <footer><p>A1 General English &copy; 2026 | <a href="unit6.html">← Unit 6</a> | <a href="index.html">Home</a> | <a href="unit8.html">Unit 8 →</a></p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
