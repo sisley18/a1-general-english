@@ -3,16 +3,19 @@
 // Web Speech API — works on ALL devices, no external requests
 // ============================================================
 
-// Pre-load voices
+// Pre-load voices robustly
+let availableVoices = [];
+function initVoices() {
+    availableVoices = window.speechSynthesis.getVoices();
+}
 if (window.speechSynthesis) {
-    window.speechSynthesis.getVoices();
-    window.speechSynthesis.onvoiceschanged = function() {
-        window.speechSynthesis.getVoices();
-    };
+    initVoices();
+    window.speechSynthesis.onvoiceschanged = initVoices;
 }
 
 function speakText(textIdOrText, slow) {
-    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    if (!window.speechSynthesis) return;
+    window.speechSynthesis.cancel();
 
     var text;
     var el = document.getElementById(textIdOrText);
@@ -26,28 +29,40 @@ function speakText(textIdOrText, slow) {
 
     text = text.replace(/[\u2018\u2019]/g, "'").replace(/[\u201C\u201D]/g, '"').replace(/\n/g, '. ').trim();
 
-    var utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US';
-    utterance.rate = slow ? 0.6 : 0.9;
-    utterance.pitch = 1.0;
+    var doSpeak = function() {
+        var utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-US';
+        utterance.rate = slow ? 0.7 : 0.95; // Slightly faster default to sound less robotic
+        utterance.pitch = 1.0;
 
-    var voices = window.speechSynthesis.getVoices();
-    var voice =
-        voices.find(function(v){ return v.name === 'Google US English'; }) ||
-        voices.find(function(v){ return v.name === 'Samantha'; }) ||
-        voices.find(function(v){ return v.name === 'Alex'; }) ||
-        voices.find(function(v){ return v.lang === 'en-US'; }) ||
-        voices.find(function(v){ return v.lang && v.lang.indexOf('en') === 0; });
+        if (availableVoices.length === 0) availableVoices = window.speechSynthesis.getVoices();
 
-    if (voice) utterance.voice = voice;
+        var voice =
+            availableVoices.find(function(v) { return v.name.includes('Google US English') || v.name.includes('Google') && v.lang === 'en-US'; }) ||
+            availableVoices.find(function(v) { return v.name.includes('Microsoft Zira') || v.name.includes('Microsoft David') || v.name.includes('Microsoft Mark'); }) ||
+            availableVoices.find(function(v) { return v.name === 'Samantha' || v.name === 'Alex' || v.name === 'Victoria'; }) ||
+            availableVoices.find(function(v) { return v.lang === 'en-US' && v.localService; }) ||
+            availableVoices.find(function(v) { return v.lang === 'en-US'; }) ||
+            availableVoices.find(function(v) { return v.lang && v.lang.indexOf('en') === 0; });
 
-    utterance.onerror = function(e) {
-        if (e.error !== 'interrupted' && e.error !== 'canceled') {
-            console.error('Speech error:', e.error);
+        if (voice) {
+            utterance.voice = voice;
         }
+
+        utterance.onerror = function(e) {
+            if (e.error !== 'interrupted' && e.error !== 'canceled') {
+                console.error('Speech error:', e.error);
+            }
+        };
+
+        window.speechSynthesis.speak(utterance);
     };
 
-    window.speechSynthesis.speak(utterance);
+    if (availableVoices.length === 0) {
+        setTimeout(doSpeak, 50);
+    } else {
+        doSpeak();
+    }
 }
 
 function speakTextSlow(textIdOrText) {
@@ -219,3 +234,58 @@ window.copyPracticeSection = copyPracticeSection;
 window.exportCompleteClass = exportCompleteClass;
 window.printSection = printSection;
 window.showNotification = showNotification;
+
+// --- FILL IN THE BLANKS & SEND TO TEACHER ---
+document.addEventListener('DOMContentLoaded', function () {
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    var nodesToReplace = [];
+    while (walker.nextNode()) {
+        var node = walker.currentNode;
+        if (node.nodeValue.match(/_{3,}/)) {
+            nodesToReplace.push(node);
+        }
+    }
+    
+    if (nodesToReplace.length > 0 || document.querySelectorAll('textarea').length > 0) {
+        nodesToReplace.forEach(function(node) {
+            var span = document.createElement('span');
+            var replacedText = node.nodeValue.replace(/_{3,}/g, '<input type="text" class="fill-in-blank-input" placeholder="✏️" style="border:none; border-bottom: 2px solid #5a3fd6; background:rgba(255,255,255,0.1); color:inherit; font-family:inherit; font-size:1rem; width:100px; text-align:center; outline:none; margin: 0 5px; padding: 2px;">');
+            span.innerHTML = replacedText;
+            node.parentNode.replaceChild(span, node);
+        });
+
+        var sendBtn = document.createElement('button');
+        sendBtn.innerHTML = '📨 Send to Teacher';
+        sendBtn.className = 'send-teacher-btn';
+        sendBtn.style.cssText = 'position:fixed; bottom:20px; right:20px; background:linear-gradient(135deg,#db2777,#9d174d); color:white; border:none; padding:15px 25px; border-radius:30px; font-weight:bold; font-size:1rem; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,0.3); z-index:9999; transition: transform 0.2s;';
+        sendBtn.onmouseover = function() { sendBtn.style.transform = 'scale(1.05)'; };
+        sendBtn.onmouseout = function() { sendBtn.style.transform = 'scale(1)'; };
+        sendBtn.onclick = sendToTeacher;
+        document.body.appendChild(sendBtn);
+    }
+});
+
+function sendToTeacher() {
+    var answers = [];
+    var inputs = document.querySelectorAll('.fill-in-blank-input');
+    inputs.forEach(function(input, index) {
+        answers.push('Blank ' + (index + 1) + ': ' + (input.value || '(empty)'));
+    });
+    
+    var textareas = document.querySelectorAll('textarea');
+    textareas.forEach(function(ta, index) {
+        answers.push('Open Question ' + (index + 1) + ': ' + (ta.value || '(empty)'));
+    });
+
+    if(answers.length === 0) {
+        showNotification('No answers found!', 'info');
+        return;
+    }
+
+    var bodyText = 'Hello Teacher,\n\nHere are my answers:\n\n' + answers.join('\n') + '\n\nBest regards.';
+    var mailtoLink = 'mailto:?subject=' + encodeURIComponent('My English Exercises') + '&body=' + encodeURIComponent(bodyText);
+    
+    window.location.href = mailtoLink;
+    showNotification('📧 Opening email to send your answers...', 'success');
+}
+window.sendToTeacher = sendToTeacher;
