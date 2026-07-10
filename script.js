@@ -1,141 +1,93 @@
 // ============================================================
 // A1 General English Coursebook — Audio & Interactive Script
-// Uses Google Neural TTS for professional American pronunciation
+// Web Speech API — works on ALL devices, no external requests
 // ============================================================
 
-// --- AUDIO ENGINE: Web Speech API ---
-// Uses native speech synthesis for 100% reliable playback on all devices (bypasses iOS autoplay blocks)
-let currentUtterance = null;
-
-/**
- * Ensures voices are loaded (some browsers load them asynchronously)
- */
-function getVoices() {
-    return new Promise(resolve => {
-        let voices = window.speechSynthesis.getVoices();
-        if (voices.length) {
-            resolve(voices);
-            return;
-        }
-        window.speechSynthesis.onvoiceschanged = () => {
-            voices = window.speechSynthesis.getVoices();
-            resolve(voices);
-        };
-    });
+// Pre-load voices
+if (window.speechSynthesis) {
+    window.speechSynthesis.getVoices();
+    window.speechSynthesis.onvoiceschanged = function() {
+        window.speechSynthesis.getVoices();
+    };
 }
 
-/**
- * Plays text using Web Speech API with American English.
- */
-async function speakText(textIdOrText, slow = false) {
-    stopAudio();
+function speakText(textIdOrText, slow) {
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
 
-    if (!window.speechSynthesis) {
-        showNotification('Audio not supported on this device', 'error');
-        return;
-    }
-
-    let text;
-    const el = document.getElementById(textIdOrText);
+    var text;
+    var el = document.getElementById(textIdOrText);
     if (el) {
         text = el.textContent || el.innerText;
     } else {
         text = textIdOrText;
     }
+    text = (text || '').trim();
+    if (!text) return;
 
-    text = text.trim();
-    if (!text) {
-        showNotification('No text to read', 'error');
-        return;
-    }
+    text = text.replace(/[\u2018\u2019]/g, "'").replace(/[\u201C\u201D]/g, '"').replace(/\n/g, '. ').trim();
 
-    // Clean text
-    text = text.replace(/\u2018|\u2019/g, "'").replace(/\u201C|\u201D/g, '"').replace(/\u2013/g, '-').replace(/\n/g, '. ').trim();
+    var utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US';
+    utterance.rate = slow ? 0.6 : 0.9;
+    utterance.pitch = 1.0;
 
-    currentUtterance = new SpeechSynthesisUtterance(text);
-    currentUtterance.lang = 'en-US'; // Force American English
-    currentUtterance.rate = slow ? 0.65 : 0.95; // Natural speed
-    currentUtterance.pitch = 1.0;
+    var voices = window.speechSynthesis.getVoices();
+    var voice =
+        voices.find(function(v){ return v.name === 'Google US English'; }) ||
+        voices.find(function(v){ return v.name === 'Samantha'; }) ||
+        voices.find(function(v){ return v.name === 'Alex'; }) ||
+        voices.find(function(v){ return v.lang === 'en-US'; }) ||
+        voices.find(function(v){ return v.lang && v.lang.indexOf('en') === 0; });
 
-    const voices = await getVoices();
-    // Prioritize natural sounding US English voices
-    const selectedVoice =
-        voices.find(v => v.name === 'Google US English') ||
-        voices.find(v => v.name === 'Samantha') ||
-        voices.find(v => v.name === 'Alex') ||
-        voices.find(v => v.lang === 'en-US');
+    if (voice) utterance.voice = voice;
 
-    if (selectedVoice) {
-        currentUtterance.voice = selectedVoice;
-    }
-
-    currentUtterance.onstart = () => {
-        // Silently start
-    };
-    currentUtterance.onend = () => {
-        // Silently end
-    };
-    currentUtterance.onerror = (e) => {
+    utterance.onerror = function(e) {
         if (e.error !== 'interrupted' && e.error !== 'canceled') {
-            console.error('Audio error:', e);
+            console.error('Speech error:', e.error);
         }
     };
 
-    window.speechSynthesis.speak(currentUtterance);
+    window.speechSynthesis.speak(utterance);
 }
 
-/**
- * Plays text at slow speed.
- */
 function speakTextSlow(textIdOrText) {
     speakText(textIdOrText, true);
 }
 
-/**
- * Stops all audio playback.
- */
 function stopAudio() {
-    if (window.speechSynthesis) {
-        window.speechSynthesis.cancel();
-    }
-    const notif = document.querySelector('.notification');
-    if (notif) notif.remove();
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
 }
 
-// Alias for compatibility with B1 style
 function pauseSpeech() {
     stopAudio();
 }
 
 // --- NOTIFICATION SYSTEM ---
-function showNotification(message, type = 'info') {
-    // Remove existing notification
-    const existing = document.querySelector('.notification');
+function showNotification(message, type) {
+    var existing = document.querySelector('.notification');
     if (existing) existing.remove();
 
-    const notif = document.createElement('div');
-    notif.className = `notification ${type}`;
+    var notif = document.createElement('div');
+    notif.className = 'notification ' + (type || 'info');
     notif.textContent = message;
     document.body.appendChild(notif);
 
-    setTimeout(() => {
+    setTimeout(function() {
         notif.style.transition = 'opacity 0.4s ease';
         notif.style.opacity = '0';
-        setTimeout(() => notif.remove(), 400);
+        setTimeout(function() { notif.remove(); }, 400);
     }, 3000);
 }
 
 // --- DROPDOWN NAVIGATION ---
 document.addEventListener('DOMContentLoaded', function () {
-    // Setup all dropdowns
     document.querySelectorAll('.dropdown').forEach(function (dropdown) {
-        const btn = dropdown.querySelector('.dropdown-btn');
-        const content = dropdown.querySelector('.dropdown-content');
+        var btn = dropdown.querySelector('.dropdown-btn');
+        var content = dropdown.querySelector('.dropdown-content');
 
         if (btn && content) {
             btn.addEventListener('click', function (e) {
                 e.stopPropagation();
-                // Close other dropdowns
                 document.querySelectorAll('.dropdown-content').forEach(function (dc) {
                     if (dc !== content) dc.style.display = 'none';
                 });
@@ -144,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Close dropdowns on outside click
     document.addEventListener('click', function () {
         document.querySelectorAll('.dropdown-content').forEach(function (dc) {
             dc.style.display = 'none';
@@ -154,15 +105,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // --- INTERACTIVE EXERCISE FUNCTIONS ---
 function checkDropdownAnswer(questionId) {
-    const container = document.querySelector(`[data-question="${questionId}"]`);
+    var container = document.querySelector('[data-question="' + questionId + '"]');
     if (!container) return;
 
-    const select = container.querySelector('.exercise-dropdown select');
-    const feedback = container.querySelector('.feedback-message');
+    var select = container.querySelector('.exercise-dropdown select');
+    var feedback = container.querySelector('.feedback-message');
     if (!select || !feedback) return;
 
-    const correct = select.getAttribute('data-correct');
-    const selected = select.value;
+    var correct = select.getAttribute('data-correct');
+    var selected = select.value;
 
     if (!selected) {
         feedback.textContent = '⚠️ Please select an answer.';
@@ -183,15 +134,15 @@ function checkDropdownAnswer(questionId) {
 
 function checkAllExercises() {
     document.querySelectorAll('.exercise-question').forEach(function (q) {
-        const id = q.getAttribute('data-question');
+        var id = q.getAttribute('data-question');
         if (id) checkDropdownAnswer(id);
     });
 }
 
 function resetAllExercises() {
     document.querySelectorAll('.exercise-question').forEach(function (q) {
-        const select = q.querySelector('select');
-        const feedback = q.querySelector('.feedback-message');
+        var select = q.querySelector('select');
+        var feedback = q.querySelector('.feedback-message');
         if (select) {
             select.selectedIndex = 0;
             select.style.borderColor = '#e2e8f0';
@@ -201,81 +152,53 @@ function resetAllExercises() {
             feedback.className = 'feedback-message';
         }
     });
-    showNotification('🔄 Quiz reset!', 'info');
 }
 
 // --- EXPORT & COPY FUNCTIONS ---
 function copyClassContent() {
-    const main = document.querySelector('main') || document.querySelector('.container');
+    var main = document.querySelector('main') || document.querySelector('.container');
     if (main) {
-        const text = main.innerText;
-        navigator.clipboard.writeText(text).then(function () {
-            showNotification('📋 Content copied to clipboard!', 'success');
-        }).catch(function () {
-            showNotification('❌ Could not copy content', 'error');
+        navigator.clipboard.writeText(main.innerText).then(function () {
+            showNotification('📋 Content copied!', 'success');
         });
     }
 }
 
 function copyVocabularySection() {
-    const section = document.getElementById('vocabulary-section');
-    if (section) {
-        navigator.clipboard.writeText(section.innerText).then(function () {
-            showNotification('📚 Vocabulary copied!', 'success');
-        });
-    }
+    var section = document.getElementById('vocabulary-section');
+    if (section) navigator.clipboard.writeText(section.innerText);
 }
 
 function copyListeningSection() {
-    const section = document.getElementById('listening-section');
-    if (section) {
-        navigator.clipboard.writeText(section.innerText).then(function () {
-            showNotification('🎧 Listening materials copied!', 'success');
-        });
-    }
+    var section = document.getElementById('listening-section');
+    if (section) navigator.clipboard.writeText(section.innerText);
 }
 
 function copyPracticeSection() {
-    const section = document.getElementById('practice-section');
-    if (section) {
-        navigator.clipboard.writeText(section.innerText).then(function () {
-            showNotification('🎯 Practice activities copied!', 'success');
-        });
-    }
+    var section = document.getElementById('practice-section');
+    if (section) navigator.clipboard.writeText(section.innerText);
 }
 
 function exportCompleteClass() {
-    const main = document.querySelector('main');
+    var main = document.querySelector('main');
     if (!main) return;
-
-    const title = document.title || 'A1 English Course';
-    const content = main.innerHTML;
-
-    const htmlContent = `
-        <html><head><meta charset="utf-8"><title>${title}</title>
-        <style>body{font-family:Arial,sans-serif;line-height:1.6;margin:2cm;color:#333;}
-        h1,h2,h3{color:#5a3fd6;}table{border-collapse:collapse;width:100%;}
-        td,th{border:1px solid #ddd;padding:8px;}.vocab-card{border:1px solid #ddd;padding:1rem;margin:0.5rem 0;}
-        </style></head><body><h1>${title}</h1>${content}</body></html>`;
-
-    const blob = new Blob(['\ufeff' + htmlContent], { type: 'application/msword' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    var title = document.title || 'A1 English Course';
+    var content = main.innerHTML;
+    var htmlContent = '<html><head><meta charset="utf-8"><title>' + title + '</title><style>body{font-family:Arial,sans-serif;line-height:1.6;margin:2cm;color:#333;}h1,h2,h3{color:#5a3fd6;}table{border-collapse:collapse;width:100%;}td,th{border:1px solid #ddd;padding:8px;}.vocab-card{border:1px solid #ddd;padding:1rem;margin:0.5rem 0;}</style></head><body><h1>' + title + '</h1>' + content + '</body></html>';
+    var blob = new Blob(['\ufeff' + htmlContent], { type: 'application/msword' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
     a.href = url;
     a.download = title.replace(/[^a-z0-9]/gi, '_') + '.doc';
     a.click();
     URL.revokeObjectURL(url);
-    showNotification('📄 Exported to Word!', 'success');
 }
 
 function printSection(sectionId) {
-    const section = document.getElementById(sectionId) || document.querySelector('main');
+    var section = document.getElementById(sectionId) || document.querySelector('main');
     if (section) {
-        const printWin = window.open('', '_blank');
-        printWin.document.write(`<html><head><title>Print</title>
-            <style>body{font-family:Arial,sans-serif;line-height:1.6;margin:2cm;}
-            h1,h2,h3{color:#333;}.vocab-card{border:1px solid #ddd;padding:1rem;margin:0.5rem 0;}
-            </style></head><body>${section.innerHTML}</body></html>`);
+        var printWin = window.open('', '_blank');
+        printWin.document.write('<html><head><title>Print</title><style>body{font-family:Arial,sans-serif;line-height:1.6;margin:2cm;}h1,h2,h3{color:#333;}.vocab-card{border:1px solid #ddd;padding:1rem;margin:0.5rem 0;}</style></head><body>' + section.innerHTML + '</body></html>');
         printWin.document.close();
         printWin.print();
     }

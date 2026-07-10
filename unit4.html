@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 4: Food and Drink — A1 English Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header"><div class="container"><a href="index.html" class="logo">🌍 A1 <span>English Course</span></a><nav class="navigation"><div class="dropdown"><button class="dropdown-btn">📚 Units <span class="arrow">▼</span></button><div class="dropdown-content"><a href="unit1.html" class="dropdown-item">Unit 1: Hello! Nice to Meet You</a><a href="unit2.html" class="dropdown-item">Unit 2: My Family</a><a href="unit3.html" class="dropdown-item">Unit 3: My Daily Routine</a><a href="unit4.html" class="dropdown-item">Unit 4: Food and Drink</a><a href="unit5.html" class="dropdown-item">Unit 5: My Home</a><a href="unit6.html" class="dropdown-item">Unit 6: Around Town</a><a href="unit7.html" class="dropdown-item">Unit 7: Clothes and Shopping</a><a href="unit8.html" class="dropdown-item">Unit 8: Free Time and Hobbies</a></div></div><a href="index.html" class="nav-link">Home</a><div class="dropdown"><button class="dropdown-btn" style="font-size:0.85rem">📄 Export <span class="arrow">▼</span></button><div class="dropdown-content"><a href="#" onclick="copyClassContent()" class="dropdown-item">📋 Copy All</a><a href="#" onclick="exportCompleteClass()" class="dropdown-item">📄 Export to Word</a><a href="#" onclick="printSection('main')" class="dropdown-item">🖨️ Print</a></div></div></nav></div></header>
+
+    <section class="hero"><div class="container"><span class="hero-badge">📘 Unit 4 of 8</span><h1 class="hero-title">Food and Drink</h1><p class="hero-description">Learn food vocabulary, countable and uncountable nouns, "some" and "any," and how to order at a restaurant.</p></div></section>
+
+    <main id="main"><div class="container">
+
+        <!-- VOCABULARY -->
+        <section class="section-wrapper" id="vocabulary-section">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Food and Drink</h2>
+            <h3 style="color:var(--accent-indigo);margin-bottom:1rem">Food</h3>
+            <div class="vocabulary-grid">
+                <div class="vocab-card"><div class="vocab-word">Bread</div><div class="vocab-definition">A basic baked food made from flour</div><div class="vocab-example">"I eat bread for breakfast."</div><button class="audio-btn small" onclick="speakText('I eat bread for breakfast.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Rice</div><div class="vocab-definition">Small white or brown grains, very common food</div><div class="vocab-example">"We eat rice with chicken."</div><button class="audio-btn small" onclick="speakText('We eat rice with chicken.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Chicken</div><div class="vocab-definition">Meat from a bird</div><div class="vocab-example">"I like chicken with salad."</div><button class="audio-btn small" onclick="speakText('I like chicken with salad.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Fish</div><div class="vocab-definition">An animal that lives in water, also a food</div><div class="vocab-example">"Fish is very healthy."</div><button class="audio-btn small" onclick="speakText('Fish is very healthy.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Egg</div><div class="vocab-definition">Comes from a chicken, very common for breakfast</div><div class="vocab-example">"I have two eggs for breakfast."</div><button class="audio-btn small" onclick="speakText('I have two eggs for breakfast.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Fruit</div><div class="vocab-definition">Apples, oranges, bananas, etc.</div><div class="vocab-example">"I like fruit. My favorite is banana."</div><button class="audio-btn small" onclick="speakText('I like fruit. My favorite is banana.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Vegetables</div><div class="vocab-definition">Tomatoes, carrots, onions, etc.</div><div class="vocab-example">"Vegetables are good for you."</div><button class="audio-btn small" onclick="speakText('Vegetables are good for you.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Cheese</div><div class="vocab-definition">A food made from milk</div><div class="vocab-example">"I want a cheese sandwich, please."</div><button class="audio-btn small" onclick="speakText('I want a cheese sandwich, please.')">🔊</button></div>
+            </div>
+
+            <h3 style="color:var(--accent-indigo);margin:2rem 0 1rem">Drinks</h3>
+            <div class="vocabulary-grid">
+                <div class="vocab-card"><div class="vocab-word">Water</div><div class="vocab-example">"Can I have a glass of water, please?"</div><button class="audio-btn small" onclick="speakText('Can I have a glass of water, please?')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Coffee / Tea</div><div class="vocab-example">"I drink coffee in the morning."</div><button class="audio-btn small" onclick="speakText('I drink coffee in the morning.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Juice</div><div class="vocab-example">"I like orange juice."</div><button class="audio-btn small" onclick="speakText('I like orange juice.')">🔊</button></div>
+                <div class="vocab-card"><div class="vocab-word">Milk</div><div class="vocab-example">"Children drink milk every day."</div><button class="audio-btn small" onclick="speakText('Children drink milk every day.')">🔊</button></div>
+            </div>
+        </section>
+
+        <!-- GRAMMAR -->
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Countable & Uncountable Nouns — Some / Any</h2>
+            <div class="grammar-rule">
+                <strong>Countable:</strong> an apple, two eggs, three tomatoes <br>
+                <strong>Uncountable:</strong> water, rice, bread, milk, cheese
+            </div>
+            <div class="grammar-rule">
+                <strong>Some</strong> (positive): <span class="grammar-example">There is some milk. I have some apples.</span><br>
+                <strong>Any</strong> (negative & questions): <span class="grammar-example">Is there any bread? There isn't any juice.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>A / An:</strong> <span class="grammar-example">I want an apple. She eats a sandwich.</span><br>
+                <strong>How much / How many:</strong> <span class="grammar-example">How much water? How many eggs?</span>
+            </div>
+            <div style="margin-top:1rem">
+                <button class="audio-btn" onclick="speakText('There is some milk. I have some apples. Is there any bread? There is not any juice. I want an apple. She eats a sandwich. How much water do you want? How many eggs do you need?')">🔊 Listen</button>
+                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+            </div>
+        </section>
+
+        <!-- LISTENING -->
+        <section class="listening-section" id="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">Listening Comprehension</h2>
+
+            <div class="listening-exercise">
+                <h3>🔊 Audio 1: Ordering at a Restaurant</h3>
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakText('Good afternoon. Welcome to the Blue Cafe. Are you ready to order? Yes, please. I would like a chicken sandwich and a salad. Of course. And to drink? I would like an orange juice, please. And for you, sir? I would like the fish with rice, please. And a glass of water. Very good. Anything else? Yes, can we have some bread, please? Of course. Your food will be ready in ten minutes. Thank you very much.')">🔊 Listen</button>
+                    <button class="audio-btn" onclick="speakTextSlow('Good afternoon. Welcome to the Blue Cafe. Are you ready to order? Yes, please. I would like a chicken sandwich and a salad. Of course. And to drink? I would like an orange juice, please. And for you, sir? I would like the fish with rice, please. And a glass of water. Very good. Anything else? Yes, can we have some bread, please? Of course. Your food will be ready in ten minutes. Thank you very much.')">🐢 Slow</button>
+                    <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Waiter:</strong> Good afternoon. Welcome to the Blue Café. Are you ready to order?</p>
+                    <p><strong>Woman:</strong> Yes, please. I would like a chicken sandwich and a salad.</p>
+                    <p><strong>Waiter:</strong> Of course. And to drink?</p>
+                    <p><strong>Woman:</strong> I would like an orange juice, please.</p>
+                    <p><strong>Waiter:</strong> And for you, sir?</p>
+                    <p><strong>Man:</strong> I would like the fish with rice, please. And a glass of water.</p>
+                    <p><strong>Waiter:</strong> Very good. Anything else?</p>
+                    <p><strong>Man:</strong> Yes, can we have some bread, please?</p>
+                    <p><strong>Waiter:</strong> Of course. Your food will be ready in ten minutes.</p>
+                    <p><strong>Man:</strong> Thank you very much.</p>
+                </div>
+                <p><strong>What does each person order?</strong></p>
+                <ul style="margin:1rem 0;line-height:2.2">
+                    <li>Woman — Food: _____ — Drink: _____</li>
+                    <li>Man — Food: _____ — Drink: _____</li>
+                    <li>Extra: _____</li>
+                </ul>
+            </div>
+
+            <div class="listening-exercise">
+                <h3>🔊 Audio 2: At the Supermarket</h3>
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakText('Okay, let me check the shopping list. We need some milk, some eggs, and some bread. Do we have any cheese? No, we don\'t have any cheese. We need some cheese too. How many eggs do we need? We need twelve eggs. And how much milk? Two bottles of milk, please. Do we need any fruit? Yes, we need some apples and some bananas. That\'s everything. Let\'s go.')">🔊 Listen</button>
+                    <button class="audio-btn" onclick="speakTextSlow('Okay, let me check the shopping list. We need some milk, some eggs, and some bread. Do we have any cheese? No, we don\'t have any cheese. We need some cheese too. How many eggs do we need? We need twelve eggs. And how much milk? Two bottles of milk, please. Do we need any fruit? Yes, we need some apples and some bananas. That\'s everything. Let\'s go.')">🐢 Slow</button>
+                    <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+                </div>
+                <p><strong>Complete the shopping list:</strong></p>
+                <ul style="margin:1rem 0;line-height:2.2">
+                    <li>☐ _____ (how many? _____)</li>
+                    <li>☐ _____ (how much? _____)</li>
+                    <li>☐ _____</li>
+                    <li>☐ _____</li>
+                    <li>☐ _____ and _____</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SPEAKING -->
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+
+            <h3 style="color:#9d174d;margin-bottom:1rem">Role Play: At a Restaurant</h3>
+            <div class="dialogue-box">
+                <div class="dialogue-line"><span class="speaker-label">Waiter:</span><span class="speaker-text">Good evening. Are you ready to order?</span></div>
+                <div class="dialogue-line"><span class="speaker-label">Customer:</span><span class="speaker-text">Yes, I would like ______, please.</span></div>
+                <div class="dialogue-line"><span class="speaker-label">Waiter:</span><span class="speaker-text">And to drink?</span></div>
+                <div class="dialogue-line"><span class="speaker-label">Customer:</span><span class="speaker-text">A ______, please.</span></div>
+                <div class="dialogue-line"><span class="speaker-label">Waiter:</span><span class="speaker-text">Anything else?</span></div>
+                <div class="dialogue-line"><span class="speaker-label">Customer:</span><span class="speaker-text">No, thank you. / Yes, can I have some ______, please?</span></div>
+            </div>
+            <div style="margin-top:1.5rem">
+                <button class="audio-btn" onclick="speakText('Good evening. Are you ready to order? Yes, I would like a pizza, please. And to drink? A cola, please. Anything else? No, thank you. That is all.')">🔊 Listen to Model</button>
+                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+            </div>
+
+            <div class="task-box" style="margin-top:1.5rem">
+                <h3>🎯 Speaking Task: Food Survey</h3>
+                <p>Ask three classmates: What is your favorite food? What is your favorite drink? Write their answers.</p>
+            </div>
+        </section>
+
+        <!-- READING -->
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">Reading Comprehension</h2>
+
+            <div class="reading-passage">
+                <p><strong>Eating Around the World</strong></p>
+                <p>In Japan, people eat a lot of rice and fish. A typical breakfast is rice, fish, and soup. In Italy, people love pasta and pizza. They also eat a lot of bread and cheese. Italian coffee is very famous.</p>
+                <p>In Mexico, people eat tacos, beans, and rice. They drink a lot of fruit juice. Mexican food is very spicy. In England, a typical breakfast is eggs, toast, sausages, and tea. English people drink a lot of tea.</p>
+                <p>All around the world, people eat different food, but everyone likes good food!</p>
+            </div>
+            <div style="margin:1.5rem 0">
+                <button class="audio-btn" onclick="speakText('In Japan, people eat a lot of rice and fish. A typical breakfast is rice, fish, and soup. In Italy, people love pasta and pizza. They also eat a lot of bread and cheese. Italian coffee is very famous. In Mexico, people eat tacos, beans, and rice. They drink a lot of fruit juice. Mexican food is very spicy. In England, a typical breakfast is eggs, toast, sausages, and tea. English people drink a lot of tea. All around the world, people eat different food, but everyone likes good food!')">🔊 Listen</button>
+                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+            </div>
+
+            <div class="reading-question">1. What do people eat in Japan? _____</div>
+            <div class="reading-question">2. What is famous in Italy? _____</div>
+            <div class="reading-question">3. What is Mexican food like? _____</div>
+            <div class="reading-question">4. What do English people drink a lot of? _____</div>
+        </section>
+
+        <!-- WRITING -->
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <div class="writing-template">
+                <h4>📝 Write about food in YOUR country:</h4>
+                <p style="line-height:2.5">
+                    In ______ (your country), people eat a lot of ______. <br>
+                    A typical breakfast is ______. <br>
+                    For lunch, people usually eat ______. <br>
+                    For dinner, we eat ______. <br>
+                    My favorite food is ______. <br>
+                    My favorite drink is ______.
+                </p>
+            </div>
+            <div class="writing-prompt">
+                <h4>✏️ Extra Task: Design a Menu</h4>
+                <p>Create a simple menu for a restaurant. Include: 3 food items and 3 drinks, with prices.</p>
+            </div>
+        </section>
+
+        <!-- QUIZ -->
+        <section class="practice-section" id="practice-section">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Vocabulary Check</h2>
+            <div class="exercise-question" data-question="u4q1">
+                <p><strong>1.</strong> "Is there ______ milk in the fridge?"</p>
+                <div class="exercise-dropdown"><select data-correct="any"><option value="">Choose...</option><option value="some">some</option><option value="any">any</option><option value="a">a</option><option value="an">an</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q1')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u4q2">
+                <p><strong>2.</strong> "I would like ______ apple, please."</p>
+                <div class="exercise-dropdown"><select data-correct="an"><option value="">Choose...</option><option value="a">a</option><option value="an">an</option><option value="some">some</option><option value="the">the</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q2')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u4q3">
+                <p><strong>3.</strong> "How ______ eggs do we need?" (countable)</p>
+                <div class="exercise-dropdown"><select data-correct="many"><option value="">Choose...</option><option value="much">much</option><option value="many">many</option><option value="some">some</option><option value="any">any</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q3')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u4q4">
+                <p><strong>4.</strong> "There ______ some bread on the table."</p>
+                <div class="exercise-dropdown"><select data-correct="is"><option value="">Choose...</option><option value="are">are</option><option value="is">is</option><option value="have">have</option><option value="has">has</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q4')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div style="margin-top:1.5rem;text-align:center">
+                <button onclick="checkAllExercises()" style="background:linear-gradient(135deg,#22c55e,#16a34a);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;margin-right:1rem">✓ Check All</button>
+                <button onclick="resetAllExercises()" style="background:linear-gradient(135deg,#64748b,#475569);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold">↻ Reset</button>
+            </div>
+        </section>
+
+    </div></main>
+    <footer><p>A1 General English &copy; 2026 | <a href="unit3.html">← Unit 3</a> | <a href="index.html">Home</a> | <a href="unit5.html">Unit 5 →</a></p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
