@@ -59,7 +59,7 @@ async function speakText(textIdOrText, slow = false) {
 
     const voices = await getVoices();
     // Prioritize natural sounding US English voices
-    const selectedVoice = 
+    const selectedVoice =
         voices.find(v => v.name === 'Google US English') ||
         voices.find(v => v.name === 'Samantha') ||
         voices.find(v => v.name === 'Alex') ||
@@ -99,7 +99,7 @@ function stopAudio() {
         window.speechSynthesis.cancel();
     }
     const notif = document.querySelector('.notification');
-    if(notif) notif.remove();
+    if (notif) notif.remove();
 }
 
 // Alias for compatibility with B1 style
