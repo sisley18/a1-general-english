@@ -3,61 +3,39 @@
 // Uses Google Neural TTS for professional American pronunciation
 // ============================================================
 
-// --- AUDIO ENGINE: Google Neural TTS ---
-let currentAudio = null;
-let audioQueue = [];
-let isPlaying = false;
+// --- AUDIO ENGINE: Web Speech API ---
+// Uses native speech synthesis for 100% reliable playback on all devices (bypasses iOS autoplay blocks)
+let currentUtterance = null;
 
 /**
- * Splits text into chunks at sentence boundaries, max ~190 chars each.
- * This ensures Google TTS returns smooth, natural audio.
+ * Ensures voices are loaded (some browsers load them asynchronously)
  */
-function splitTextIntoChunks(text, maxLen = 190) {
-    const sentences = text.replace(/([.!?])\s+/g, '$1|').split('|');
-    const chunks = [];
-    let current = '';
-
-    for (const sentence of sentences) {
-        const trimmed = sentence.trim();
-        if (!trimmed) continue;
-
-        if (current.length + trimmed.length + 1 <= maxLen) {
-            current += (current ? ' ' : '') + trimmed;
-        } else {
-            if (current) chunks.push(current);
-            // If a single sentence exceeds maxLen, split by comma
-            if (trimmed.length > maxLen) {
-                const parts = trimmed.split(/,\s*/);
-                let sub = '';
-                for (const part of parts) {
-                    if (sub.length + part.length + 2 <= maxLen) {
-                        sub += (sub ? ', ' : '') + part;
-                    } else {
-                        if (sub) chunks.push(sub);
-                        sub = part;
-                    }
-                }
-                if (sub) current = sub;
-                else current = '';
-            } else {
-                current = trimmed;
-            }
+function getVoices() {
+    return new Promise(resolve => {
+        let voices = window.speechSynthesis.getVoices();
+        if (voices.length) {
+            resolve(voices);
+            return;
         }
-    }
-    if (current) chunks.push(current);
-    return chunks;
+        window.speechSynthesis.onvoiceschanged = () => {
+            voices = window.speechSynthesis.getVoices();
+            resolve(voices);
+        };
+    });
 }
 
 /**
- * Plays text using Google Neural TTS.
- * Produces clear, professional American English audio on any device.
+ * Plays text using Web Speech API with American English.
  */
-function speakText(textIdOrText, slow = false) {
-    // Stop any current audio
+async function speakText(textIdOrText, slow = false) {
     stopAudio();
 
+    if (!window.speechSynthesis) {
+        showNotification('Audio not supported on this device', 'error');
+        return;
+    }
+
     let text;
-    // Try to get element by ID first
     const el = document.getElementById(textIdOrText);
     if (el) {
         text = el.textContent || el.innerText;
@@ -71,82 +49,57 @@ function speakText(textIdOrText, slow = false) {
         return;
     }
 
-    // Clean text for TTS
-    text = text
-        .replace(/\u2018|\u2019/g, "'")
-        .replace(/\u201C|\u201D/g, '"')
-        .replace(/\u2013/g, '-')
-        .replace(/\u2014/g, ' - ')
-        .replace(/\n/g, '. ')
-        .replace(/\.\./g, '.')
-        .replace(/\s+/g, ' ')
-        .trim();
+    // Clean text
+    text = text.replace(/\u2018|\u2019/g, "'").replace(/\u201C|\u201D/g, '"').replace(/\u2013/g, '-').replace(/\n/g, '. ').trim();
 
-    const chunks = splitTextIntoChunks(text);
-    audioQueue = chunks.map(chunk => {
-        const encoded = encodeURIComponent(chunk);
-        let url = `https://translate.googleapis.com/translate_tts?ie=UTF-8&client=gtx&tl=en-US&q=${encoded}`;
-        if (slow) {
-            url += '&ttsspeed=0.24';
+    currentUtterance = new SpeechSynthesisUtterance(text);
+    currentUtterance.lang = 'en-US'; // Force American English
+    currentUtterance.rate = slow ? 0.65 : 0.95; // Natural speed
+    currentUtterance.pitch = 1.0;
+
+    const voices = await getVoices();
+    // Prioritize natural sounding US English voices
+    const selectedVoice = 
+        voices.find(v => v.name === 'Google US English') ||
+        voices.find(v => v.name === 'Samantha') ||
+        voices.find(v => v.name === 'Alex') ||
+        voices.find(v => v.lang === 'en-US');
+
+    if (selectedVoice) {
+        currentUtterance.voice = selectedVoice;
+    }
+
+    currentUtterance.onstart = () => {
+        // Silently start
+    };
+    currentUtterance.onend = () => {
+        // Silently end
+    };
+    currentUtterance.onerror = (e) => {
+        if (e.error !== 'interrupted' && e.error !== 'canceled') {
+            console.error('Audio error:', e);
         }
-        return url;
-    });
+    };
 
-    isPlaying = true;
-    showNotification('🎧 Audio playing...', 'info');
-    playNextChunk();
+    window.speechSynthesis.speak(currentUtterance);
 }
 
 /**
- * Plays text at slow speed for practice.
+ * Plays text at slow speed.
  */
 function speakTextSlow(textIdOrText) {
     speakText(textIdOrText, true);
 }
 
 /**
- * Plays the next chunk in the audio queue.
- */
-function playNextChunk() {
-    if (!isPlaying || audioQueue.length === 0) {
-        isPlaying = false;
-        currentAudio = null;
-        if (audioQueue.length === 0) {
-            showNotification('✅ Audio finished', 'success');
-        }
-        return;
-    }
-
-    const url = audioQueue.shift();
-    currentAudio = new Audio(url);
-
-    currentAudio.onended = function () {
-        playNextChunk();
-    };
-
-    currentAudio.onerror = function () {
-        console.warn('Audio chunk error, trying next...');
-        playNextChunk();
-    };
-
-    currentAudio.play().catch(function (err) {
-        console.error('Audio play error:', err);
-        playNextChunk();
-    });
-}
-
-/**
  * Stops all audio playback.
  */
 function stopAudio() {
-    isPlaying = false;
-    audioQueue = [];
-    if (currentAudio) {
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
-        currentAudio = null;
+    if (window.speechSynthesis) {
+        window.speechSynthesis.cancel();
     }
-    showNotification('🔇 Audio stopped', 'info');
+    const notif = document.querySelector('.notification');
+    if(notif) notif.remove();
 }
 
 // Alias for compatibility with B1 style
