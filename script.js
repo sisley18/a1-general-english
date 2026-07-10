@@ -254,18 +254,29 @@ document.addEventListener('DOMContentLoaded', function () {
             node.parentNode.replaceChild(span, node);
         });
 
+        // Email Button
         var sendBtn = document.createElement('button');
-        sendBtn.innerHTML = '📨 Send to Teacher';
+        sendBtn.innerHTML = '📧 Send via Email';
         sendBtn.className = 'send-teacher-btn';
         sendBtn.style.cssText = 'position:fixed; bottom:20px; right:20px; background:linear-gradient(135deg,#db2777,#9d174d); color:white; border:none; padding:15px 25px; border-radius:30px; font-weight:bold; font-size:1rem; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,0.3); z-index:9999; transition: transform 0.2s;';
         sendBtn.onmouseover = function() { sendBtn.style.transform = 'scale(1.05)'; };
         sendBtn.onmouseout = function() { sendBtn.style.transform = 'scale(1)'; };
         sendBtn.onclick = sendToTeacher;
         document.body.appendChild(sendBtn);
+
+        // WhatsApp Button
+        var waBtn = document.createElement('button');
+        waBtn.innerHTML = '📱 Send via WhatsApp';
+        waBtn.className = 'send-teacher-wa-btn';
+        waBtn.style.cssText = 'position:fixed; bottom:80px; right:20px; background:linear-gradient(135deg,#25D366,#128C7E); color:white; border:none; padding:15px 25px; border-radius:30px; font-weight:bold; font-size:1rem; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,0.3); z-index:9999; transition: transform 0.2s;';
+        waBtn.onmouseover = function() { waBtn.style.transform = 'scale(1.05)'; };
+        waBtn.onmouseout = function() { waBtn.style.transform = 'scale(1)'; };
+        waBtn.onclick = sendToTeacherWhatsApp;
+        document.body.appendChild(waBtn);
     }
 });
 
-function sendToTeacher() {
+function getAnswersText() {
     var answers = [];
     var inputs = document.querySelectorAll('.fill-in-blank-input');
     inputs.forEach(function(input, index) {
@@ -276,7 +287,11 @@ function sendToTeacher() {
     textareas.forEach(function(ta, index) {
         answers.push('Open Question ' + (index + 1) + ': ' + (ta.value || '(empty)'));
     });
+    return answers;
+}
 
+function sendToTeacher() {
+    var answers = getAnswersText();
     if(answers.length === 0) {
         showNotification('No answers found!', 'info');
         return;
@@ -288,4 +303,20 @@ function sendToTeacher() {
     window.location.href = mailtoLink;
     showNotification('📧 Opening email to send your answers...', 'success');
 }
+
+function sendToTeacherWhatsApp() {
+    var answers = getAnswersText();
+    if(answers.length === 0) {
+        showNotification('No answers found!', 'info');
+        return;
+    }
+
+    var bodyText = 'Hello Teacher, here are my answers:\n\n' + answers.join('\n');
+    var waLink = 'https://wa.me/?text=' + encodeURIComponent(bodyText);
+    
+    window.open(waLink, '_blank');
+    showNotification('📱 Opening WhatsApp...', 'success');
+}
+
 window.sendToTeacher = sendToTeacher;
+window.sendToTeacherWhatsApp = sendToTeacherWhatsApp;
