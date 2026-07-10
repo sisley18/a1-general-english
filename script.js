@@ -85,7 +85,7 @@ function speakText(textIdOrText, slow = false) {
     const chunks = splitTextIntoChunks(text);
     audioQueue = chunks.map(chunk => {
         const encoded = encodeURIComponent(chunk);
-        let url = `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=${encoded}`;
+        let url = `https://translate.googleapis.com/translate_tts?ie=UTF-8&client=gtx&tl=en-US&q=${encoded}`;
         if (slow) {
             url += '&ttsspeed=0.24';
         }
