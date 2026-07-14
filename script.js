@@ -254,9 +254,9 @@ document.addEventListener('DOMContentLoaded', function () {
             node.parentNode.replaceChild(span, node);
         });
 
-        // Email Button
+        // Email Button (Gmail)
         var sendBtn = document.createElement('button');
-        sendBtn.innerHTML = '📧 Send via Email';
+        sendBtn.innerHTML = '📧 Send via Gmail';
         sendBtn.className = 'send-teacher-btn';
         sendBtn.style.cssText = 'position:fixed; bottom:20px; right:20px; background:linear-gradient(135deg,#db2777,#9d174d); color:white; border:none; padding:15px 25px; border-radius:30px; font-weight:bold; font-size:1rem; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,0.3); z-index:9999; transition: transform 0.2s;';
         sendBtn.onmouseover = function() { sendBtn.style.transform = 'scale(1.05)'; };
@@ -298,10 +298,10 @@ function sendToTeacher() {
     }
 
     var bodyText = 'Hello Teacher,\n\nHere are my answers:\n\n' + answers.join('\n') + '\n\nBest regards.';
-    var mailtoLink = 'mailto:?subject=' + encodeURIComponent('My English Exercises') + '&body=' + encodeURIComponent(bodyText);
+    var gmailLink = 'https://mail.google.com/mail/?view=cm&fs=1&su=' + encodeURIComponent('My English Exercises') + '&body=' + encodeURIComponent(bodyText);
     
-    window.location.href = mailtoLink;
-    showNotification('📧 Opening email to send your answers...', 'success');
+    window.open(gmailLink, '_blank');
+    showNotification('📧 Opening Gmail to send your answers...', 'success');
 }
 
 function sendToTeacherWhatsApp() {

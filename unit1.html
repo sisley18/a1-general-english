@@ -351,6 +351,66 @@
                     <p style="margin-top:0.5rem"><strong>Example:</strong> <em>"This is my friend Pedro. He is from Mexico. He is twenty years old. He is a student."</em></p>
                     <button class="audio-btn small" onclick="speakText('This is my friend Pedro. He is from Mexico. He is twenty years old. He is a student.')" style="margin-top:0.5rem">🔊 Listen</button>
                 </div>
+                </div>
+            </section>
+
+            <!-- ===== INTERACTIVE LISTENING & READING ===== -->
+            <section class="practice-section" id="interactive-practice">
+                <span class="section-label listening">🎧 Interactive Practice</span>
+                <h2 class="section-title">Listen and Complete</h2>
+
+                <div class="listening-exercise">
+                    <h3>🔊 Audio 3: At the Cafe</h3>
+                    <div class="audio-player">
+                        <button class="audio-btn" onclick="speakText('Hello! Can I help you? Yes, I would like a coffee, please. Sure. What is your name? My name is Sarah. Where are you from, Sarah? I am from London. Nice to meet you. I am David.')">🔊 Listen</button>
+                        <button class="audio-btn" onclick="speakTextSlow('Hello! Can I help you? Yes, I would like a coffee, please. Sure. What is your name? My name is Sarah. Where are you from, Sarah? I am from London. Nice to meet you. I am David.')">🐢 Slow</button>
+                        <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+                    </div>
+
+                    <div style="margin-top:1.5rem; background:rgba(255,255,255,0.05); padding:1.5rem; border-radius:8px;">
+                        <h4 style="margin-bottom:1rem">A. Multiple Choice</h4>
+                        <div class="exercise-question" data-question="u1q5">
+                            <p><strong>1.</strong> What does Sarah want?</p>
+                            <div class="exercise-dropdown">
+                                <select data-correct="A coffee">
+                                    <option value="">Choose your answer...</option>
+                                    <option value="A tea">A tea</option>
+                                    <option value="A coffee">A coffee</option>
+                                    <option value="Water">Water</option>
+                                </select>
+                            </div>
+                            <button class="check-answer-btn" onclick="checkDropdownAnswer('u1q5')">Check Answer</button>
+                            <div class="feedback-message"></div>
+                        </div>
+
+                        <div class="exercise-question" data-question="u1q6" style="margin-top:1.5rem">
+                            <p><strong>2.</strong> Where is Sarah from?</p>
+                            <div class="exercise-dropdown">
+                                <select data-correct="London">
+                                    <option value="">Choose your answer...</option>
+                                    <option value="New York">New York</option>
+                                    <option value="London">London</option>
+                                    <option value="Paris">Paris</option>
+                                </select>
+                            </div>
+                            <button class="check-answer-btn" onclick="checkDropdownAnswer('u1q6')">Check Answer</button>
+                            <div class="feedback-message"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:1.5rem; background:rgba(255,255,255,0.05); padding:1.5rem; border-radius:8px;">
+                        <h4 style="margin-bottom:1rem; color: #a78bfa;">B. Fill in the Blanks</h4>
+                        <p style="line-height:2.5; font-size:1.1rem;">
+                            <strong>David:</strong> Hello! Can I help you?<br>
+                            <strong>Sarah:</strong> Yes, I would like a coffee, _____.<br>
+                            <strong>David:</strong> Sure. What is your _____?<br>
+                            <strong>Sarah:</strong> My name is Sarah.<br>
+                            <strong>David:</strong> Where are you _____, Sarah?<br>
+                            <strong>Sarah:</strong> I am from London.<br>
+                            <strong>David:</strong> Nice to _____ you. I am David.
+                        </p>
+                    </div>
+                </div>
             </section>
 
             <!-- ===== VOCABULARY QUIZ ===== -->

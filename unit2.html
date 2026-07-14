@@ -284,6 +284,65 @@
                     <h4>✏️ Extra Task: Draw a Family Tree</h4>
                     <p>Draw your family tree and write the name, age, and job of each person. Then describe it to your partner.</p>
                 </div>
+                </div>
+            </section>
+
+            <!-- ===== INTERACTIVE LISTENING & READING ===== -->
+            <section class="practice-section" id="interactive-practice">
+                <span class="section-label listening">🎧 Interactive Practice</span>
+                <h2 class="section-title">Listen and Complete</h2>
+
+                <div class="listening-exercise">
+                    <h3>🔊 Audio 3: Meeting the Family</h3>
+                    <div class="audio-player">
+                        <button class="audio-btn" onclick="speakText('Look at this picture. Who is this? This is my sister, Anna. How old is she? She is twenty years old. And who is the tall man? That is my uncle, John. He is a doctor. Wow! Your family is very nice.')">🔊 Listen</button>
+                        <button class="audio-btn" onclick="speakTextSlow('Look at this picture. Who is this? This is my sister, Anna. How old is she? She is twenty years old. And who is the tall man? That is my uncle, John. He is a doctor. Wow! Your family is very nice.')">🐢 Slow</button>
+                        <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+                    </div>
+
+                    <div style="margin-top:1.5rem; background:rgba(255,255,255,0.05); padding:1.5rem; border-radius:8px;">
+                        <h4 style="margin-bottom:1rem">A. Multiple Choice</h4>
+                        <div class="exercise-question" data-question="u2q5">
+                            <p><strong>1.</strong> Who is Anna?</p>
+                            <div class="exercise-dropdown">
+                                <select data-correct="The sister">
+                                    <option value="">Choose your answer...</option>
+                                    <option value="The mother">The mother</option>
+                                    <option value="The sister">The sister</option>
+                                    <option value="The aunt">The aunt</option>
+                                </select>
+                            </div>
+                            <button class="check-answer-btn" onclick="checkDropdownAnswer('u2q5')">Check Answer</button>
+                            <div class="feedback-message"></div>
+                        </div>
+
+                        <div class="exercise-question" data-question="u2q6" style="margin-top:1.5rem">
+                            <p><strong>2.</strong> What does uncle John do?</p>
+                            <div class="exercise-dropdown">
+                                <select data-correct="He is a doctor">
+                                    <option value="">Choose your answer...</option>
+                                    <option value="He is a teacher">He is a teacher</option>
+                                    <option value="He is a doctor">He is a doctor</option>
+                                    <option value="He is a driver">He is a driver</option>
+                                </select>
+                            </div>
+                            <button class="check-answer-btn" onclick="checkDropdownAnswer('u2q6')">Check Answer</button>
+                            <div class="feedback-message"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:1.5rem; background:rgba(255,255,255,0.05); padding:1.5rem; border-radius:8px;">
+                        <h4 style="margin-bottom:1rem; color: #a78bfa;">B. Fill in the Blanks</h4>
+                        <p style="line-height:2.5; font-size:1.1rem;">
+                            <strong>Person A:</strong> Look at this picture. Who is _____?<br>
+                            <strong>Person B:</strong> This is my _____, Anna.<br>
+                            <strong>Person A:</strong> How _____ is she?<br>
+                            <strong>Person B:</strong> She is twenty years old.<br>
+                            <strong>Person A:</strong> And who is the tall man?<br>
+                            <strong>Person B:</strong> That is my _____, John. He is a doctor.
+                        </p>
+                    </div>
+                </div>
             </section>
 
             <!-- QUIZ -->
