@@ -3,22 +3,115 @@
 // Web Speech API — works on ALL devices, no external requests
 // ============================================================
 
-// Pre-load voices robustly
-let availableVoices = [];
-function initVoices() {
-    availableVoices = window.speechSynthesis.getVoices();
+// ============================================================
+// Universal Audio Engine — Mobile/Tablet/Desktop
+// Pronunciación americana natural y profesional en todos los dispositivos
+// ============================================================
+let audioQueue = [];
+let isPlaying = false;
+let isPaused = false;
+let voices = [];
+let _currentUtterance = null;
+
+// Detect mobile/tablet environments where gesture-gating applies
+const _isMobile = /iPhone|iPad|iPod|Android|Mobile|Tablet/i.test(navigator.userAgent);
+
+function initAudioEngine() {
+    if (!('speechSynthesis' in window)) {
+        console.warn('Web Speech API not supported on this browser.');
+        return;
+    }
+
+    // Attempt immediate load (works synchronously on Firefox & Safari)
+    _loadVoices();
+
+    // Chrome/Edge: voices load asynchronously — hook the event
+    window.speechSynthesis.onvoiceschanged = () => {
+        _loadVoices();
+    };
+
+    // Retry fallback for browsers that never fire onvoiceschanged (some Android WebViews)
+    if (voices.length === 0) {
+        let attempts = 0;
+        const retryInterval = setInterval(() => {
+            _loadVoices();
+            attempts++;
+            if (voices.length > 0 || attempts >= 20) {
+                clearInterval(retryInterval);
+            }
+        }, 250);
+    }
 }
-if (window.speechSynthesis) {
-    initVoices();
-    window.speechSynthesis.onvoiceschanged = initVoices;
+
+// Call it on load
+document.addEventListener('DOMContentLoaded', initAudioEngine);
+
+function _loadVoices() {
+    const raw = window.speechSynthesis.getVoices();
+    if (raw.length > 0) voices = raw;
+}
+
+function _normalizedLang(voice) {
+    return voice.lang.toLowerCase().replace(/_/g, '-');
+}
+
+function getBestVoice(genderPreference) {
+    if (voices.length === 0) _loadVoices();
+
+    const usVoices = voices.filter(v => {
+        const lang = _normalizedLang(v);
+        return lang === 'en-us' || lang.startsWith('en-us');
+    });
+
+    const pool = usVoices.length > 0
+        ? usVoices
+        : voices.filter(v => _normalizedLang(v).startsWith('en'));
+
+    if (pool.length === 0) return null;
+
+    let filtered = pool;
+    if (genderPreference) {
+        const gp = genderPreference.toLowerCase();
+        if (gp === 'female') {
+            const f = pool.filter(v => /samantha|zira|victoria|aria|jenny|michelle|monica|karen|siri|ava|allison|susan|alice/i.test(v.name));
+            if (f.length > 0) filtered = f;
+        } else if (gp === 'male') {
+            const m = pool.filter(v => /alex|david|mark|guy|ryan|andrew|fred|tom|daniel|bruce/i.test(v.name));
+            if (m.length > 0) filtered = m;
+        }
+    }
+
+    const priority = [
+        'Google US English',
+        'Google US',
+        'Microsoft Aria Online',
+        'Microsoft Jenny Online',
+        'Microsoft Aria',
+        'Microsoft Jenny',
+        'Microsoft Guy',
+        'Microsoft David',
+        'Microsoft Zira',
+        'Samantha',
+        'Enhanced',
+        'Premium',
+        'Natural',
+        'Google',
+        'Microsoft'
+    ];
+
+    for (const keyword of priority) {
+        const match = filtered.find(v => v.name.includes(keyword));
+        if (match) return match;
+    }
+
+    return filtered[0] || pool[0];
 }
 
 function speakText(textIdOrText, slow) {
-    if (!window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
-
-    var text;
-    var el = document.getElementById(textIdOrText);
+    if (!('speechSynthesis' in window)) return;
+    
+    let text;
+    let el = document.getElementById(textIdOrText);
     if (el) {
         text = el.textContent || el.innerText;
     } else {
@@ -29,40 +122,71 @@ function speakText(textIdOrText, slow) {
 
     text = text.replace(/[\u2018\u2019]/g, "'").replace(/[\u201C\u201D]/g, '"').replace(/\n/g, '. ').trim();
 
-    var doSpeak = function() {
-        var utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'en-US';
-        utterance.rate = slow ? 0.7 : 0.95; // Slightly faster default to sound less robotic
-        utterance.pitch = 1.0;
+    stopAudio();
 
-        if (availableVoices.length === 0) availableVoices = window.speechSynthesis.getVoices();
+    if (_isMobile || text.length <= 300) {
+        _speak(text, slow);
+    } else {
+        const chunks = _splitText(text, 250);
+        audioQueue = chunks.map(c => ({ text: c, slow: slow }));
+        isPaused = false;
+        _processQueue();
+    }
+}
 
-        var voice =
-            availableVoices.find(function(v) { return v.name.includes('Google US English') || v.name.includes('Google') && v.lang === 'en-US'; }) ||
-            availableVoices.find(function(v) { return v.name.includes('Microsoft Zira') || v.name.includes('Microsoft David') || v.name.includes('Microsoft Mark'); }) ||
-            availableVoices.find(function(v) { return v.name === 'Samantha' || v.name === 'Alex' || v.name === 'Victoria'; }) ||
-            availableVoices.find(function(v) { return v.lang === 'en-US' && v.localService; }) ||
-            availableVoices.find(function(v) { return v.lang === 'en-US'; }) ||
-            availableVoices.find(function(v) { return v.lang && v.lang.indexOf('en') === 0; });
+function _speak(text, slow) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US';
+    utterance.rate = slow ? 0.7 : 0.95; 
+    utterance.pitch = 1.0;
+    utterance.volume = 1.0;
 
-        if (voice) {
-            utterance.voice = voice;
+    const voice = getBestVoice(null);
+    if (voice) utterance.voice = voice;
+
+    _currentUtterance = utterance;
+    isPlaying = true;
+
+    utterance.onend = () => {
+        if (isPlaying && !isPaused) {
+            setTimeout(_processQueue, 350);
         }
-
-        utterance.onerror = function(e) {
-            if (e.error !== 'interrupted' && e.error !== 'canceled') {
-                console.error('Speech error:', e.error);
-            }
-        };
-
-        window.speechSynthesis.speak(utterance);
     };
 
-    if (availableVoices.length === 0) {
-        setTimeout(doSpeak, 50);
-    } else {
-        doSpeak();
+    utterance.onerror = (e) => {
+        if (isPlaying && !isPaused && e.error !== 'interrupted' && e.error !== 'canceled') {
+            setTimeout(_processQueue, 200);
+        }
+    };
+
+    if (window.speechSynthesis.paused) window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utterance);
+}
+
+function _processQueue() {
+    if (isPaused || audioQueue.length === 0) {
+        isPlaying = audioQueue.length > 0;
+        return;
     }
+    const item = audioQueue.shift();
+    _speak(item.text, item.slow);
+}
+
+function _splitText(text, maxLen) {
+    const chunks = [];
+    let remaining = text;
+    while (remaining.length > 0) {
+        if (remaining.length <= maxLen) { chunks.push(remaining); break; }
+        let idx = remaining.lastIndexOf('. ', maxLen);
+        if (idx < 0) idx = remaining.lastIndexOf('? ', maxLen);
+        if (idx < 0) idx = remaining.lastIndexOf('! ', maxLen);
+        if (idx < 0) idx = remaining.lastIndexOf(', ', maxLen);
+        if (idx < 0) idx = remaining.lastIndexOf(' ', maxLen);
+        if (idx < 0) idx = maxLen;
+        chunks.push(remaining.substring(0, idx + 1).trim());
+        remaining = remaining.substring(idx + 1).trim();
+    }
+    return chunks;
 }
 
 function speakTextSlow(textIdOrText) {
@@ -70,7 +194,13 @@ function speakTextSlow(textIdOrText) {
 }
 
 function stopAudio() {
-    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    audioQueue = [];
+    isPlaying = false;
+    isPaused = false;
+    _currentUtterance = null;
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+    }
 }
 
 function pauseSpeech() {
