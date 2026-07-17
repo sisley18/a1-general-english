@@ -737,6 +737,134 @@ footer a {
 }
 
 /* ============ RESPONSIVE ============ */
+/* ============ MULTIPLE CHOICE EXERCISES ============ */
+.mc-exercise {
+    background: white;
+    border-radius: 14px;
+    padding: 1.8rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-medium);
+    border-left: 5px solid var(--accent-indigo);
+    transition: transform 0.2s ease;
+}
+.mc-exercise:hover { transform: translateY(-2px); }
+.mc-exercise .mc-question {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+.mc-exercise .mc-question .mc-number {
+    display: inline-block;
+    background: var(--accent-indigo);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-right: 8px;
+}
+.mc-options { display: flex; flex-direction: column; gap: 0.6rem; }
+.mc-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: #f8f6ff;
+    border: 2px solid #e8e4f5;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+}
+.mc-option:hover { background: #ede9ff; border-color: var(--accent-indigo-light); }
+.mc-option input[type="radio"] {
+    accent-color: var(--accent-indigo);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+.mc-option label { cursor: pointer; flex: 1; }
+.mc-option.correct {
+    background: #ecfdf5 !important;
+    border-color: #059669 !important;
+}
+.mc-option.incorrect {
+    background: #fef2f2 !important;
+    border-color: #ef4444 !important;
+}
+.mc-option.correct label::after { content: ' ✅'; }
+.mc-option.incorrect label::after { content: ' ❌'; }
+.mc-feedback {
+    margin-top: 0.8rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: none;
+}
+.mc-feedback.show { display: block; }
+.mc-feedback.correct { background: #ecfdf5; color: #059669; }
+.mc-feedback.incorrect { background: #fef2f2; color: #ef4444; }
+.mc-check-btn {
+    margin-top: 0.8rem;
+    background: linear-gradient(135deg, var(--accent-indigo), #764ba2);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mc-check-btn:hover { transform: scale(1.03); box-shadow: 0 4px 15px rgba(90,63,214,0.3); }
+.mc-section-title {
+    color: var(--accent-indigo);
+    font-size: 1.3rem;
+    margin: 2rem 0 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px dashed rgba(90,63,214,0.3);
+}
+.mc-section-title.listening-mc { color: #0d9488; border-color: rgba(13,148,136,0.3); }
+.mc-section-title.reading-mc { color: #d95f24; border-color: rgba(217,95,36,0.3); }
+
+/* Listening MC in dark bg */
+.listening-section .mc-exercise {
+    background: rgba(255,255,255,0.95);
+    border-left-color: #2dd4bf;
+}
+.listening-section .mc-option { background: #f0fdfa; border-color: #b2f5ea; }
+.listening-section .mc-option:hover { background: #ccfbf1; border-color: #2dd4bf; }
+.listening-section .mc-check-btn { background: linear-gradient(135deg, #0d9488, #059669); }
+.listening-section .mc-exercise .mc-question .mc-number { background: #0d9488; }
+
+/* MC Check All / Reset for MC sections */
+.mc-controls {
+    margin-top: 1.5rem;
+    text-align: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.mc-controls button {
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease;
+}
+.mc-controls button:hover { transform: scale(1.03); }
+.mc-controls .mc-check-all { background: linear-gradient(135deg, #22c55e, #16a34a); color: white; }
+.mc-controls .mc-reset-all { background: linear-gradient(135deg, #64748b, #475569); color: white; }
+
 @media (max-width: 768px) {
     .header .container { flex-direction: column; gap: 10px; }
     .navigation { flex-direction: column; width: 100%; }

@@ -365,6 +365,96 @@ window.exportCompleteClass = exportCompleteClass;
 window.printSection = printSection;
 window.showNotification = showNotification;
 
+// --- MULTIPLE CHOICE EXERCISE FUNCTIONS ---
+function checkMC(questionName) {
+    var radios = document.querySelectorAll('input[name="' + questionName + '"]');
+    if (!radios.length) return;
+
+    var selected = null;
+    radios.forEach(function(r) { if (r.checked) selected = r; });
+
+    // Find the mc-exercise container
+    var container = radios[0].closest('.mc-exercise');
+    if (!container) return;
+    var feedback = container.querySelector('.mc-feedback');
+
+    if (!selected) {
+        if (feedback) {
+            feedback.textContent = '⚠️ Please select an answer.';
+            feedback.className = 'mc-feedback show incorrect';
+        }
+        return;
+    }
+
+    var isCorrect = selected.getAttribute('data-correct') === 'true';
+
+    // Reset all option styles in this question
+    container.querySelectorAll('.mc-option').forEach(function(opt) {
+        opt.classList.remove('correct', 'incorrect');
+    });
+
+    // Highlight correct and selected
+    radios.forEach(function(r) {
+        var optDiv = r.closest('.mc-option');
+        if (r.getAttribute('data-correct') === 'true') {
+            optDiv.classList.add('correct');
+        }
+        if (r === selected && !isCorrect) {
+            optDiv.classList.add('incorrect');
+        }
+    });
+
+    if (feedback) {
+        if (isCorrect) {
+            feedback.textContent = '✅ Correct! Well done!';
+            feedback.className = 'mc-feedback show correct';
+        } else {
+            feedback.textContent = '❌ Not quite. The correct answer is highlighted in green.';
+            feedback.className = 'mc-feedback show incorrect';
+        }
+    }
+}
+
+function checkAllMC(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (!section) {
+        // Fallback: check all MC on the page
+        document.querySelectorAll('.mc-exercise').forEach(function(ex) {
+            var radio = ex.querySelector('input[type="radio"]');
+            if (radio) checkMC(radio.name);
+        });
+        return;
+    }
+    section.querySelectorAll('.mc-exercise').forEach(function(ex) {
+        var radio = ex.querySelector('input[type="radio"]');
+        if (radio) checkMC(radio.name);
+    });
+}
+
+function resetAllMC(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (!section) {
+        section = document;
+    }
+    section.querySelectorAll('.mc-exercise').forEach(function(ex) {
+        ex.querySelectorAll('input[type="radio"]').forEach(function(r) {
+            r.checked = false;
+        });
+        ex.querySelectorAll('.mc-option').forEach(function(opt) {
+            opt.classList.remove('correct', 'incorrect');
+        });
+        var fb = ex.querySelector('.mc-feedback');
+        if (fb) {
+            fb.textContent = '';
+            fb.className = 'mc-feedback';
+        }
+    });
+}
+
+window.checkMC = checkMC;
+window.checkAllMC = checkAllMC;
+window.resetAllMC = resetAllMC;
+
 // --- FILL IN THE BLANKS & SEND TO TEACHER ---
 document.addEventListener('DOMContentLoaded', function () {
     var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
