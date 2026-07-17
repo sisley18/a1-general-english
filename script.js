@@ -4,172 +4,116 @@
 // ============================================================
 
 // ============================================================
-// Universal Audio Engine — Mobile/Tablet/Desktop
-// Pronunciación americana natural y profesional en todos los dispositivos
+// Universal Audio Engine — Google TTS + Fallback
+// Pronunciación americana garantizada y fluida en todos los dispositivos
 // ============================================================
 let audioQueue = [];
 let isPlaying = false;
-let isPaused = false;
+let currentAudioElement = null;
 let voices = [];
-let _currentUtterance = null;
-
-// Detect mobile/tablet environments where gesture-gating applies
-const _isMobile = /iPhone|iPad|iPod|Android|Mobile|Tablet/i.test(navigator.userAgent);
 
 function initAudioEngine() {
-    if (!('speechSynthesis' in window)) {
-        console.warn('Web Speech API not supported on this browser.');
-        return;
-    }
-
-    // Attempt immediate load (works synchronously on Firefox & Safari)
-    _loadVoices();
-
-    // Chrome/Edge: voices load asynchronously — hook the event
-    window.speechSynthesis.onvoiceschanged = () => {
-        _loadVoices();
-    };
-
-    // Retry fallback for browsers that never fire onvoiceschanged (some Android WebViews)
-    if (voices.length === 0) {
-        let attempts = 0;
-        const retryInterval = setInterval(() => {
-            _loadVoices();
-            attempts++;
-            if (voices.length > 0 || attempts >= 20) {
-                clearInterval(retryInterval);
-            }
-        }, 250);
+    if ('speechSynthesis' in window) {
+        voices = window.speechSynthesis.getVoices();
+        window.speechSynthesis.onvoiceschanged = () => { voices = window.speechSynthesis.getVoices(); };
     }
 }
-
-// Call it on load
 document.addEventListener('DOMContentLoaded', initAudioEngine);
 
-function _loadVoices() {
-    const raw = window.speechSynthesis.getVoices();
-    if (raw.length > 0) voices = raw;
-}
-
-function _normalizedLang(voice) {
-    return voice.lang.toLowerCase().replace(/_/g, '-');
-}
-
-function getBestVoice(genderPreference) {
-    if (voices.length === 0) _loadVoices();
-
-    const usVoices = voices.filter(v => {
-        const lang = _normalizedLang(v);
-        return lang === 'en-us' || lang.startsWith('en-us');
-    });
-
-    const pool = usVoices.length > 0
-        ? usVoices
-        : voices.filter(v => _normalizedLang(v).startsWith('en'));
-
-    if (pool.length === 0) return null;
-
-    let filtered = pool;
-    if (genderPreference) {
-        const gp = genderPreference.toLowerCase();
-        if (gp === 'female') {
-            const f = pool.filter(v => /samantha|zira|victoria|aria|jenny|michelle|monica|karen|siri|ava|allison|susan|alice/i.test(v.name));
-            if (f.length > 0) filtered = f;
-        } else if (gp === 'male') {
-            const m = pool.filter(v => /alex|david|mark|guy|ryan|andrew|fred|tom|daniel|bruce/i.test(v.name));
-            if (m.length > 0) filtered = m;
-        }
-    }
-
-    const priority = [
-        'Google US English',
-        'Google US',
-        'Microsoft Aria Online',
-        'Microsoft Jenny Online',
-        'Microsoft Aria',
-        'Microsoft Jenny',
-        'Microsoft Guy',
-        'Microsoft David',
-        'Microsoft Zira',
-        'Samantha',
-        'Enhanced',
-        'Premium',
-        'Natural',
-        'Google',
-        'Microsoft'
-    ];
-
-    for (const keyword of priority) {
-        const match = filtered.find(v => v.name.includes(keyword));
-        if (match) return match;
-    }
-
-    return filtered[0] || pool[0];
-}
-
 function speakText(textIdOrText, slow) {
-    if (!('speechSynthesis' in window)) return;
-    
-    let text;
-    let el = document.getElementById(textIdOrText);
-    if (el) {
-        text = el.textContent || el.innerText;
-    } else {
-        text = textIdOrText;
-    }
+    let text = document.getElementById(textIdOrText) ? (document.getElementById(textIdOrText).textContent || document.getElementById(textIdOrText).innerText) : textIdOrText;
     text = (text || '').trim();
     if (!text) return;
 
     text = text.replace(/[\u2018\u2019]/g, "'").replace(/[\u201C\u201D]/g, '"').replace(/\n/g, '. ').trim();
-
     stopAudio();
 
-    if (_isMobile || text.length <= 300) {
-        _speak(text, slow);
-    } else {
-        const chunks = _splitText(text, 250);
-        audioQueue = chunks.map(c => ({ text: c, slow: slow }));
-        isPaused = false;
-        _processQueue();
-    }
-}
-
-function _speak(text, slow) {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US';
-    utterance.rate = slow ? 0.7 : 0.95; 
-    utterance.pitch = 1.0;
-    utterance.volume = 1.0;
-
-    const voice = getBestVoice(null);
-    if (voice) utterance.voice = voice;
-
-    _currentUtterance = utterance;
-    isPlaying = true;
-
-    utterance.onend = () => {
-        if (isPlaying && !isPaused) {
-            setTimeout(_processQueue, 350);
-        }
-    };
-
-    utterance.onerror = (e) => {
-        if (isPlaying && !isPaused && e.error !== 'interrupted' && e.error !== 'canceled') {
-            setTimeout(_processQueue, 200);
-        }
-    };
-
-    if (window.speechSynthesis.paused) window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(utterance);
+    // Chunk text for Google TTS limit (approx 200 chars max)
+    const chunks = _splitText(text, 150);
+    audioQueue = chunks.map(c => ({ text: c, slow: slow }));
+    _processQueue();
 }
 
 function _processQueue() {
-    if (isPaused || audioQueue.length === 0) {
-        isPlaying = audioQueue.length > 0;
+    if (audioQueue.length === 0) {
+        isPlaying = false;
         return;
     }
+    isPlaying = true;
     const item = audioQueue.shift();
-    _speak(item.text, item.slow);
+    
+    // Use Google Translate TTS for guaranteed high-quality American English
+    const url = 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en-US&q=' + encodeURIComponent(item.text);
+    const audio = new Audio(url);
+    
+    // Slow down playback if needed
+    if (item.slow) {
+        audio.playbackRate = 0.75;
+        audio.preservesPitch = true;
+    }
+    
+    currentAudioElement = audio;
+    
+    audio.onended = () => {
+        setTimeout(_processQueue, 250); // Natural pause between chunks
+    };
+    
+    audio.onerror = () => {
+        console.warn("Google TTS failed, falling back to Web Speech API");
+        _fallbackSpeak(item.text, item.slow);
+    };
+    
+    audio.play().catch(e => {
+        console.warn("Audio play blocked or failed, falling back to Web Speech API", e);
+        _fallbackSpeak(item.text, item.slow);
+    });
+}
+
+function stopAudio() {
+    audioQueue = [];
+    isPlaying = false;
+    if (currentAudioElement) {
+        currentAudioElement.pause();
+        currentAudioElement.currentTime = 0;
+        currentAudioElement = null;
+    }
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+    }
+}
+
+function pauseSpeech() {
+    stopAudio();
+}
+
+function speakTextSlow(text) {
+    speakText(text, true);
+}
+
+// Fallback logic for Web Speech API
+function _fallbackSpeak(text, slow) {
+    if (!('speechSynthesis' in window)) {
+        setTimeout(_processQueue, 300);
+        return;
+    }
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US';
+    u.rate = slow ? 0.7 : 0.95;
+    
+    if (voices.length === 0) voices = window.speechSynthesis.getVoices();
+    
+    const usVoice = voices.find(v => v.lang.toLowerCase().startsWith('en-us') && (v.name.includes('Google') || v.name.includes('Online') || v.name.includes('Premium')));
+    if (usVoice) {
+        u.voice = usVoice;
+    } else {
+        const anyEng = voices.find(v => v.lang.toLowerCase().startsWith('en'));
+        if (anyEng) u.voice = anyEng;
+    }
+    
+    u.onend = () => { setTimeout(_processQueue, 300); };
+    u.onerror = () => { setTimeout(_processQueue, 300); };
+    
+    window.speechSynthesis.speak(u);
 }
 
 function _splitText(text, maxLen) {
@@ -187,24 +131,6 @@ function _splitText(text, maxLen) {
         remaining = remaining.substring(idx + 1).trim();
     }
     return chunks;
-}
-
-function speakTextSlow(textIdOrText) {
-    speakText(textIdOrText, true);
-}
-
-function stopAudio() {
-    audioQueue = [];
-    isPlaying = false;
-    isPaused = false;
-    _currentUtterance = null;
-    if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-    }
-}
-
-function pauseSpeech() {
-    stopAudio();
 }
 
 // --- NOTIFICATION SYSTEM ---
