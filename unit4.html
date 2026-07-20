@@ -1,148 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit 4: Food and Drink — A1 English Course</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header class="header"><div class="container"><a href="index.html" class="logo">🌍 A1 <span>English Course</span></a><nav class="navigation"><div class="dropdown"><button class="dropdown-btn">📚 Units <span class="arrow">▼</span></button><div class="dropdown-content"><a href="unit1.html" class="dropdown-item">Unit 1: Hello! Nice to Meet You</a><a href="unit2.html" class="dropdown-item">Unit 2: My Family</a><a href="unit3.html" class="dropdown-item">Unit 3: My Daily Routine</a><a href="unit4.html" class="dropdown-item">Unit 4: Food and Drink</a><a href="unit5.html" class="dropdown-item">Unit 5: My Home</a><a href="unit6.html" class="dropdown-item">Unit 6: Around Town</a><a href="unit7.html" class="dropdown-item">Unit 7: Clothes and Shopping</a><a href="unit8.html" class="dropdown-item">Unit 8: Free Time and Hobbies</a></div></div><a href="index.html" class="nav-link">Home</a><a href="#progress-test" class="nav-link" style="color:var(--accent-indigo,#6366f1);font-weight:bold">📝 Progress Test</a><div class="dropdown"><button class="dropdown-btn" style="font-size:0.85rem">📄 Export <span class="arrow">▼</span></button><div class="dropdown-content"><a href="#" onclick="copyClassContent()" class="dropdown-item">📋 Copy All</a><a href="#" onclick="exportCompleteClass()" class="dropdown-item">📄 Export to Word</a><a href="#" onclick="printSection('main')" class="dropdown-item">🖨️ Print</a></div></div></nav></div></header>
+    <header class="header">
+        <div class="container"><a href="index.html" class="logo">🌍 A1 <span>English Course</span></a>
+            <nav class="navigation">
+                <div class="dropdown"><button class="dropdown-btn">📚 Units <span class="arrow">▼</span></button>
+                    <div class="dropdown-content"><a href="unit1.html" class="dropdown-item">Unit 1: Hello! Nice to Meet
+                            You</a><a href="unit2.html" class="dropdown-item">Unit 2: My Family</a><a href="unit3.html"
+                            class="dropdown-item">Unit 3: My Daily Routine</a><a href="unit4.html"
+                            class="dropdown-item">Unit 4: Food and Drink</a><a href="unit5.html"
+                            class="dropdown-item">Unit 5: My Home</a><a href="unit6.html" class="dropdown-item">Unit 6:
+                            Around Town</a><a href="unit7.html" class="dropdown-item">Unit 7: Clothes and Shopping</a><a
+                            href="unit8.html" class="dropdown-item">Unit 8: Free Time and Hobbies</a></div>
+                </div><a href="index.html" class="nav-link">Home</a><a href="#progress-test" class="nav-link"
+                    style="color:var(--accent-indigo,#6366f1);font-weight:bold">📝 Progress Test</a>
+                <div class="dropdown"><button class="dropdown-btn" style="font-size:0.85rem">📄 Export <span
+                            class="arrow">▼</span></button>
+                    <div class="dropdown-content"><a href="#" onclick="copyClassContent()" class="dropdown-item">📋 Copy
+                            All</a><a href="#" onclick="exportCompleteClass()" class="dropdown-item">📄 Export to
+                            Word</a><a href="#" onclick="printSection('main')" class="dropdown-item">🖨️ Print</a></div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-    <section class="hero"><div class="container"><span class="hero-badge">📘 Unit 4 of 8</span><h1 class="hero-title">Food and Drink</h1><p class="hero-description">Learn food vocabulary, countable and uncountable nouns, "some" and "any," and how to order at a restaurant.</p><div style="margin-top:1rem"><a href="#progress-test" style="display:inline-block;background:white;color:var(--accent-indigo,#4f46e5);padding:0.6rem 1.2rem;border-radius:8px;font-weight:bold;text-decoration:none;box-shadow:0 2px 4px rgba(0,0,0,0.1)">📝 Take Progress Test (Units 1-4) ↓</a></div></div></section>
+    <section class="hero">
+        <div class="container"><span class="hero-badge">📘 Unit 4 of 8</span>
+            <h1 class="hero-title">Food and Drink</h1>
+            <p class="hero-description">Learn food vocabulary, countable and uncountable nouns, "some" and "any," and
+                how to order at a restaurant.</p>
+            <div style="margin-top:1rem"><a href="#progress-test"
+                    style="display:inline-block;background:white;color:var(--accent-indigo,#4f46e5);padding:0.6rem 1.2rem;border-radius:8px;font-weight:bold;text-decoration:none;box-shadow:0 2px 4px rgba(0,0,0,0.1)">📝
+                    Take Progress Test (Units 1-4) ↓</a></div>
+        </div>
+    </section>
 
-    <main id="main"><div class="container">
+    <main id="main">
+        <div class="container">
 
-        <!-- VOCABULARY -->
-        <section class="section-wrapper" id="vocabulary-section">
-            <span class="section-label vocabulary">📚 Vocabulary</span>
-            <h2 class="section-title">Food and Drink</h2>
-            <h3 style="color:var(--accent-indigo);margin-bottom:1rem">Food</h3>
-            <div class="vocabulary-grid">
-                <div class="vocab-card"><div class="vocab-word">Bread</div><div class="vocab-definition">A basic baked food made from flour</div><div class="vocab-example">"I eat bread for breakfast."</div><button class="audio-btn small" onclick="speakText('I eat bread for breakfast.')">🔊</button></div>
-                <div class="vocab-card"><div class="vocab-word">Rice</div><div class="vocab-definition">Small white or brown grains, very common food</div><div class="vocab-example">"We eat rice with chicken."</div><button class="audio-btn small" onclick="speakText('We eat rice with chicken.')">🔊</button></div>
-                <div class="vocab-card"><div class="vocab-word">Chicken</div><div class="vocab-definition">Meat from a bird</div><div class="vocab-example">"I like chicken with salad."</div><button class="audio-btn small" onclick="speakText('I like chicken with salad.')">🔊</button></div>
-                <div class="vocab-card"><div class="vocab-word">Fish</div><div class="vocab-definition">An animal that lives in water, also a food</div><div class="vocab-example">"Fish is very healthy."</div><button class="audio-btn small" onclick="speakText('Fish is very healthy.')">🔊</button></div>
-                <div class="vocab-card"><div class="vocab-word">Egg</div><div class="vocab-definition">Comes from a chicken, very common for breakfast</div><div class="vocab-example">"I have two eggs for breakfast."</div><button class="audio-btn small" onclick="speakText('I have two eggs for breakfast.')">🔊</button></div>
-                <div class="vocab-card"><div class="vocab-word">Fruit</div><div class="vocab-definition">Apples, oranges, bananas, etc.</div><div class="vocab-example">"I like fruit. My favorite is banana."</div><button class="audio-btn small" onclick="speakText('I like fruit. My favorite is banana.')">🔊</button></div>
-                <div class="vocab-card"><div class="vocab-word">Vegetables</div><div class="vocab-definition">Tomatoes, carrots, onions, etc.</div><div class="vocab-example">"Vegetables are good for you."</div><button class="audio-btn small" onclick="speakText('Vegetables are good for you.')">🔊</button></div>
-                <div class="vocab-card"><div class="vocab-word">Cheese</div><div class="vocab-definition">A food made from milk</div><div class="vocab-example">"I want a cheese sandwich, please."</div><button class="audio-btn small" onclick="speakText('I want a cheese sandwich, please.')">🔊</button></div>
-            </div>
+            <!-- VOCABULARY -->
+            <section class="section-wrapper" id="vocabulary-section">
+                <span class="section-label vocabulary">📚 Vocabulary</span>
+                <h2 class="section-title">Food and Drink</h2>
+                <h3 style="color:var(--accent-indigo);margin-bottom:1rem">Food</h3>
+                <div class="vocabulary-grid">
+                    <div class="vocab-card">
+                        <div class="vocab-word">Bread</div>
+                        <div class="vocab-definition">A basic baked food made from flour</div>
+                        <div class="vocab-example">"I eat bread for breakfast."</div><button class="audio-btn small"
+                            onclick="speakText('I eat bread for breakfast.')">🔊</button>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Rice</div>
+                        <div class="vocab-definition">Small white or brown grains, very common food</div>
+                        <div class="vocab-example">"We eat rice with chicken."</div><button class="audio-btn small"
+                            onclick="speakText('We eat rice with chicken.')">🔊</button>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Chicken</div>
+                        <div class="vocab-definition">Meat from a bird</div>
+                        <div class="vocab-example">"I like chicken with salad."</div><button class="audio-btn small"
+                            onclick="speakText('I like chicken with salad.')">🔊</button>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Fish</div>
+                        <div class="vocab-definition">An animal that lives in water, also a food</div>
+                        <div class="vocab-example">"Fish is very healthy."</div><button class="audio-btn small"
+                            onclick="speakText('Fish is very healthy.')">🔊</button>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Egg</div>
+                        <div class="vocab-definition">Comes from a chicken, very common for breakfast</div>
+                        <div class="vocab-example">"I have two eggs for breakfast."</div><button class="audio-btn small"
+                            onclick="speakText('I have two eggs for breakfast.')">🔊</button>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Fruit</div>
+                        <div class="vocab-definition">Apples, oranges, bananas, etc.</div>
+                        <div class="vocab-example">"I like fruit. My favorite is banana."</div><button
+                            class="audio-btn small"
+                            onclick="speakText('I like fruit. My favorite is banana.')">🔊</button>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Vegetables</div>
+                        <div class="vocab-definition">Tomatoes, carrots, onions, etc.</div>
+                        <div class="vocab-example">"Vegetables are good for you."</div><button class="audio-btn small"
+                            onclick="speakText('Vegetables are good for you.')">🔊</button>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Cheese</div>
+                        <div class="vocab-definition">A food made from milk</div>
+                        <div class="vocab-example">"I want a cheese sandwich, please."</div><button
+                            class="audio-btn small" onclick="speakText('I want a cheese sandwich, please.')">🔊</button>
+                    </div>
+                </div>
 
-            <h3 style="color:var(--accent-indigo);margin:2rem 0 1rem">Drinks</h3>
-            <div class="vocabulary-grid">
-                <div class="vocab-card"><div class="vocab-word">Water</div><div class="vocab-example">"Can I have a glass of water, please?"</div><button class="audio-btn small" onclick="speakText('Can I have a glass of water, please?')">🔊</button></div>
-                <div class="vocab-card"><div class="vocab-word">Coffee / Tea</div><div class="vocab-example">"I drink coffee in the morning."</div><button class="audio-btn small" onclick="speakText('I drink coffee in the morning.')">🔊</button></div>
-                <div class="vocab-card"><div class="vocab-word">Juice</div><div class="vocab-example">"I like orange juice."</div><button class="audio-btn small" onclick="speakText('I like orange juice.')">🔊</button></div>
-                <div class="vocab-card"><div class="vocab-word">Milk</div><div class="vocab-example">"Children drink milk every day."</div><button class="audio-btn small" onclick="speakText('Children drink milk every day.')">🔊</button></div>
-            </div>
-        </section>
+                <h3 style="color:var(--accent-indigo);margin:2rem 0 1rem">Drinks</h3>
+                <div class="vocabulary-grid">
+                    <div class="vocab-card">
+                        <div class="vocab-word">Water</div>
+                        <div class="vocab-example">"Can I have a glass of water, please?"</div><button
+                            class="audio-btn small"
+                            onclick="speakText('Can I have a glass of water, please?')">🔊</button>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Coffee / Tea</div>
+                        <div class="vocab-example">"I drink coffee in the morning."</div><button class="audio-btn small"
+                            onclick="speakText('I drink coffee in the morning.')">🔊</button>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Juice</div>
+                        <div class="vocab-example">"I like orange juice."</div><button class="audio-btn small"
+                            onclick="speakText('I like orange juice.')">🔊</button>
+                    </div>
+                    <div class="vocab-card">
+                        <div class="vocab-word">Milk</div>
+                        <div class="vocab-example">"Children drink milk every day."</div><button class="audio-btn small"
+                            onclick="speakText('Children drink milk every day.')">🔊</button>
+                    </div>
+                </div>
+            </section>
 
-        <!-- GRAMMAR -->
-        <section class="grammar-box">
-            <span class="section-label grammar">📝 Grammar</span>
-            <h2 class="section-title">Countable & Uncountable Nouns — Some / Any</h2>
-            <div class="grammar-rule">
-                <strong>Countable:</strong> an apple, two eggs, three tomatoes <br>
-                <strong>Uncountable:</strong> water, rice, bread, milk, cheese
-            </div>
-            <div class="grammar-rule">
-                <strong>Some</strong> (positive): <span class="grammar-example">There is some milk. I have some apples.</span><br>
-                <strong>Any</strong> (negative & questions): <span class="grammar-example">Is there any bread? There isn't any juice.</span>
-            </div>
-            <div class="grammar-rule">
-                <strong>A / An:</strong> <span class="grammar-example">I want an apple. She eats a sandwich.</span><br>
-                <strong>How much / How many:</strong> <span class="grammar-example">How much water? How many eggs?</span>
-            </div>
-            <div style="margin-top:1rem">
-                <button class="audio-btn" onclick="speakText('There is some milk. I have some apples. Is there any bread? There is not any juice. I want an apple. She eats a sandwich. How much water do you want? How many eggs do you need?')">🔊 Listen</button>
-                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
-            </div>
-        </section>
-
-        <!-- LISTENING -->
-        <section class="listening-section" id="listening-section">
-            <span class="section-label listening">🎧 Listening</span>
-            <h2 style="color:white;margin-bottom:1.5rem">Listening Comprehension</h2>
-
-            <div class="listening-exercise">
-                <h3>🔊 Audio 1: Ordering at a Restaurant</h3>
-                <div class="audio-player">
-                    <button class="audio-btn" onclick="speakText('Good afternoon. Welcome to the Blue Cafe. Are you ready to order? Yes, please. I would like a chicken sandwich and a salad. Of course. And to drink? I would like an orange juice, please. And for you, sir? I would like the fish with rice, please. And a glass of water. Very good. Anything else? Yes, can we have some bread, please? Of course. Your food will be ready in ten minutes. Thank you very much.')">🔊 Listen</button>
-                    <button class="audio-btn" onclick="speakTextSlow('Good afternoon. Welcome to the Blue Cafe. Are you ready to order? Yes, please. I would like a chicken sandwich and a salad. Of course. And to drink? I would like an orange juice, please. And for you, sir? I would like the fish with rice, please. And a glass of water. Very good. Anything else? Yes, can we have some bread, please? Of course. Your food will be ready in ten minutes. Thank you very much.')">🐢 Slow</button>
+            <!-- GRAMMAR -->
+            <section class="grammar-box">
+                <span class="section-label grammar">📝 Grammar</span>
+                <h2 class="section-title">Countable & Uncountable Nouns — Some / Any</h2>
+                <div class="grammar-rule">
+                    <strong>Countable:</strong> an apple, two eggs, three tomatoes <br>
+                    <strong>Uncountable:</strong> water, rice, bread, milk, cheese
+                </div>
+                <div class="grammar-rule">
+                    <strong>Some</strong> (positive): <span class="grammar-example">There is some milk. I have some
+                        apples.</span><br>
+                    <strong>Any</strong> (negative & questions): <span class="grammar-example">Is there any bread? There
+                        isn't any juice.</span>
+                </div>
+                <div class="grammar-rule">
+                    <strong>A / An:</strong> <span class="grammar-example">I want an apple. She eats a
+                        sandwich.</span><br>
+                    <strong>How much / How many:</strong> <span class="grammar-example">How much water? How many
+                        eggs?</span>
+                </div>
+                <div style="margin-top:1rem">
+                    <button class="audio-btn"
+                        onclick="speakText('There is some milk. I have some apples. Is there any bread? There is not any juice. I want an apple. She eats a sandwich. How much water do you want? How many eggs do you need?')">🔊
+                        Listen</button>
                     <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
                 </div>
-                <div class="transcript-box">
-                    <p><strong>📝 Transcript:</strong></p>
-                    <p><strong>Waiter:</strong> Good afternoon. Welcome to the Blue Café. Are you ready to order?</p>
-                    <p><strong>Woman:</strong> Yes, please. I would like a chicken sandwich and a salad.</p>
-                    <p><strong>Waiter:</strong> Of course. And to drink?</p>
-                    <p><strong>Woman:</strong> I would like an orange juice, please.</p>
-                    <p><strong>Waiter:</strong> And for you, sir?</p>
-                    <p><strong>Man:</strong> I would like the fish with rice, please. And a glass of water.</p>
-                    <p><strong>Waiter:</strong> Very good. Anything else?</p>
-                    <p><strong>Man:</strong> Yes, can we have some bread, please?</p>
-                    <p><strong>Waiter:</strong> Of course. Your food will be ready in ten minutes.</p>
-                    <p><strong>Man:</strong> Thank you very much.</p>
-                </div>
-                <p><strong>What does each person order?</strong></p>
-                <ul style="margin:1rem 0;line-height:2.2">
-                    <li>Woman — Food: _____ — Drink: _____</li>
-                    <li>Man — Food: _____ — Drink: _____</li>
-                    <li>Extra: _____</li>
-                </ul>
-            </div>
+            </section>
 
-            <div class="listening-exercise">
-                <h3>🔊 Audio 2: At the Supermarket</h3>
-                <div class="audio-player">
-                    <button class="audio-btn" onclick="speakText('Okay, let me check the shopping list. We need some milk, some eggs, and some bread. Do we have any cheese? No, we don\'t have any cheese. We need some cheese too. How many eggs do we need? We need twelve eggs. And how much milk? Two bottles of milk, please. Do we need any fruit? Yes, we need some apples and some bananas. That\'s everything. Let\'s go.')">🔊 Listen</button>
-                    <button class="audio-btn" onclick="speakTextSlow('Okay, let me check the shopping list. We need some milk, some eggs, and some bread. Do we have any cheese? No, we don\'t have any cheese. We need some cheese too. How many eggs do we need? We need twelve eggs. And how much milk? Two bottles of milk, please. Do we need any fruit? Yes, we need some apples and some bananas. That\'s everything. Let\'s go.')">🐢 Slow</button>
-                    <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+            <!-- LISTENING -->
+            <section class="listening-section" id="listening-section">
+                <span class="section-label listening">🎧 Listening</span>
+                <h2 style="color:white;margin-bottom:1.5rem">Listening Comprehension</h2>
+
+                <div class="listening-exercise">
+                    <h3>🔊 Audio 1: Ordering at a Restaurant</h3>
+                    <div class="audio-player">
+                        <button class="audio-btn"
+                            onclick="speakText('Good afternoon. Welcome to the Blue Cafe. Are you ready to order? Yes, please. I would like a chicken sandwich and a salad. Of course. And to drink? I would like an orange juice, please. And for you, sir? I would like the fish with rice, please. And a glass of water. Very good. Anything else? Yes, can we have some bread, please? Of course. Your food will be ready in ten minutes. Thank you very much.')">🔊
+                            Listen</button>
+                        <button class="audio-btn"
+                            onclick="speakTextSlow('Good afternoon. Welcome to the Blue Cafe. Are you ready to order? Yes, please. I would like a chicken sandwich and a salad. Of course. And to drink? I would like an orange juice, please. And for you, sir? I would like the fish with rice, please. And a glass of water. Very good. Anything else? Yes, can we have some bread, please? Of course. Your food will be ready in ten minutes. Thank you very much.')">🐢
+                            Slow</button>
+                        <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+                    </div>
+                    <div class="transcript-box">
+                        <p><strong>📝 Transcript:</strong></p>
+                        <p><strong>Waiter:</strong> Good afternoon. Welcome to the Blue Café. Are you ready to order?
+                        </p>
+                        <p><strong>Woman:</strong> Yes, please. I would like a chicken sandwich and a salad.</p>
+                        <p><strong>Waiter:</strong> Of course. And to drink?</p>
+                        <p><strong>Woman:</strong> I would like an orange juice, please.</p>
+                        <p><strong>Waiter:</strong> And for you, sir?</p>
+                        <p><strong>Man:</strong> I would like the fish with rice, please. And a glass of water.</p>
+                        <p><strong>Waiter:</strong> Very good. Anything else?</p>
+                        <p><strong>Man:</strong> Yes, can we have some bread, please?</p>
+                        <p><strong>Waiter:</strong> Of course. Your food will be ready in ten minutes.</p>
+                        <p><strong>Man:</strong> Thank you very much.</p>
+                    </div>
+                    <p><strong>What does each person order?</strong></p>
+                    <ul style="margin:1rem 0;line-height:2.2">
+                        <li>Woman — Food: _____ — Drink: _____</li>
+                        <li>Man — Food: _____ — Drink: _____</li>
+                        <li>Extra: _____</li>
+                    </ul>
                 </div>
-                <p><strong>Complete the shopping list:</strong></p>
-                <ul style="margin:1rem 0;line-height:2.2">
-                    <li>☐ _____ (how many? _____)</li>
-                    <li>☐ _____ (how much? _____)</li>
-                    <li>☐ _____</li>
-                    <li>☐ _____</li>
-                    <li>☐ _____ and _____</li>
-                </ul>
-            </div>
+
+                <div class="listening-exercise">
+                    <h3>🔊 Audio 2: At the Supermarket</h3>
+                    <div class="audio-player">
+                        <button class="audio-btn"
+                            onclick="speakText('Okay, let me check the shopping list. We need some milk, some eggs, and some bread. Do we have any cheese? No, we don\'t have any cheese. We need some cheese too. How many eggs do we need? We need twelve eggs. And how much milk? Two bottles of milk, please. Do we need any fruit? Yes, we need some apples and some bananas. That\'s everything. Let\'s go.')">🔊
+                            Listen</button>
+                        <button class="audio-btn"
+                            onclick="speakTextSlow('Okay, let me check the shopping list. We need some milk, some eggs, and some bread. Do we have any cheese? No, we don\'t have any cheese. We need some cheese too. How many eggs do we need? We need twelve eggs. And how much milk? Two bottles of milk, please. Do we need any fruit? Yes, we need some apples and some bananas. That\'s everything. Let\'s go.')">🐢
+                            Slow</button>
+                        <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+                    </div>
+                    <p><strong>Complete the shopping list:</strong></p>
+                    <ul style="margin:1rem 0;line-height:2.2">
+                        <li>☐ _____ (how many? _____)</li>
+                        <li>☐ _____ (how much? _____)</li>
+                        <li>☐ _____</li>
+                        <li>☐ _____</li>
+                        <li>☐ _____ and _____</li>
+                    </ul>
+                </div>
 
                 <!-- LISTENING MULTIPLE CHOICE: Food and Drinks -->
-                <h3 class="mc-section-title listening-mc" style="color:#2dd4bf">🎧 Listening — Multiple Choice: Food and Drinks</h3>
-                <p style="color:rgba(255,255,255,0.85);margin-bottom:1rem">Listen to each audio clip and choose the correct answer.</p>
+                <h3 class="mc-section-title listening-mc" style="color:#2dd4bf">🎧 Listening — Multiple Choice: Food and
+                    Drinks</h3>
+                <p style="color:rgba(255,255,255,0.85);margin-bottom:1rem">Listen to each audio clip and choose the
+                    correct answer.</p>
 
                 <div class="mc-exercise" id="u4-listen-mc">
-                    <div class="mc-question"><span class="mc-number">1</span> Listen: What does the woman order to eat?</div>
+                    <div class="mc-question"><span class="mc-number">1</span> Listen: What does the woman order to eat?
+                    </div>
                     <div class="audio-player" style="margin-bottom:1rem">
-                        <button class="audio-btn" onclick="speakText('Good afternoon. Are you ready to order? Yes, I would like a chicken sandwich and a salad please. And to drink? An orange juice, please.')">🔊 Listen</button>
-                        <button class="audio-btn" onclick="speakTextSlow('Good afternoon. Are you ready to order? Yes, I would like a chicken sandwich and a salad please. And to drink? An orange juice, please.')">🐢 Slow</button>
+                        <button class="audio-btn"
+                            onclick="speakText('Good afternoon. Are you ready to order? Yes, I would like a chicken sandwich and a salad please. And to drink? An orange juice, please.')">🔊
+                            Listen</button>
+                        <button class="audio-btn"
+                            onclick="speakTextSlow('Good afternoon. Are you ready to order? Yes, I would like a chicken sandwich and a salad please. And to drink? An orange juice, please.')">🐢
+                            Slow</button>
                         <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
                     </div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4lmc1" id="u4lmc1a" value="a"><label for="u4lmc1a">a) Fish and rice</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc1" id="u4lmc1b" value="b" data-correct="true"><label for="u4lmc1b">b) A chicken sandwich and a salad</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc1" id="u4lmc1c" value="c"><label for="u4lmc1c">c) Pizza and bread</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc1" id="u4lmc1d" value="d"><label for="u4lmc1d">d) Eggs and toast</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc1" id="u4lmc1a" value="a"><label
+                                for="u4lmc1a">a) Fish and rice</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc1" id="u4lmc1b" value="b"
+                                data-correct="true"><label for="u4lmc1b">b) A chicken sandwich and a salad</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc1" id="u4lmc1c" value="c"><label
+                                for="u4lmc1c">c) Pizza and bread</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc1" id="u4lmc1d" value="d"><label
+                                for="u4lmc1d">d) Eggs and toast</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4lmc1')">Check Answer</button>
                     <div class="mc-feedback"></div>
                 </div>
 
                 <div class="mc-exercise">
-                    <div class="mc-question"><span class="mc-number">2</span> Listen: What drink does the man order?</div>
+                    <div class="mc-question"><span class="mc-number">2</span> Listen: What drink does the man order?
+                    </div>
                     <div class="audio-player" style="margin-bottom:1rem">
-                        <button class="audio-btn" onclick="speakText('And for you, sir? I would like the fish with rice, please. And a glass of water. Very good.')">🔊 Listen</button>
-                        <button class="audio-btn" onclick="speakTextSlow('And for you, sir? I would like the fish with rice, please. And a glass of water. Very good.')">🐢 Slow</button>
+                        <button class="audio-btn"
+                            onclick="speakText('And for you, sir? I would like the fish with rice, please. And a glass of water. Very good.')">🔊
+                            Listen</button>
+                        <button class="audio-btn"
+                            onclick="speakTextSlow('And for you, sir? I would like the fish with rice, please. And a glass of water. Very good.')">🐢
+                            Slow</button>
                         <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
                     </div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4lmc2" id="u4lmc2a" value="a"><label for="u4lmc2a">a) Orange juice</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc2" id="u4lmc2b" value="b"><label for="u4lmc2b">b) Coffee</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc2" id="u4lmc2c" value="c" data-correct="true"><label for="u4lmc2c">c) A glass of water</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc2" id="u4lmc2d" value="d"><label for="u4lmc2d">d) Tea</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc2" id="u4lmc2a" value="a"><label
+                                for="u4lmc2a">a) Orange juice</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc2" id="u4lmc2b" value="b"><label
+                                for="u4lmc2b">b) Coffee</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc2" id="u4lmc2c" value="c"
+                                data-correct="true"><label for="u4lmc2c">c) A glass of water</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc2" id="u4lmc2d" value="d"><label
+                                for="u4lmc2d">d) Tea</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4lmc2')">Check Answer</button>
                     <div class="mc-feedback"></div>
@@ -151,15 +277,21 @@
                 <div class="mc-exercise">
                     <div class="mc-question"><span class="mc-number">3</span> Listen: How many eggs do they need?</div>
                     <div class="audio-player" style="margin-bottom:1rem">
-                        <button class="audio-btn" onclick="speakText('How many eggs do we need? We need twelve eggs.')">🔊 Listen</button>
-                        <button class="audio-btn" onclick="speakTextSlow('How many eggs do we need? We need twelve eggs.')">🐢 Slow</button>
+                        <button class="audio-btn"
+                            onclick="speakText('How many eggs do we need? We need twelve eggs.')">🔊 Listen</button>
+                        <button class="audio-btn"
+                            onclick="speakTextSlow('How many eggs do we need? We need twelve eggs.')">🐢 Slow</button>
                         <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
                     </div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4lmc3" id="u4lmc3a" value="a"><label for="u4lmc3a">a) Two eggs</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc3" id="u4lmc3b" value="b"><label for="u4lmc3b">b) Ten eggs</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc3" id="u4lmc3c" value="c" data-correct="true"><label for="u4lmc3c">c) Twelve eggs</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc3" id="u4lmc3d" value="d"><label for="u4lmc3d">d) Twenty eggs</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc3" id="u4lmc3a" value="a"><label
+                                for="u4lmc3a">a) Two eggs</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc3" id="u4lmc3b" value="b"><label
+                                for="u4lmc3b">b) Ten eggs</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc3" id="u4lmc3c" value="c"
+                                data-correct="true"><label for="u4lmc3c">c) Twelve eggs</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc3" id="u4lmc3d" value="d"><label
+                                for="u4lmc3d">d) Twenty eggs</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4lmc3')">Check Answer</button>
                     <div class="mc-feedback"></div>
@@ -168,15 +300,23 @@
                 <div class="mc-exercise">
                     <div class="mc-question"><span class="mc-number">4</span> Listen: What fruit do they need?</div>
                     <div class="audio-player" style="margin-bottom:1rem">
-                        <button class="audio-btn" onclick="speakText('Do we need any fruit? Yes, we need some apples and some bananas.')">🔊 Listen</button>
-                        <button class="audio-btn" onclick="speakTextSlow('Do we need any fruit? Yes, we need some apples and some bananas.')">🐢 Slow</button>
+                        <button class="audio-btn"
+                            onclick="speakText('Do we need any fruit? Yes, we need some apples and some bananas.')">🔊
+                            Listen</button>
+                        <button class="audio-btn"
+                            onclick="speakTextSlow('Do we need any fruit? Yes, we need some apples and some bananas.')">🐢
+                            Slow</button>
                         <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
                     </div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4lmc4" id="u4lmc4a" value="a"><label for="u4lmc4a">a) Oranges and grapes</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc4" id="u4lmc4b" value="b" data-correct="true"><label for="u4lmc4b">b) Apples and bananas</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc4" id="u4lmc4c" value="c"><label for="u4lmc4c">c) Strawberries and bananas</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc4" id="u4lmc4d" value="d"><label for="u4lmc4d">d) They don't need any fruit</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc4" id="u4lmc4a" value="a"><label
+                                for="u4lmc4a">a) Oranges and grapes</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc4" id="u4lmc4b" value="b"
+                                data-correct="true"><label for="u4lmc4b">b) Apples and bananas</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc4" id="u4lmc4c" value="c"><label
+                                for="u4lmc4c">c) Strawberries and bananas</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc4" id="u4lmc4d" value="d"><label
+                                for="u4lmc4d">d) They don't need any fruit</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4lmc4')">Check Answer</button>
                     <div class="mc-feedback"></div>
@@ -185,100 +325,151 @@
                 <div class="mc-exercise">
                     <div class="mc-question"><span class="mc-number">5</span> Listen: How much milk do they need?</div>
                     <div class="audio-player" style="margin-bottom:1rem">
-                        <button class="audio-btn" onclick="speakText('And how much milk? Two bottles of milk, please.')">🔊 Listen</button>
-                        <button class="audio-btn" onclick="speakTextSlow('And how much milk? Two bottles of milk, please.')">🐢 Slow</button>
+                        <button class="audio-btn"
+                            onclick="speakText('And how much milk? Two bottles of milk, please.')">🔊 Listen</button>
+                        <button class="audio-btn"
+                            onclick="speakTextSlow('And how much milk? Two bottles of milk, please.')">🐢 Slow</button>
                         <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
                     </div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4lmc5" id="u4lmc5a" value="a"><label for="u4lmc5a">a) One bottle</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc5" id="u4lmc5b" value="b" data-correct="true"><label for="u4lmc5b">b) Two bottles</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc5" id="u4lmc5c" value="c"><label for="u4lmc5c">c) Three bottles</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc5" id="u4lmc5d" value="d"><label for="u4lmc5d">d) A glass of milk</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc5" id="u4lmc5a" value="a"><label
+                                for="u4lmc5a">a) One bottle</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc5" id="u4lmc5b" value="b"
+                                data-correct="true"><label for="u4lmc5b">b) Two bottles</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc5" id="u4lmc5c" value="c"><label
+                                for="u4lmc5c">c) Three bottles</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc5" id="u4lmc5d" value="d"><label
+                                for="u4lmc5d">d) A glass of milk</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4lmc5')">Check Answer</button>
                     <div class="mc-feedback"></div>
                 </div>
 
                 <div class="mc-exercise">
-                    <div class="mc-question"><span class="mc-number">6</span> Listen: What does the waiter ask first?</div>
+                    <div class="mc-question"><span class="mc-number">6</span> Listen: What does the waiter ask first?
+                    </div>
                     <div class="audio-player" style="margin-bottom:1rem">
-                        <button class="audio-btn" onclick="speakText('Good afternoon. Welcome to the Blue Cafe. Are you ready to order?')">🔊 Listen</button>
-                        <button class="audio-btn" onclick="speakTextSlow('Good afternoon. Welcome to the Blue Cafe. Are you ready to order?')">🐢 Slow</button>
+                        <button class="audio-btn"
+                            onclick="speakText('Good afternoon. Welcome to the Blue Cafe. Are you ready to order?')">🔊
+                            Listen</button>
+                        <button class="audio-btn"
+                            onclick="speakTextSlow('Good afternoon. Welcome to the Blue Cafe. Are you ready to order?')">🐢
+                            Slow</button>
                         <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
                     </div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4lmc6" id="u4lmc6a" value="a"><label for="u4lmc6a">a) "What is your name?"</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc6" id="u4lmc6b" value="b" data-correct="true"><label for="u4lmc6b">b) "Are you ready to order?"</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc6" id="u4lmc6c" value="c"><label for="u4lmc6c">c) "How are you today?"</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc6" id="u4lmc6d" value="d"><label for="u4lmc6d">d) "Do you have a reservation?"</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc6" id="u4lmc6a" value="a"><label
+                                for="u4lmc6a">a) "What is your name?"</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc6" id="u4lmc6b" value="b"
+                                data-correct="true"><label for="u4lmc6b">b) "Are you ready to order?"</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc6" id="u4lmc6c" value="c"><label
+                                for="u4lmc6c">c) "How are you today?"</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc6" id="u4lmc6d" value="d"><label
+                                for="u4lmc6d">d) "Do you have a reservation?"</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4lmc6')">Check Answer</button>
                     <div class="mc-feedback"></div>
                 </div>
 
                 <div class="mc-exercise">
-                    <div class="mc-question"><span class="mc-number">7</span> Listen: Do they have any cheese at home?</div>
+                    <div class="mc-question"><span class="mc-number">7</span> Listen: Do they have any cheese at home?
+                    </div>
                     <div class="audio-player" style="margin-bottom:1rem">
-                        <button class="audio-btn" onclick="speakText('Do we have any cheese? No, we don\'t have any cheese. We need some cheese too.')">🔊 Listen</button>
-                        <button class="audio-btn" onclick="speakTextSlow('Do we have any cheese? No, we don\'t have any cheese. We need some cheese too.')">🐢 Slow</button>
+                        <button class="audio-btn"
+                            onclick="speakText('Do we have any cheese? No, we don\'t have any cheese. We need some cheese too.')">🔊
+                            Listen</button>
+                        <button class="audio-btn"
+                            onclick="speakTextSlow('Do we have any cheese? No, we don\'t have any cheese. We need some cheese too.')">🐢
+                            Slow</button>
                         <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
                     </div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4lmc7" id="u4lmc7a" value="a"><label for="u4lmc7a">a) Yes, they have a lot</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc7" id="u4lmc7b" value="b"><label for="u4lmc7b">b) Yes, they have some</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc7" id="u4lmc7c" value="c" data-correct="true"><label for="u4lmc7c">c) No, they don't have any</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc7" id="u4lmc7d" value="d"><label for="u4lmc7d">d) They don't like cheese</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc7" id="u4lmc7a" value="a"><label
+                                for="u4lmc7a">a) Yes, they have a lot</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc7" id="u4lmc7b" value="b"><label
+                                for="u4lmc7b">b) Yes, they have some</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc7" id="u4lmc7c" value="c"
+                                data-correct="true"><label for="u4lmc7c">c) No, they don't have any</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc7" id="u4lmc7d" value="d"><label
+                                for="u4lmc7d">d) They don't like cheese</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4lmc7')">Check Answer</button>
                     <div class="mc-feedback"></div>
                 </div>
 
                 <div class="mc-exercise">
-                    <div class="mc-question"><span class="mc-number">8</span> Listen: What does the man ask for at the end?</div>
+                    <div class="mc-question"><span class="mc-number">8</span> Listen: What does the man ask for at the
+                        end?</div>
                     <div class="audio-player" style="margin-bottom:1rem">
-                        <button class="audio-btn" onclick="speakText('Anything else? Yes, can we have some bread, please? Of course.')">🔊 Listen</button>
-                        <button class="audio-btn" onclick="speakTextSlow('Anything else? Yes, can we have some bread, please? Of course.')">🐢 Slow</button>
+                        <button class="audio-btn"
+                            onclick="speakText('Anything else? Yes, can we have some bread, please? Of course.')">🔊
+                            Listen</button>
+                        <button class="audio-btn"
+                            onclick="speakTextSlow('Anything else? Yes, can we have some bread, please? Of course.')">🐢
+                            Slow</button>
                         <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
                     </div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4lmc8" id="u4lmc8a" value="a"><label for="u4lmc8a">a) More water</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc8" id="u4lmc8b" value="b" data-correct="true"><label for="u4lmc8b">b) Some bread</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc8" id="u4lmc8c" value="c"><label for="u4lmc8c">c) The bill</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc8" id="u4lmc8d" value="d"><label for="u4lmc8d">d) Dessert</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc8" id="u4lmc8a" value="a"><label
+                                for="u4lmc8a">a) More water</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc8" id="u4lmc8b" value="b"
+                                data-correct="true"><label for="u4lmc8b">b) Some bread</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc8" id="u4lmc8c" value="c"><label
+                                for="u4lmc8c">c) The bill</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc8" id="u4lmc8d" value="d"><label
+                                for="u4lmc8d">d) Dessert</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4lmc8')">Check Answer</button>
                     <div class="mc-feedback"></div>
                 </div>
 
                 <div class="mc-exercise">
-                    <div class="mc-question"><span class="mc-number">9</span> Listen: What does the woman drink in the morning?</div>
+                    <div class="mc-question"><span class="mc-number">9</span> Listen: What does the woman drink in the
+                        morning?</div>
                     <div class="audio-player" style="margin-bottom:1rem">
-                        <button class="audio-btn" onclick="speakText('Every morning, I have a cup of coffee with milk and sugar. Sometimes I have tea instead.')">🔊 Listen</button>
-                        <button class="audio-btn" onclick="speakTextSlow('Every morning, I have a cup of coffee with milk and sugar. Sometimes I have tea instead.')">🐢 Slow</button>
+                        <button class="audio-btn"
+                            onclick="speakText('Every morning, I have a cup of coffee with milk and sugar. Sometimes I have tea instead.')">🔊
+                            Listen</button>
+                        <button class="audio-btn"
+                            onclick="speakTextSlow('Every morning, I have a cup of coffee with milk and sugar. Sometimes I have tea instead.')">🐢
+                            Slow</button>
                         <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
                     </div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4lmc9" id="u4lmc9a" value="a"><label for="u4lmc9a">a) Only tea</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc9" id="u4lmc9b" value="b"><label for="u4lmc9b">b) Orange juice</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc9" id="u4lmc9c" value="c" data-correct="true"><label for="u4lmc9c">c) Coffee with milk and sugar</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc9" id="u4lmc9d" value="d"><label for="u4lmc9d">d) Water</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc9" id="u4lmc9a" value="a"><label
+                                for="u4lmc9a">a) Only tea</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc9" id="u4lmc9b" value="b"><label
+                                for="u4lmc9b">b) Orange juice</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc9" id="u4lmc9c" value="c"
+                                data-correct="true"><label for="u4lmc9c">c) Coffee with milk and sugar</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc9" id="u4lmc9d" value="d"><label
+                                for="u4lmc9d">d) Water</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4lmc9')">Check Answer</button>
                     <div class="mc-feedback"></div>
                 </div>
 
                 <div class="mc-exercise">
-                    <div class="mc-question"><span class="mc-number">10</span> Listen: What three things are on the shopping list?</div>
+                    <div class="mc-question"><span class="mc-number">10</span> Listen: What three things are on the
+                        shopping list?</div>
                     <div class="audio-player" style="margin-bottom:1rem">
-                        <button class="audio-btn" onclick="speakText('Let me check the shopping list. We need some milk, some eggs, and some bread.')">🔊 Listen</button>
-                        <button class="audio-btn" onclick="speakTextSlow('Let me check the shopping list. We need some milk, some eggs, and some bread.')">🐢 Slow</button>
+                        <button class="audio-btn"
+                            onclick="speakText('Let me check the shopping list. We need some milk, some eggs, and some bread.')">🔊
+                            Listen</button>
+                        <button class="audio-btn"
+                            onclick="speakTextSlow('Let me check the shopping list. We need some milk, some eggs, and some bread.')">🐢
+                            Slow</button>
                         <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
                     </div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4lmc10" id="u4lmc10a" value="a" data-correct="true"><label for="u4lmc10a">a) Milk, eggs, and bread</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc10" id="u4lmc10b" value="b"><label for="u4lmc10b">b) Milk, cheese, and bread</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc10" id="u4lmc10c" value="c"><label for="u4lmc10c">c) Eggs, cheese, and fruit</label></div>
-                        <div class="mc-option"><input type="radio" name="u4lmc10" id="u4lmc10d" value="d"><label for="u4lmc10d">d) Rice, milk, and eggs</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc10" id="u4lmc10a" value="a"
+                                data-correct="true"><label for="u4lmc10a">a) Milk, eggs, and bread</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc10" id="u4lmc10b" value="b"><label
+                                for="u4lmc10b">b) Milk, cheese, and bread</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc10" id="u4lmc10c" value="c"><label
+                                for="u4lmc10c">c) Eggs, cheese, and fruit</label></div>
+                        <div class="mc-option"><input type="radio" name="u4lmc10" id="u4lmc10d" value="d"><label
+                                for="u4lmc10d">d) Rice, milk, and eggs</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4lmc10')">Check Answer</button>
                     <div class="mc-feedback"></div>
@@ -288,64 +479,84 @@
                     <button class="mc-check-all" onclick="checkAllMC('listening-section')">✓ Check All</button>
                     <button class="mc-reset-all" onclick="resetAllMC('listening-section')">↻ Reset All</button>
                 </div>
-        </section>
+            </section>
 
-        <!-- SPEAKING -->
-        <section class="speaking-section">
-            <span class="section-label speaking">🗣️ Speaking</span>
-            <h2 class="section-title">Speaking Practice</h2>
+            <!-- SPEAKING -->
+            <section class="speaking-section">
+                <span class="section-label speaking">🗣️ Speaking</span>
+                <h2 class="section-title">Speaking Practice</h2>
 
-            <h3 style="color:#9d174d;margin-bottom:1rem">Role Play: At a Restaurant</h3>
-            <div class="dialogue-box">
-                <div class="dialogue-line"><span class="speaker-label">Waiter:</span><span class="speaker-text">Good evening. Are you ready to order?</span></div>
-                <div class="dialogue-line"><span class="speaker-label">Customer:</span><span class="speaker-text">Yes, I would like ______, please.</span></div>
-                <div class="dialogue-line"><span class="speaker-label">Waiter:</span><span class="speaker-text">And to drink?</span></div>
-                <div class="dialogue-line"><span class="speaker-label">Customer:</span><span class="speaker-text">A ______, please.</span></div>
-                <div class="dialogue-line"><span class="speaker-label">Waiter:</span><span class="speaker-text">Anything else?</span></div>
-                <div class="dialogue-line"><span class="speaker-label">Customer:</span><span class="speaker-text">No, thank you. / Yes, can I have some ______, please?</span></div>
-            </div>
-            <div style="margin-top:1.5rem">
-                <button class="audio-btn" onclick="speakText('Good evening. Are you ready to order? Yes, I would like a pizza, please. And to drink? A cola, please. Anything else? No, thank you. That is all.')">🔊 Listen to Model</button>
-                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
-            </div>
+                <h3 style="color:#9d174d;margin-bottom:1rem">Role Play: At a Restaurant</h3>
+                <div class="dialogue-box">
+                    <div class="dialogue-line"><span class="speaker-label">Waiter:</span><span class="speaker-text">Good
+                            evening. Are you ready to order?</span></div>
+                    <div class="dialogue-line"><span class="speaker-label">Customer:</span><span
+                            class="speaker-text">Yes, I would like ______, please.</span></div>
+                    <div class="dialogue-line"><span class="speaker-label">Waiter:</span><span class="speaker-text">And
+                            to drink?</span></div>
+                    <div class="dialogue-line"><span class="speaker-label">Customer:</span><span class="speaker-text">A
+                            ______, please.</span></div>
+                    <div class="dialogue-line"><span class="speaker-label">Waiter:</span><span
+                            class="speaker-text">Anything else?</span></div>
+                    <div class="dialogue-line"><span class="speaker-label">Customer:</span><span
+                            class="speaker-text">No, thank you. / Yes, can I have some ______, please?</span></div>
+                </div>
+                <div style="margin-top:1.5rem">
+                    <button class="audio-btn"
+                        onclick="speakText('Good evening. Are you ready to order? Yes, I would like a pizza, please. And to drink? A cola, please. Anything else? No, thank you. That is all.')">🔊
+                        Listen to Model</button>
+                    <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+                </div>
 
-            <div class="task-box" style="margin-top:1.5rem">
-                <h3>🎯 Speaking Task: Food Survey</h3>
-                <p>Ask three classmates: What is your favorite food? What is your favorite drink? Write their answers.</p>
-            </div>
-        </section>
+                <div class="task-box" style="margin-top:1.5rem">
+                    <h3>🎯 Speaking Task: Food Survey</h3>
+                    <p>Ask three classmates: What is your favorite food? What is your favorite drink? Write their
+                        answers.</p>
+                </div>
+            </section>
 
-        <!-- READING -->
-        <section class="reading-section" id="reading-section">
-            <span class="section-label reading">📖 Reading</span>
-            <h2 class="section-title">Reading Comprehension</h2>
+            <!-- READING -->
+            <section class="reading-section" id="reading-section">
+                <span class="section-label reading">📖 Reading</span>
+                <h2 class="section-title">Reading Comprehension</h2>
 
-            <div class="reading-passage">
-                <p><strong>Eating Around the World</strong></p>
-                <p>In Japan, people eat a lot of rice and fish. A typical breakfast is rice, fish, and soup. In Italy, people love pasta and pizza. They also eat a lot of bread and cheese. Italian coffee is very famous.</p>
-                <p>In Mexico, people eat tacos, beans, and rice. They drink a lot of fruit juice. Mexican food is very spicy. In England, a typical breakfast is eggs, toast, sausages, and tea. English people drink a lot of tea.</p>
-                <p>All around the world, people eat different food, but everyone likes good food!</p>
-            </div>
-            <div style="margin:1.5rem 0">
-                <button class="audio-btn" onclick="speakText('In Japan, people eat a lot of rice and fish. A typical breakfast is rice, fish, and soup. In Italy, people love pasta and pizza. They also eat a lot of bread and cheese. Italian coffee is very famous. In Mexico, people eat tacos, beans, and rice. They drink a lot of fruit juice. Mexican food is very spicy. In England, a typical breakfast is eggs, toast, sausages, and tea. English people drink a lot of tea. All around the world, people eat different food, but everyone likes good food!')">🔊 Listen</button>
-                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
-            </div>
+                <div class="reading-passage">
+                    <p><strong>Eating Around the World</strong></p>
+                    <p>In Japan, people eat a lot of rice and fish. A typical breakfast is rice, fish, and soup. In
+                        Italy, people love pasta and pizza. They also eat a lot of bread and cheese. Italian coffee is
+                        very famous.</p>
+                    <p>In Mexico, people eat tacos, beans, and rice. They drink a lot of fruit juice. Mexican food is
+                        very spicy. In England, a typical breakfast is eggs, toast, sausages, and tea. English people
+                        drink a lot of tea.</p>
+                    <p>All around the world, people eat different food, but everyone likes good food!</p>
+                </div>
+                <div style="margin:1.5rem 0">
+                    <button class="audio-btn"
+                        onclick="speakText('In Japan, people eat a lot of rice and fish. A typical breakfast is rice, fish, and soup. In Italy, people love pasta and pizza. They also eat a lot of bread and cheese. Italian coffee is very famous. In Mexico, people eat tacos, beans, and rice. They drink a lot of fruit juice. Mexican food is very spicy. In England, a typical breakfast is eggs, toast, sausages, and tea. English people drink a lot of tea. All around the world, people eat different food, but everyone likes good food!')">🔊
+                        Listen</button>
+                    <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+                </div>
 
-            <div class="reading-question">1. What do people eat in Japan? _____</div>
-            <div class="reading-question">2. What is famous in Italy? _____</div>
-            <div class="reading-question">3. What is Mexican food like? _____</div>
-            <div class="reading-question">4. What do English people drink a lot of? _____</div>
+                <div class="reading-question">1. What do people eat in Japan? _____</div>
+                <div class="reading-question">2. What is famous in Italy? _____</div>
+                <div class="reading-question">3. What is Mexican food like? _____</div>
+                <div class="reading-question">4. What do English people drink a lot of? _____</div>
 
                 <!-- READING MULTIPLE CHOICE: Food and Drinks -->
                 <h3 class="mc-section-title reading-mc">📖 Reading — Multiple Choice: Food and Drinks</h3>
 
                 <div class="mc-exercise" id="u4-read-mc">
-                    <div class="mc-question"><span class="mc-number">1</span> What is a typical breakfast in Japan?</div>
+                    <div class="mc-question"><span class="mc-number">1</span> What is a typical breakfast in Japan?
+                    </div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4rmc1" id="u4rmc1a" value="a"><label for="u4rmc1a">a) Eggs, toast, and tea</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc1" id="u4rmc1b" value="b" data-correct="true"><label for="u4rmc1b">b) Rice, fish, and soup</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc1" id="u4rmc1c" value="c"><label for="u4rmc1c">c) Pasta and pizza</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc1" id="u4rmc1d" value="d"><label for="u4rmc1d">d) Tacos and beans</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc1" id="u4rmc1a" value="a"><label
+                                for="u4rmc1a">a) Eggs, toast, and tea</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc1" id="u4rmc1b" value="b"
+                                data-correct="true"><label for="u4rmc1b">b) Rice, fish, and soup</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc1" id="u4rmc1c" value="c"><label
+                                for="u4rmc1c">c) Pasta and pizza</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc1" id="u4rmc1d" value="d"><label
+                                for="u4rmc1d">d) Tacos and beans</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4rmc1')">Check Answer</button>
                     <div class="mc-feedback"></div>
@@ -354,10 +565,14 @@
                 <div class="mc-exercise">
                     <div class="mc-question"><span class="mc-number">2</span> What do Italian people eat a lot of?</div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4rmc2" id="u4rmc2a" value="a"><label for="u4rmc2a">a) Rice and fish</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc2" id="u4rmc2b" value="b"><label for="u4rmc2b">b) Tacos and beans</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc2" id="u4rmc2c" value="c" data-correct="true"><label for="u4rmc2c">c) Bread and cheese</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc2" id="u4rmc2d" value="d"><label for="u4rmc2d">d) Sausages and eggs</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc2" id="u4rmc2a" value="a"><label
+                                for="u4rmc2a">a) Rice and fish</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc2" id="u4rmc2b" value="b"><label
+                                for="u4rmc2b">b) Tacos and beans</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc2" id="u4rmc2c" value="c"
+                                data-correct="true"><label for="u4rmc2c">c) Bread and cheese</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc2" id="u4rmc2d" value="d"><label
+                                for="u4rmc2d">d) Sausages and eggs</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4rmc2')">Check Answer</button>
                     <div class="mc-feedback"></div>
@@ -366,46 +581,65 @@
                 <div class="mc-exercise">
                     <div class="mc-question"><span class="mc-number">3</span> What is Mexican food like?</div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4rmc3" id="u4rmc3a" value="a"><label for="u4rmc3a">a) Very sweet</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc3" id="u4rmc3b" value="b" data-correct="true"><label for="u4rmc3b">b) Very spicy</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc3" id="u4rmc3c" value="c"><label for="u4rmc3c">c) Very salty</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc3" id="u4rmc3d" value="d"><label for="u4rmc3d">d) Very cold</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc3" id="u4rmc3a" value="a"><label
+                                for="u4rmc3a">a) Very sweet</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc3" id="u4rmc3b" value="b"
+                                data-correct="true"><label for="u4rmc3b">b) Very spicy</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc3" id="u4rmc3c" value="c"><label
+                                for="u4rmc3c">c) Very salty</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc3" id="u4rmc3d" value="d"><label
+                                for="u4rmc3d">d) Very cold</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4rmc3')">Check Answer</button>
                     <div class="mc-feedback"></div>
                 </div>
 
                 <div class="mc-exercise">
-                    <div class="mc-question"><span class="mc-number">4</span> What do English people drink a lot of?</div>
+                    <div class="mc-question"><span class="mc-number">4</span> What do English people drink a lot of?
+                    </div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4rmc4" id="u4rmc4a" value="a"><label for="u4rmc4a">a) Coffee</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc4" id="u4rmc4b" value="b"><label for="u4rmc4b">b) Fruit juice</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc4" id="u4rmc4c" value="c" data-correct="true"><label for="u4rmc4c">c) Tea</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc4" id="u4rmc4d" value="d"><label for="u4rmc4d">d) Water</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc4" id="u4rmc4a" value="a"><label
+                                for="u4rmc4a">a) Coffee</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc4" id="u4rmc4b" value="b"><label
+                                for="u4rmc4b">b) Fruit juice</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc4" id="u4rmc4c" value="c"
+                                data-correct="true"><label for="u4rmc4c">c) Tea</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc4" id="u4rmc4d" value="d"><label
+                                for="u4rmc4d">d) Water</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4rmc4')">Check Answer</button>
                     <div class="mc-feedback"></div>
                 </div>
 
                 <div class="mc-exercise">
-                    <div class="mc-question"><span class="mc-number">5</span> Which country is famous for its coffee, according to the text?</div>
+                    <div class="mc-question"><span class="mc-number">5</span> Which country is famous for its coffee,
+                        according to the text?</div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4rmc5" id="u4rmc5a" value="a"><label for="u4rmc5a">a) Japan</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc5" id="u4rmc5b" value="b" data-correct="true"><label for="u4rmc5b">b) Italy</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc5" id="u4rmc5c" value="c"><label for="u4rmc5c">c) Mexico</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc5" id="u4rmc5d" value="d"><label for="u4rmc5d">d) England</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc5" id="u4rmc5a" value="a"><label
+                                for="u4rmc5a">a) Japan</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc5" id="u4rmc5b" value="b"
+                                data-correct="true"><label for="u4rmc5b">b) Italy</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc5" id="u4rmc5c" value="c"><label
+                                for="u4rmc5c">c) Mexico</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc5" id="u4rmc5d" value="d"><label
+                                for="u4rmc5d">d) England</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4rmc5')">Check Answer</button>
                     <div class="mc-feedback"></div>
                 </div>
 
                 <div class="mc-exercise">
-                    <div class="mc-question"><span class="mc-number">6</span> What do people in Mexico drink a lot of?</div>
+                    <div class="mc-question"><span class="mc-number">6</span> What do people in Mexico drink a lot of?
+                    </div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4rmc6" id="u4rmc6a" value="a"><label for="u4rmc6a">a) Tea</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc6" id="u4rmc6b" value="b" data-correct="true"><label for="u4rmc6b">b) Fruit juice</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc6" id="u4rmc6c" value="c"><label for="u4rmc6c">c) Coffee</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc6" id="u4rmc6d" value="d"><label for="u4rmc6d">d) Milk</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc6" id="u4rmc6a" value="a"><label
+                                for="u4rmc6a">a) Tea</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc6" id="u4rmc6b" value="b"
+                                data-correct="true"><label for="u4rmc6b">b) Fruit juice</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc6" id="u4rmc6c" value="c"><label
+                                for="u4rmc6c">c) Coffee</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc6" id="u4rmc6d" value="d"><label
+                                for="u4rmc6d">d) Milk</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4rmc6')">Check Answer</button>
                     <div class="mc-feedback"></div>
@@ -414,10 +648,14 @@
                 <div class="mc-exercise">
                     <div class="mc-question"><span class="mc-number">7</span> What is a typical English breakfast?</div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4rmc7" id="u4rmc7a" value="a"><label for="u4rmc7a">a) Rice, fish, and soup</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc7" id="u4rmc7b" value="b"><label for="u4rmc7b">b) Pasta and pizza</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc7" id="u4rmc7c" value="c" data-correct="true"><label for="u4rmc7c">c) Eggs, toast, sausages, and tea</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc7" id="u4rmc7d" value="d"><label for="u4rmc7d">d) Tacos, beans, and rice</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc7" id="u4rmc7a" value="a"><label
+                                for="u4rmc7a">a) Rice, fish, and soup</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc7" id="u4rmc7b" value="b"><label
+                                for="u4rmc7b">b) Pasta and pizza</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc7" id="u4rmc7c" value="c"
+                                data-correct="true"><label for="u4rmc7c">c) Eggs, toast, sausages, and tea</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc7" id="u4rmc7d" value="d"><label
+                                for="u4rmc7d">d) Tacos, beans, and rice</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4rmc7')">Check Answer</button>
                     <div class="mc-feedback"></div>
@@ -426,10 +664,14 @@
                 <div class="mc-exercise">
                     <div class="mc-question"><span class="mc-number">8</span> What do people in Italy love to eat?</div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4rmc8" id="u4rmc8a" value="a" data-correct="true"><label for="u4rmc8a">a) Pasta and pizza</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc8" id="u4rmc8b" value="b"><label for="u4rmc8b">b) Tacos and beans</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc8" id="u4rmc8c" value="c"><label for="u4rmc8c">c) Fish and soup</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc8" id="u4rmc8d" value="d"><label for="u4rmc8d">d) Sausages and eggs</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc8" id="u4rmc8a" value="a"
+                                data-correct="true"><label for="u4rmc8a">a) Pasta and pizza</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc8" id="u4rmc8b" value="b"><label
+                                for="u4rmc8b">b) Tacos and beans</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc8" id="u4rmc8c" value="c"><label
+                                for="u4rmc8c">c) Fish and soup</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc8" id="u4rmc8d" value="d"><label
+                                for="u4rmc8d">d) Sausages and eggs</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4rmc8')">Check Answer</button>
                     <div class="mc-feedback"></div>
@@ -438,22 +680,31 @@
                 <div class="mc-exercise">
                     <div class="mc-question"><span class="mc-number">9</span> What do people in Mexico eat?</div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4rmc9" id="u4rmc9a" value="a"><label for="u4rmc9a">a) Pasta, pizza, and cheese</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc9" id="u4rmc9b" value="b"><label for="u4rmc9b">b) Eggs, toast, and sausages</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc9" id="u4rmc9c" value="c" data-correct="true"><label for="u4rmc9c">c) Tacos, beans, and rice</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc9" id="u4rmc9d" value="d"><label for="u4rmc9d">d) Rice, fish, and soup</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc9" id="u4rmc9a" value="a"><label
+                                for="u4rmc9a">a) Pasta, pizza, and cheese</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc9" id="u4rmc9b" value="b"><label
+                                for="u4rmc9b">b) Eggs, toast, and sausages</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc9" id="u4rmc9c" value="c"
+                                data-correct="true"><label for="u4rmc9c">c) Tacos, beans, and rice</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc9" id="u4rmc9d" value="d"><label
+                                for="u4rmc9d">d) Rice, fish, and soup</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4rmc9')">Check Answer</button>
                     <div class="mc-feedback"></div>
                 </div>
 
                 <div class="mc-exercise">
-                    <div class="mc-question"><span class="mc-number">10</span> According to the text, what does everyone like?</div>
+                    <div class="mc-question"><span class="mc-number">10</span> According to the text, what does everyone
+                        like?</div>
                     <div class="mc-options">
-                        <div class="mc-option"><input type="radio" name="u4rmc10" id="u4rmc10a" value="a"><label for="u4rmc10a">a) Italian coffee</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc10" id="u4rmc10b" value="b"><label for="u4rmc10b">b) English tea</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc10" id="u4rmc10c" value="c"><label for="u4rmc10c">c) Spicy food</label></div>
-                        <div class="mc-option"><input type="radio" name="u4rmc10" id="u4rmc10d" value="d" data-correct="true"><label for="u4rmc10d">d) Good food</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc10" id="u4rmc10a" value="a"><label
+                                for="u4rmc10a">a) Italian coffee</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc10" id="u4rmc10b" value="b"><label
+                                for="u4rmc10b">b) English tea</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc10" id="u4rmc10c" value="c"><label
+                                for="u4rmc10c">c) Spicy food</label></div>
+                        <div class="mc-option"><input type="radio" name="u4rmc10" id="u4rmc10d" value="d"
+                                data-correct="true"><label for="u4rmc10d">d) Good food</label></div>
                     </div>
                     <button class="mc-check-btn" onclick="checkMC('u4rmc10')">Check Answer</button>
                     <div class="mc-feedback"></div>
@@ -463,185 +714,333 @@
                     <button class="mc-check-all" onclick="checkAllMC('reading-section')">✓ Check All</button>
                     <button class="mc-reset-all" onclick="resetAllMC('reading-section')">↻ Reset All</button>
                 </div>
-        </section>
+            </section>
 
-        <!-- WRITING -->
-        <section class="writing-section">
-            <span class="section-label writing">✍️ Writing</span>
-            <h2 class="section-title">Writing Practice</h2>
-            <div class="writing-template">
-                <h4>📝 Write about food in YOUR country:</h4>
-                <p style="line-height:2.5">
-                    In ______ (your country), people eat a lot of ______. <br>
-                    A typical breakfast is ______. <br>
-                    For lunch, people usually eat ______. <br>
-                    For dinner, we eat ______. <br>
-                    My favorite food is ______. <br>
-                    My favorite drink is ______.
-                </p>
-            </div>
-            <div class="writing-prompt">
-                <h4>✏️ Extra Task: Design a Menu</h4>
-                <p>Create a simple menu for a restaurant. Include: 3 food items and 3 drinks, with prices.</p>
-            </div>
-        </section>
+            <!-- WRITING -->
+            <section class="writing-section">
+                <span class="section-label writing">✍️ Writing</span>
+                <h2 class="section-title">Writing Practice</h2>
+                <div class="writing-template">
+                    <h4>📝 Write about food in YOUR country:</h4>
+                    <p style="line-height:2.5">
+                        In ______ (your country), people eat a lot of ______. <br>
+                        A typical breakfast is ______. <br>
+                        For lunch, people usually eat ______. <br>
+                        For dinner, we eat ______. <br>
+                        My favorite food is ______. <br>
+                        My favorite drink is ______.
+                    </p>
+                </div>
+                <div class="writing-prompt">
+                    <h4>✏️ Extra Task: Design a Menu</h4>
+                    <p>Create a simple menu for a restaurant. Include: 3 food items and 3 drinks, with prices.</p>
+                </div>
+            </section>
 
-        <!-- QUIZ -->
-        <section class="practice-section" id="practice-section">
-            <span class="section-label vocabulary">🎯 Quiz</span>
-            <h2 class="section-title">Vocabulary Check</h2>
-            <div class="exercise-question" data-question="u4q1">
-                <p><strong>1.</strong> "Is there ______ milk in the fridge?"</p>
-                <div class="exercise-dropdown"><select data-correct="any"><option value="">Choose...</option><option value="some">some</option><option value="any">any</option><option value="a">a</option><option value="an">an</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q1')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="u4q2">
-                <p><strong>2.</strong> "I would like ______ apple, please."</p>
-                <div class="exercise-dropdown"><select data-correct="an"><option value="">Choose...</option><option value="a">a</option><option value="an">an</option><option value="some">some</option><option value="the">the</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q2')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="u4q3">
-                <p><strong>3.</strong> "How ______ eggs do we need?" (countable)</p>
-                <div class="exercise-dropdown"><select data-correct="many"><option value="">Choose...</option><option value="much">much</option><option value="many">many</option><option value="some">some</option><option value="any">any</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q3')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="u4q4">
-                <p><strong>4.</strong> "There ______ some bread on the table."</p>
-                <div class="exercise-dropdown"><select data-correct="is"><option value="">Choose...</option><option value="are">are</option><option value="is">is</option><option value="have">have</option><option value="has">has</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q4')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="u4q5">
-                <p><strong>5.</strong> "I don't have ______ money."</p>
-                <div class="exercise-dropdown"><select data-correct="any"><option value="">Choose...</option><option value="some">some</option><option value="any">any</option><option value="a">a</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q5')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="u4q6">
-                <p><strong>6.</strong> "Are there ______ students in the classroom?"</p>
-                <div class="exercise-dropdown"><select data-correct="any"><option value="">Choose...</option><option value="some">some</option><option value="any">any</option><option value="a">a</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q6')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="u4q7">
-                <p><strong>7.</strong> "I bought ______ fresh vegetables today."</p>
-                <div class="exercise-dropdown"><select data-correct="some"><option value="">Choose...</option><option value="some">some</option><option value="any">any</option><option value="a">a</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q7')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div style="margin-top:1.5rem;text-align:center">
-                <button onclick="checkAllExercises()" style="background:linear-gradient(135deg,#22c55e,#16a34a);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;margin-right:1rem">✓ Check All</button>
-                <button onclick="resetAllExercises()" style="background:linear-gradient(135deg,#64748b,#475569);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold">↻ Reset</button>
-            </div>
-        </section>
+            <!-- QUIZ -->
+            <section class="practice-section" id="practice-section">
+                <span class="section-label vocabulary">🎯 Quiz</span>
+                <h2 class="section-title">Vocabulary Check</h2>
+                <div class="exercise-question" data-question="u4q1">
+                    <p><strong>1.</strong> "Is there ______ milk in the fridge?"</p>
+                    <div class="exercise-dropdown"><select data-correct="any">
+                            <option value="">Choose...</option>
+                            <option value="some">some</option>
+                            <option value="any">any</option>
+                            <option value="a">a</option>
+                            <option value="an">an</option>
+                        </select></div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q1')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
+                <div class="exercise-question" data-question="u4q2">
+                    <p><strong>2.</strong> "I would like ______ apple, please."</p>
+                    <div class="exercise-dropdown"><select data-correct="an">
+                            <option value="">Choose...</option>
+                            <option value="a">a</option>
+                            <option value="an">an</option>
+                            <option value="some">some</option>
+                            <option value="the">the</option>
+                        </select></div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q2')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
+                <div class="exercise-question" data-question="u4q3">
+                    <p><strong>3.</strong> "How ______ eggs do we need?" (countable)</p>
+                    <div class="exercise-dropdown"><select data-correct="many">
+                            <option value="">Choose...</option>
+                            <option value="much">much</option>
+                            <option value="many">many</option>
+                            <option value="some">some</option>
+                            <option value="any">any</option>
+                        </select></div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q3')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
+                <div class="exercise-question" data-question="u4q4">
+                    <p><strong>4.</strong> "There ______ some bread on the table."</p>
+                    <div class="exercise-dropdown"><select data-correct="is">
+                            <option value="">Choose...</option>
+                            <option value="are">are</option>
+                            <option value="is">is</option>
+                            <option value="have">have</option>
+                            <option value="has">has</option>
+                        </select></div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q4')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
+                <div class="exercise-question" data-question="u4q5">
+                    <p><strong>5.</strong> "I don't have ______ money."</p>
+                    <div class="exercise-dropdown"><select data-correct="any">
+                            <option value="">Choose...</option>
+                            <option value="some">some</option>
+                            <option value="any">any</option>
+                            <option value="a">a</option>
+                        </select></div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q5')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
+                <div class="exercise-question" data-question="u4q6">
+                    <p><strong>6.</strong> "Are there ______ students in the classroom?"</p>
+                    <div class="exercise-dropdown"><select data-correct="any">
+                            <option value="">Choose...</option>
+                            <option value="some">some</option>
+                            <option value="any">any</option>
+                            <option value="a">a</option>
+                        </select></div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q6')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
+                <div class="exercise-question" data-question="u4q7">
+                    <p><strong>7.</strong> "I bought ______ fresh vegetables today."</p>
+                    <div class="exercise-dropdown"><select data-correct="some">
+                            <option value="">Choose...</option>
+                            <option value="some">some</option>
+                            <option value="any">any</option>
+                            <option value="a">a</option>
+                        </select></div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('u4q7')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
+                <div style="margin-top:1.5rem;text-align:center">
+                    <button onclick="checkAllExercises()"
+                        style="background:linear-gradient(135deg,#22c55e,#16a34a);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;margin-right:1rem">✓
+                        Check All</button>
+                    <button onclick="resetAllExercises()"
+                        style="background:linear-gradient(135deg,#64748b,#475569);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold">↻
+                        Reset</button>
+                </div>
+            </section>
 
 
-        <!-- PROGRESS TEST (UNITS 1 - 4) -->
-        <section class="practice-section" id="progress-test" style="border: 2px solid var(--accent-indigo, #6366f1); background: #f8fafc; margin-top: 2.5rem; padding: 2rem; border-radius: 12px;">
-            <span class="section-label" style="background: rgba(99, 102, 241, 0.1); color: var(--accent-indigo, #6366f1); font-weight: bold; padding: 0.3rem 0.8rem; border-radius: 6px; display: inline-block;">Progress Test (Units 1–4) 📝</span>
-            <h2 class="section-title" style="margin-top: 0.8rem; color: #1e293b;">Unit 4 Progress Test: Comprehensive Assessment</h2>
-            <div style="background: white; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 20px;">
-                <p style="margin: 0; color: #334155;">Test your knowledge of vocabulary and grammar (Present & Past Tenses) from Units 1, 2, 3, and 4.</p>
-            </div>
+            <!-- PROGRESS TEST (UNITS 1 - 4: PRESENT & PAST) -->
+            <section class="practice-section" id="progress-test"
+                style="border: 2px solid var(--accent-indigo, #6366f1); background: #f8fafc; margin-top: 2.5rem; padding: 2rem; border-radius: 12px;">
+                <span class="section-label"
+                    style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; font-weight: bold; font-size: 1.1rem; padding: 0.4rem 1rem; border-radius: 6px; display: inline-block;">TEST 📝</span>
+                <h2 class="section-title" style="margin-top: 0.8rem; color: #1e293b; font-size: 2rem;">TEST — Units 1 to 4 (Present & Past Tenses)</h2>
+                <div
+                    style="background: white; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 20px;">
+                    <p style="margin: 0; color: #334155;">Test your knowledge of present and past grammar from Units 1
+                        to 4.</p>
+                </div>
 
-            <!-- Part A: Multiple Choice -->
-            <h3 style="color:var(--accent-indigo, #6366f1);margin-bottom:1rem">Part A: Choose the correct answer</h3>
+                <!-- Part A: Multiple Choice (Items 1-5) -->
+                <h3 style="color:var(--accent-indigo, #6366f1);margin-bottom:1rem">Part A: Multiple Choice (Present &
+                    Past)</h3>
 
-            <div class="exercise-question" data-question="pt4q1">
-                <p><strong>1.</strong> "She _____ breakfast at 7 AM every day."</p>
-                <div class="exercise-dropdown"><select data-correct="has"><option value="">Choose...</option><option value="have">have</option><option value="has">has</option><option value="having">having</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt4q1')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="pt4q2">
-                <p><strong>2.</strong> "Is there _____ cheese in the fridge?"</p>
-                <div class="exercise-dropdown"><select data-correct="any"><option value="">Choose...</option><option value="some">some</option><option value="any">any</option><option value="a">a</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt4q2')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="pt4q3">
-                <p><strong>3.</strong> "I would like _____ orange juice, please."</p>
-                <div class="exercise-dropdown"><select data-correct="an"><option value="">Choose...</option><option value="a">a</option><option value="an">an</option><option value="some">some</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt4q3')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="pt4q4">
-                <p><strong>4.</strong> "How _____ water do you drink every day?"</p>
-                <div class="exercise-dropdown"><select data-correct="much"><option value="">Choose...</option><option value="much">much</option><option value="many">many</option><option value="some">some</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt4q4')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="pt4q5">
-                <p><strong>5.</strong> "We have _____ apples at home. Let's make a pie!"</p>
-                <div class="exercise-dropdown"><select data-correct="some"><option value="">Choose...</option><option value="some">some</option><option value="any">any</option><option value="a">a</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt4q5')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="pt4q6">
-                <p><strong>6.</strong> "There _____ any milk in the bottle."</p>
-                <div class="exercise-dropdown"><select data-correct="isn't"><option value="">Choose...</option><option value="isn't">isn't</option><option value="aren't">aren't</option><option value="don't">don't</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt4q6')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="pt4q7">
-                <p><strong>7.</strong> "Yesterday, I _____ (be) at home all day."</p>
-                <div class="exercise-dropdown"><select data-correct="was"><option value="">Choose...</option><option value="am">am</option><option value="was">was</option><option value="were">were</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt4q7')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="pt4q8">
-                <p><strong>8.</strong> "Last night, we _____ (eat) pizza for dinner."</p>
-                <div class="exercise-dropdown"><select data-correct="ate"><option value="">Choose...</option><option value="eat">eat</option><option value="ate">ate</option><option value="eating">eating</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt4q8')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="pt4q9">
-                <p><strong>9.</strong> "Where _____ you go last weekend?"</p>
-                <div class="exercise-dropdown"><select data-correct="did"><option value="">Choose...</option><option value="do">do</option><option value="did">did</option><option value="are">are</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt4q9')">Check</button><div class="feedback-message"></div>
-            </div>
-            <div class="exercise-question" data-question="pt4q10">
-                <p><strong>10.</strong> "They _____ to the supermarket yesterday afternoon."</p>
-                <div class="exercise-dropdown"><select data-correct="went"><option value="">Choose...</option><option value="went">went</option><option value="go">go</option><option value="goes">goes</option></select></div>
-                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt4q10')">Check</button><div class="feedback-message"></div>
-            </div>
+                <div class="exercise-question" data-question="pt1q1">
+                    <p><strong>1.</strong> (Present To Be) "Hello, my name _____ Sarah."</p>
+                    <div class="exercise-dropdown">
+                        <select data-correct="is">
+                            <option value="">Choose...</option>
+                            <option value="am">am</option>
+                            <option value="is">is</option>
+                            <option value="are">are</option>
+                        </select>
+                    </div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('pt1q1')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
 
-            <div style="margin-top:1.5rem;text-align:center">
-                <button onclick="checkAllExercises()" style="background:linear-gradient(135deg,#4f46e5,#4338ca);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;">✓ Check Part A</button>
-            </div>
+                <div class="exercise-question" data-question="pt1q2">
+                    <p><strong>2.</strong> (Past To Be) "Yesterday, I _____ at home all day."</p>
+                    <div class="exercise-dropdown">
+                        <select data-correct="was">
+                            <option value="">Choose...</option>
+                            <option value="am">am</option>
+                            <option value="was">was</option>
+                            <option value="were">were</option>
+                        </select>
+                    </div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('pt1q2')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
 
-            <!-- Part B: Write Your Answers -->
-            <h3 style="color:var(--accent-indigo, #6366f1);margin:2rem 0 1rem;padding-top:1.5rem;border-top:1px dashed #cbd5e1">Part B: Write your answers ✍️</h3>
-            <p style="color:#64748b;margin-bottom:1.5rem">Answer the following questions about yourself. Write complete sentences.</p>
+                <div class="exercise-question" data-question="pt1q3">
+                    <p><strong>3.</strong> (Present Routine) "She _____ up at 7:00 AM every morning."</p>
+                    <div class="exercise-dropdown">
+                        <select data-correct="wakes">
+                            <option value="">Choose...</option>
+                            <option value="wake">wake</option>
+                            <option value="wakes">wakes</option>
+                            <option value="woke">woke</option>
+                        </select>
+                    </div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('pt1q3')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
 
-            <div style="background:white;border-radius:12px;padding:1.5rem;margin-bottom:1rem;border:1px solid #e2e8f0;box-shadow:var(--shadow-sm, 0 1px 2px 0 rgba(0,0,0,0.05))">
-                <p style="color:#334155;font-weight:600;margin-bottom:0.5rem">📌 Personal Information</p>
-                <div class="reading-question" style="margin-bottom:0.8rem">1. What is your name? _____</div>
-                <div class="reading-question" style="margin-bottom:0.8rem">2. How old are you? _____</div>
-                <div class="reading-question" style="margin-bottom:0.8rem">3. Where are you from? _____</div>
-            </div>
+                <div class="exercise-question" data-question="pt1q4">
+                    <p><strong>4.</strong> (Past Action) "Last night, we _____ pizza for dinner."</p>
+                    <div class="exercise-dropdown">
+                        <select data-correct="ate">
+                            <option value="">Choose...</option>
+                            <option value="eat">eat</option>
+                            <option value="ate">ate</option>
+                            <option value="eating">eating</option>
+                        </select>
+                    </div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('pt1q4')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
 
-            <div style="background:white;border-radius:12px;padding:1.5rem;margin-bottom:1rem;border:1px solid #e2e8f0;box-shadow:var(--shadow-sm, 0 1px 2px 0 rgba(0,0,0,0.05))">
-                <p style="color:#334155;font-weight:600;margin-bottom:0.5rem">⏰ Daily Life & Past Routines</p>
-                <div class="reading-question" style="margin-bottom:0.8rem">4. What time do you wake up? _____</div>
-                <div class="reading-question" style="margin-bottom:0.8rem">5. What do you do in the morning? _____</div>
-                <div class="reading-question" style="margin-bottom:0.8rem">6. How do you go to work or school? _____</div>
-                <div class="reading-question" style="margin-bottom:0.8rem">7. What time do you go to bed? _____</div>
-                <div class="reading-question" style="margin-bottom:0.8rem">8. What did you do yesterday afternoon? _____</div>
-            </div>
+                <div class="exercise-question" data-question="pt1q5">
+                    <p><strong>5.</strong> (Past Question) "Where _____ you go last weekend?"</p>
+                    <div class="exercise-dropdown">
+                        <select data-correct="did">
+                            <option value="">Choose...</option>
+                            <option value="do">do</option>
+                            <option value="did">did</option>
+                            <option value="are">are</option>
+                        </select>
+                    </div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('pt1q5')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
 
-            <div style="background:white;border-radius:12px;padding:1.5rem;margin-bottom:1rem;border:1px solid #e2e8f0;box-shadow:var(--shadow-sm, 0 1px 2px 0 rgba(0,0,0,0.05))">
-                <p style="color:#334155;font-weight:600;margin-bottom:0.5rem">🍽️ Food and Drinks</p>
-                <div class="reading-question" style="margin-bottom:0.8rem">9. What do you usually have for breakfast? _____</div>
-                <div class="reading-question" style="margin-bottom:0.8rem">10. What is your favorite food? _____</div>
-                <div class="reading-question" style="margin-bottom:0.8rem">11. What is your favorite drink? _____</div>
-                <div class="reading-question" style="margin-bottom:0.8rem">12. Do you like vegetables? Which ones? _____</div>
-                <div class="reading-question" style="margin-bottom:0.8rem">13. What did you eat for dinner last night? _____</div>
-            </div>
+                <!-- Part B: Sentence Completion (Items 6-10) -->
+                <h3
+                    style="color:var(--accent-indigo, #6366f1);margin:2rem 0 1rem;padding-top:1.5rem;border-top:1px dashed #cbd5e1">
+                    Part B: Sentence Completion (Present & Past)</h3>
 
-            <div style="background:white;border-radius:12px;padding:1.5rem;margin-bottom:1rem;border:1px solid #e2e8f0;box-shadow:var(--shadow-sm, 0 1px 2px 0 rgba(0,0,0,0.05))">
-                <p style="color:#334155;font-weight:600;margin-bottom:0.5rem">🛒 At a Restaurant / Shopping</p>
-                <div class="reading-question" style="margin-bottom:0.8rem">14. Write a sentence using "some": _____</div>
-                <div class="reading-question" style="margin-bottom:0.8rem">15. Write a sentence using "any": _____</div>
-                <div class="reading-question" style="margin-bottom:0.8rem">16. You are at a restaurant. Order food and a drink: _____</div>
-            </div>
+                <div class="exercise-question" data-question="pt1q6">
+                    <p><strong>6.</strong> (Present Routine) "Every day, I _____ to school."</p>
+                    <div class="exercise-dropdown">
+                        <select data-correct="walk">
+                            <option value="">Choose...</option>
+                            <option value="walk">walk</option>
+                            <option value="walks">walks</option>
+                            <option value="walking">walking</option>
+                        </select>
+                    </div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('pt1q6')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
 
-            <div style="margin-top:1.5rem;text-align:center">
-                <button onclick="checkAllExercises()" style="background:linear-gradient(135deg,#4f46e5,#4338ca);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;">✓ Submit Test</button>
-                <button onclick="resetAllExercises()" style="background:linear-gradient(135deg,#64748b,#475569);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;margin-left:1rem">↻ Reset</button>
-            </div>
-        </section>
+                <div class="exercise-question" data-question="pt1q7">
+                    <p><strong>7.</strong> (Past Regular) "Yesterday, she _____ her grandmother."</p>
+                    <div class="exercise-dropdown">
+                        <select data-correct="visited">
+                            <option value="">Choose...</option>
+                            <option value="visited">visited</option>
+                            <option value="visit">visit</option>
+                            <option value="visiting">visiting</option>
+                        </select>
+                    </div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('pt1q7')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
 
-    </div></main>
-    <footer><p>A1 General English &copy; 2026 | <a href="unit3.html">← Unit 3</a> | <a href="index.html">Home</a> | <a href="unit5.html">Unit 5 →</a></p></footer>
+                <div class="exercise-question" data-question="pt1q8">
+                    <p><strong>8.</strong> (Past Negative) "We _____ at work yesterday because it was Sunday."</p>
+                    <div class="exercise-dropdown">
+                        <select data-correct="weren't">
+                            <option value="">Choose...</option>
+                            <option value="weren't">weren't</option>
+                            <option value="wasn't">wasn't</option>
+                            <option value="aren't">aren't</option>
+                        </select>
+                    </div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('pt1q8')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
+
+                <div class="exercise-question" data-question="pt1q9">
+                    <p><strong>9.</strong> (Past Irregular) "They _____ to the supermarket yesterday afternoon."</p>
+                    <div class="exercise-dropdown">
+                        <select data-correct="went">
+                            <option value="">Choose...</option>
+                            <option value="went">went</option>
+                            <option value="go">go</option>
+                            <option value="goes">goes</option>
+                        </select>
+                    </div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('pt1q9')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
+
+                <div class="exercise-question" data-question="pt1q10">
+                    <p><strong>10.</strong> (Past Auxiliary Question) "_____ you buy any fruits yesterday?"</p>
+                    <div class="exercise-dropdown">
+                        <select data-correct="Did">
+                            <option value="">Choose...</option>
+                            <option value="Did">Did</option>
+                            <option value="Do">Do</option>
+                            <option value="Does">Does</option>
+                        </select>
+                    </div>
+                    <button class="check-answer-btn" onclick="checkDropdownAnswer('pt1q10')">Check</button>
+                    <div class="feedback-message"></div>
+                </div>
+
+                <!-- Part C: Write Your Answers ✍️ -->
+                <h3
+                    style="color:var(--accent-indigo, #6366f1);margin:2rem 0 1rem;padding-top:1.5rem;border-top:1px dashed #cbd5e1">
+                    Part C: Write Your Answers ✍️</h3>
+                <p style="color:#64748b;margin-bottom:1.5rem">Answer the following questions about yourself in complete
+                    sentences (Present & Past).</p>
+
+                <div
+                    style="background:white;border-radius:12px;padding:1.5rem;margin-bottom:1rem;border:1px solid #e2e8f0;box-shadow:var(--shadow-sm, 0 1px 2px 0 rgba(0,0,0,0.05))">
+                    <p style="color:#334155;font-weight:600;margin-bottom:0.5rem">📌 Personal Information & Past Routine
+                    </p>
+                    <div class="reading-question" style="margin-bottom:0.8rem">1. What is your name and where are you
+                        from? _______________________</div>
+                    <div class="reading-question" style="margin-bottom:0.8rem">2. What time do you wake up every day?
+                        _______________________</div>
+                    <div class="reading-question" style="margin-bottom:0.8rem">3. What did you do yesterday afternoon?
+                        _______________________</div>
+                </div>
+
+                <div
+                    style="background:white;border-radius:12px;padding:1.5rem;margin-bottom:1rem;border:1px solid #e2e8f0;box-shadow:var(--shadow-sm, 0 1px 2px 0 rgba(0,0,0,0.05))">
+                    <p style="color:#334155;font-weight:600;margin-bottom:0.5rem">🍽️ Food & Drinks</p>
+                    <div class="reading-question" style="margin-bottom:0.8rem">4. What do you usually have for
+                        breakfast? _______________________</div>
+                    <div class="reading-question" style="margin-bottom:0.8rem">5. What did you eat for dinner last
+                        night? _______________________</div>
+                    <div class="reading-question" style="margin-bottom:0.8rem">6. Write a sentence ordering food at a
+                        restaurant: _______________________</div>
+                </div>
+
+                <div style="margin-top:2rem;text-align:center">
+                    <button onclick="checkAllExercises()"
+                        style="background:linear-gradient(135deg,#4f46e5,#4338ca);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;margin-right:1rem">✓
+                        Check All Answers</button>
+                    <button onclick="resetAllExercises()"
+                        style="background:linear-gradient(135deg,#64748b,#475569);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold">↻
+                        Reset</button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer>
+        <p>A1 General English &copy; 2026 | <a href="unit3.html">← Unit 3</a> | <a href="index.html">Home</a> | <a
+                href="unit5.html">Unit 5 →</a></p>
+    </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
