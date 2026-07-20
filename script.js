@@ -466,3 +466,30 @@ function sendToTeacherWhatsApp() {
 
 window.sendToTeacher = sendToTeacher;
 window.sendToTeacherWhatsApp = sendToTeacherWhatsApp;
+
+// --- SINGLE PAGE APPLICATION NAVIGATION ---
+let currentUnit = 0;
+const totalUnits = 8;
+
+function navigateUnitTo(unitNum) {
+    document.querySelectorAll('.course-unit').forEach(el => el.style.display = 'none');
+    const target = document.getElementById('unit-' + unitNum);
+    if(target) target.style.display = 'block';
+    currentUnit = unitNum;
+    
+    const display = document.getElementById('current-unit-display');
+    if(display) {
+        display.innerText = unitNum === 0 ? 'Home' : 'Unit ' + unitNum;
+    }
+    window.scrollTo(0, 0);
+}
+
+function navigateUnit(dir) {
+    let nextUnit = currentUnit + dir;
+    if(nextUnit < 0) nextUnit = 0;
+    if(nextUnit > totalUnits) nextUnit = totalUnits;
+    navigateUnitTo(nextUnit);
+}
+
+window.navigateUnitTo = navigateUnitTo;
+window.navigateUnit = navigateUnit;
