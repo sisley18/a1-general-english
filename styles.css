@@ -985,6 +985,79 @@ footer a {
     display: block;
 }
 
+    /* ============ DASHBOARD TO TOP NAV ============ */
+    .app-container {
+        display: block;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: auto;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        margin: 2rem auto 3rem;
+        max-width: 1000px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 50px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        border: none;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        z-index: 1000;
+    }
+
+    .sidebar .logo {
+        margin-bottom: 0;
+        font-size: 1.2rem;
+    }
+
+    .sidebar .dropdown-content {
+        position: static;
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+        box-shadow: none;
+        background: transparent;
+        border: none;
+        max-height: none !important;
+        overflow: visible;
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .sidebar .dropdown-item {
+        padding: 8px 16px;
+        margin-bottom: 0;
+        border-radius: 20px;
+        color: var(--text-secondary);
+        font-weight: 500;
+        transition: all 0.2s ease;
+        background: transparent;
+    }
+    
+    .sidebar .dropdown-item:hover {
+        background: rgba(255,255,255,0.8);
+        color: var(--accent-indigo);
+        box-shadow: var(--shadow-light);
+        transform: translateY(-2px);
+    }
+
+    .dashboard-content {
+        flex: 1;
+        margin-left: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    /* Hide the old dropdown button in sidebar */
+    .sidebar .dropdown-btn { display: none; }
+
     .american-dialogue {
         background: rgba(255, 255, 255, 0.7);
         border-radius: 12px;
@@ -1070,7 +1143,10 @@ footer a {
         padding: 1.2rem !important;
         display: grid !important;
         grid-template-columns: auto 1fr auto !important;
-        gap: 1rem !important;
+        grid-template-areas: 
+            "icon word button"
+            "icon def button" !important;
+        gap: 0.2rem 1rem !important;
         align-items: center !important;
         box-shadow: 0 4px 15px rgba(0,0,0,0.04) !important;
         border: 1px solid rgba(0,0,0,0.05) !important;
@@ -1078,6 +1154,7 @@ footer a {
     }
 
     .vocab-card::before {
+        grid-area: icon;
         content: '🎙️';
         font-size: 1.5rem;
         background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
@@ -1088,11 +1165,12 @@ footer a {
         justify-content: center;
     }
 
-    .vocab-word { font-weight: 700 !important; font-size: 1.15rem !important; color: #222 !important; margin-bottom: 0.2rem !important; }
-    .vocab-definition { font-size: 0.95rem !important; color: #666 !important; }
+    .vocab-word { grid-area: word; font-weight: 700 !important; font-size: 1.15rem !important; color: #222 !important; margin: 0 !important; }
+    .vocab-definition { grid-area: def; font-size: 0.95rem !important; color: #666 !important; margin: 0 !important; }
     .vocab-example { display: none !important; } /* Hidden to match mockup compactness */
 
     .vocab-card .audio-btn {
+        grid-area: button;
         width: 48px !important;
         height: 48px !important;
         border-radius: 50% !important;
