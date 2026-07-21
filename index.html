@@ -2544,6 +2544,256 @@
     
 </div>
 
+            <!-- ===== PROGRESS TEST (UNITS 1-4) ===== -->
+            <section class="section-wrapper" id="progress-test" style="border: 2px solid #ef4444; background: rgba(239, 68, 68, 0.05); margin-top: 3rem;">
+                <span class="section-label" style="background: #ef4444; color: white;">📝 Progress Test</span>
+                <h2 class="section-title">Units 1–4 Evaluation</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.1rem;">This test covers vocabulary, grammar, and skills from Units 1 to 4. Good luck!</p>
+
+                <!-- SECTION A: LISTENING -->
+                <h3 style="color:var(--accent-indigo);margin-bottom:1rem">Section A: Listening Comprehension 🎧</h3>
+                <div class="listening-exercise" style="margin-bottom: 2rem;">
+                    <div class="audio-player">
+                        <button class="audio-btn" onclick="speakText('Hello, my name is Carlos. I am from Mexico. I live with my wife and my son. I get up at seven AM every day. For breakfast, I eat some eggs and I drink coffee. I do not like tea.')">🔊 Listen to Carlos</button>
+                        <button class="audio-btn" onclick="speakTextSlow('Hello, my name is Carlos. I am from Mexico. I live with my wife and my son. I get up at seven AM every day. For breakfast, I eat some eggs and I drink coffee. I do not like tea.')">🐢 Slow</button>
+                        <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+                    </div>
+
+                    <div style="margin-top:1.5rem;">
+                        <div class="exercise-question" data-question="pt_l1">
+                            <p><strong>1.</strong> Where is Carlos from?</p>
+                            <div class="exercise-dropdown">
+                                <select data-correct="Mexico">
+                                    <option value="">Choose your answer...</option>
+                                    <option value="Spain">Spain</option>
+                                    <option value="Mexico">Mexico</option>
+                                    <option value="Italy">Italy</option>
+                                </select>
+                            </div>
+                            <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_l1')">Check Answer</button>
+                            <div class="feedback-message"></div>
+                        </div>
+
+                        <div class="exercise-question" data-question="pt_l2">
+                            <p><strong>2.</strong> Who does he live with?</p>
+                            <div class="exercise-dropdown">
+                                <select data-correct="His wife and son">
+                                    <option value="">Choose your answer...</option>
+                                    <option value="His parents">His parents</option>
+                                    <option value="His friends">His friends</option>
+                                    <option value="His wife and son">His wife and son</option>
+                                </select>
+                            </div>
+                            <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_l2')">Check Answer</button>
+                            <div class="feedback-message"></div>
+                        </div>
+
+                        <div class="exercise-question" data-question="pt_l3">
+                            <p><strong>3.</strong> What time does he get up?</p>
+                            <div class="exercise-dropdown">
+                                <select data-correct="7 AM">
+                                    <option value="">Choose your answer...</option>
+                                    <option value="6 AM">6 AM</option>
+                                    <option value="7 AM">7 AM</option>
+                                    <option value="8 AM">8 AM</option>
+                                </select>
+                            </div>
+                            <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_l3')">Check Answer</button>
+                            <div class="feedback-message"></div>
+                        </div>
+
+                        <div class="exercise-question" data-question="pt_l4">
+                            <p><strong>4.</strong> What does he drink for breakfast?</p>
+                            <div class="exercise-dropdown">
+                                <select data-correct="Coffee">
+                                    <option value="">Choose your answer...</option>
+                                    <option value="Coffee">Coffee</option>
+                                    <option value="Tea">Tea</option>
+                                    <option value="Water">Water</option>
+                                </select>
+                            </div>
+                            <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_l4')">Check Answer</button>
+                            <div class="feedback-message"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION B: READING -->
+                <h3 style="color:#065f46;margin-bottom:1rem">Section B: Reading Comprehension 📖</h3>
+                <div class="reading-passage" style="margin-bottom: 1.5rem;">
+                    <p>Anna is a nurse. She is twenty-five years old. She lives in London. She has a big family — three brothers and two sisters. Anna works in a hospital. She starts work at 8 AM. For lunch, she usually has a sandwich and an apple. She loves pizza, but she doesn't like fish.</p>
+                </div>
+                
+                <div style="margin-bottom: 2rem;">
+                    <p style="font-weight: bold; margin-bottom: 1rem;">True or False?</p>
+                    <div class="exercise-question" data-question="pt_r1">
+                        <p><strong>1.</strong> Anna is a teacher.</p>
+                        <div class="exercise-dropdown">
+                            <select data-correct="False">
+                                <option value="">Choose...</option>
+                                <option value="True">True</option>
+                                <option value="False">False</option>
+                            </select>
+                        </div>
+                        <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_r1')">Check Answer</button>
+                        <div class="feedback-message"></div>
+                    </div>
+
+                    <div class="exercise-question" data-question="pt_r2">
+                        <p><strong>2.</strong> She has three sisters.</p>
+                        <div class="exercise-dropdown">
+                            <select data-correct="False">
+                                <option value="">Choose...</option>
+                                <option value="True">True</option>
+                                <option value="False">False</option>
+                            </select>
+                        </div>
+                        <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_r2')">Check Answer</button>
+                        <div class="feedback-message"></div>
+                    </div>
+
+                    <div class="exercise-question" data-question="pt_r3">
+                        <p><strong>3.</strong> She works at a hospital.</p>
+                        <div class="exercise-dropdown">
+                            <select data-correct="True">
+                                <option value="">Choose...</option>
+                                <option value="True">True</option>
+                                <option value="False">False</option>
+                            </select>
+                        </div>
+                        <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_r3')">Check Answer</button>
+                        <div class="feedback-message"></div>
+                    </div>
+
+                    <div class="exercise-question" data-question="pt_r4">
+                        <p><strong>4.</strong> She likes pizza.</p>
+                        <div class="exercise-dropdown">
+                            <select data-correct="True">
+                                <option value="">Choose...</option>
+                                <option value="True">True</option>
+                                <option value="False">False</option>
+                            </select>
+                        </div>
+                        <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_r4')">Check Answer</button>
+                        <div class="feedback-message"></div>
+                    </div>
+                </div>
+
+                <!-- SECTION C: GRAMMAR & VOCABULARY -->
+                <h3 style="color:#b45309;margin-bottom:1rem">Section C: Grammar & Vocabulary 📝</h3>
+                <div style="margin-bottom: 2rem;">
+                    <div class="exercise-question" data-question="pt_g1">
+                        <p><strong>1.</strong> I _____ from Argentina.</p>
+                        <div class="exercise-dropdown">
+                            <select data-correct="am">
+                                <option value="">Choose...</option><option value="am">am</option><option value="is">is</option><option value="are">are</option>
+                            </select>
+                        </div>
+                        <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_g1')">Check Answer</button>
+                        <div class="feedback-message"></div>
+                    </div>
+                    <div class="exercise-question" data-question="pt_g2">
+                        <p><strong>2.</strong> _____ is your name?</p>
+                        <div class="exercise-dropdown">
+                            <select data-correct="What">
+                                <option value="">Choose...</option><option value="What">What</option><option value="Where">Where</option><option value="How">How</option>
+                            </select>
+                        </div>
+                        <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_g2')">Check Answer</button>
+                        <div class="feedback-message"></div>
+                    </div>
+                    <div class="exercise-question" data-question="pt_g3">
+                        <p><strong>3.</strong> This is my brother. _____ name is Tom.</p>
+                        <div class="exercise-dropdown">
+                            <select data-correct="His">
+                                <option value="">Choose...</option><option value="His">His</option><option value="Her">Her</option><option value="My">My</option>
+                            </select>
+                        </div>
+                        <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_g3')">Check Answer</button>
+                        <div class="feedback-message"></div>
+                    </div>
+                    <div class="exercise-question" data-question="pt_g4">
+                        <p><strong>4.</strong> She _____ breakfast at 8:00 AM.</p>
+                        <div class="exercise-dropdown">
+                            <select data-correct="has">
+                                <option value="">Choose...</option><option value="have">have</option><option value="has">has</option><option value="haves">haves</option>
+                            </select>
+                        </div>
+                        <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_g4')">Check Answer</button>
+                        <div class="feedback-message"></div>
+                    </div>
+                    <div class="exercise-question" data-question="pt_g5">
+                        <p><strong>5.</strong> We _____ like tea.</p>
+                        <div class="exercise-dropdown">
+                            <select data-correct="don't">
+                                <option value="">Choose...</option><option value="don't">don't</option><option value="doesn't">doesn't</option><option value="aren't">aren't</option>
+                            </select>
+                        </div>
+                        <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_g5')">Check Answer</button>
+                        <div class="feedback-message"></div>
+                    </div>
+                    <div class="exercise-question" data-question="pt_g6">
+                        <p><strong>6.</strong> Do you have _____ brothers?</p>
+                        <div class="exercise-dropdown">
+                            <select data-correct="any">
+                                <option value="">Choose...</option><option value="some">some</option><option value="any">any</option><option value="a">a</option>
+                            </select>
+                        </div>
+                        <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_g6')">Check Answer</button>
+                        <div class="feedback-message"></div>
+                    </div>
+                    <div class="exercise-question" data-question="pt_g7">
+                        <p><strong>7.</strong> I would like _____ apple, please.</p>
+                        <div class="exercise-dropdown">
+                            <select data-correct="an">
+                                <option value="">Choose...</option><option value="a">a</option><option value="an">an</option><option value="some">some</option>
+                            </select>
+                        </div>
+                        <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_g7')">Check Answer</button>
+                        <div class="feedback-message"></div>
+                    </div>
+                    <div class="exercise-question" data-question="pt_g8">
+                        <p><strong>8.</strong> My father's sister is my _____.</p>
+                        <div class="exercise-dropdown">
+                            <select data-correct="aunt">
+                                <option value="">Choose...</option><option value="aunt">aunt</option><option value="grandmother">grandmother</option><option value="cousin">cousin</option>
+                            </select>
+                        </div>
+                        <button class="check-answer-btn" onclick="checkDropdownAnswer('pt_g8')">Check Answer</button>
+                        <div class="feedback-message"></div>
+                    </div>
+                </div>
+
+                <div style="margin-top:2rem;text-align:center">
+                    <button onclick="checkAllExercises()" style="background:linear-gradient(135deg,#4f46e5,#4338ca);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;margin-right:1rem">✓ Check All Answers</button>
+                    <button onclick="resetAllExercises()" style="background:linear-gradient(135deg,#64748b,#475569);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold">↻ Reset</button>
+                </div>
+
+                <!-- SECTION D: WRITING -->
+                <h3 style="color:#9d174d;margin-bottom:1rem;margin-top:2rem;">Section D: Writing ✍️</h3>
+                <div class="task-box" style="margin-bottom: 2rem;">
+                    <p style="margin-bottom: 1rem;"><strong>Write a short paragraph about yourself. Include:</strong></p>
+                    <ul class="checklist" style="margin-bottom: 1rem;">
+                        <li>Your name and where you are from</li>
+                        <li>Your family (e.g., brothers, sisters)</li>
+                        <li>What time you wake up</li>
+                        <li>What you usually eat for breakfast</li>
+                    </ul>
+                    <textarea style="width:100%; min-height:120px; border-radius:8px; padding:10px; border:1px solid #cbd5e1; font-family:inherit; font-size:1rem; color:#1e293b;" placeholder="Type your answer here..."></textarea>
+                </div>
+
+                <!-- SECTION E: SPEAKING -->
+                <h3 style="color:#0ea5e9;margin-bottom:1rem">Section E: Speaking 🗣️</h3>
+                <div class="task-box" style="margin-bottom: 2rem;">
+                    <p style="margin-bottom: 1rem;"><strong>Introduce yourself out loud.</strong> Tell us your name, age, and your morning routine.</p>
+                    <div style="background: rgba(255,255,255,0.5); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                        <p style="margin-bottom: 0.5rem;"><strong>Model Answer:</strong></p>
+                        <p style="font-style:italic;">"Hi, I'm Laura. I am thirty years old. I get up at 7 AM and I have toast and coffee for breakfast."</p>
+                        <button class="audio-btn small" onclick="speakText('Hi, I am Laura. I am thirty years old. I get up at 7 AM and I have toast and coffee for breakfast.')" style="margin-top:0.5rem">🔊 Listen to Model</button>
+                    </div>
+                </div>
+            </section>
+
 <div id="unit-5" class="course-unit" style="display: none;">
 <div class="container">
 
