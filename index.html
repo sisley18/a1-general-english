@@ -16,16 +16,37 @@
                     <button class="dropdown-btn">
                         📚 Units <span class="arrow">▼</span>
                     </button>
-                    <div class="dropdown-content">
+                    <div class="dropdown-content" style="max-height: 400px; overflow-y: auto;">
                         <a href="#" onclick="navigateUnitTo(1); return false;" class="dropdown-item">Unit 1: Hello! Nice to Meet You</a>
                         <a href="#" onclick="navigateUnitTo(2); return false;" class="dropdown-item">Unit 2: My Family</a>
                         <a href="#" onclick="navigateUnitTo(3); return false;" class="dropdown-item">Unit 3: My Daily Routine</a>
                         <a href="#" onclick="navigateUnitTo(4); return false;" class="dropdown-item">Unit 4: Food and Drink</a>
-                        <a href="#" onclick="navigateUnitTo(4); return false;">📝 Progress Test (Units 1-4)</a>
+                        <a href="#" onclick="navigateUnitTo(4); setTimeout(() => { document.getElementById('progress-test-1').scrollIntoView(); }, 100); return false;">📝 Test 1 (Units 1-4)</a>
                         <a href="#" onclick="navigateUnitTo(5); return false;" class="dropdown-item">Unit 5: My Home</a>
                         <a href="#" onclick="navigateUnitTo(6); return false;" class="dropdown-item">Unit 6: Around Town</a>
                         <a href="#" onclick="navigateUnitTo(7); return false;" class="dropdown-item">Unit 7: Clothes and Shopping</a>
                         <a href="#" onclick="navigateUnitTo(8); return false;" class="dropdown-item">Unit 8: Free Time and Hobbies</a>
+                        <a href="#" onclick="navigateUnitTo(8); setTimeout(() => { document.getElementById('progress-test-2').scrollIntoView(); }, 100); return false;">📝 Test 2 (Units 5-8)</a>
+                        <a href="#" onclick="navigateUnitTo(9); return false;" class="dropdown-item">Unit 9: Abilities and Talents</a>
+                        <a href="#" onclick="navigateUnitTo(10); return false;" class="dropdown-item">Unit 10: Travel and Holidays</a>
+                        <a href="#" onclick="navigateUnitTo(11); return false;" class="dropdown-item">Unit 11: Life Events</a>
+                        <a href="#" onclick="navigateUnitTo(12); return false;" class="dropdown-item">Unit 12: An Amazing Weekend</a>
+                        <a href="#" onclick="navigateUnitTo(12); setTimeout(() => { document.getElementById('progress-test-3').scrollIntoView(); }, 100); return false;">📝 Test 3 (Units 9-12)</a>
+                        <a href="#" onclick="navigateUnitTo(13); return false;" class="dropdown-item">Unit 13: Future Plans</a>
+                        <a href="#" onclick="navigateUnitTo(14); return false;" class="dropdown-item">Unit 14: Health and the Body</a>
+                        <a href="#" onclick="navigateUnitTo(15); return false;" class="dropdown-item">Unit 15: The Weather and Seasons</a>
+                        <a href="#" onclick="navigateUnitTo(16); return false;" class="dropdown-item">Unit 16: Life Experiences</a>
+                        <a href="#" onclick="navigateUnitTo(16); setTimeout(() => { document.getElementById('progress-test-4').scrollIntoView(); }, 100); return false;">📝 Test 4 (Units 13-16)</a>
+                        <a href="#" onclick="navigateUnitTo(17); return false;" class="dropdown-item">Unit 17: Rules and Obligations</a>
+                        <a href="#" onclick="navigateUnitTo(18); return false;" class="dropdown-item">Unit 18: Making Comparisons</a>
+                        <a href="#" onclick="navigateUnitTo(19); return false;" class="dropdown-item">Unit 19: The Best in the World</a>
+                        <a href="#" onclick="navigateUnitTo(20); return false;" class="dropdown-item">Unit 20: Future Predictions</a>
+                        <a href="#" onclick="navigateUnitTo(20); setTimeout(() => { document.getElementById('progress-test-5').scrollIntoView(); }, 100); return false;">📝 Test 5 (Units 17-20)</a>
+                        <a href="#" onclick="navigateUnitTo(21); return false;" class="dropdown-item">Unit 21: Polite Requests and Offers</a>
+                        <a href="#" onclick="navigateUnitTo(22); return false;" class="dropdown-item">Unit 22: Feelings and Emotions</a>
+                        <a href="#" onclick="navigateUnitTo(23); return false;" class="dropdown-item">Unit 23: In the Kitchen</a>
+                        <a href="#" onclick="navigateUnitTo(24); return false;" class="dropdown-item">Unit 24: Modern Technology</a>
+                        <a href="#" onclick="navigateUnitTo(24); setTimeout(() => { document.getElementById('progress-test-6').scrollIntoView(); }, 100); return false;">📝 Test 6 (Units 21-24)</a>
                     </div>
                 </div>
                 <a href="index.html" class="nav-link">Home</a>
@@ -48,21 +69,56 @@
                 <section class="index-hero" style="text-align: center; margin-bottom: 2rem;">
                     <span class="hero-badge" style="background: rgba(99,102,241,0.1); color: #6366f1; padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold;">🌟 CEFR Level A1 — Beginner</span>
                     <h1 style="font-size: 2.5rem; margin-top: 1rem;">A1 General English</h1>
-                    <p style="color: #64748b; font-size: 1.1rem; max-width: 600px; margin: 1rem auto;">8 complete units with Listening, Speaking, Reading, and Writing activities.</p>
+                    <p style="color: #64748b; font-size: 1.1rem; max-width: 600px; margin: 1rem auto;">24 complete units with Listening, Speaking, Reading, and Writing activities.</p>
                 </section>
                 <div class="unit-grid" style="display: grid; gap: 1.5rem; grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
                     <a href="#" onclick="navigateUnitTo(1); return false;" class="unit-card" style="text-align: center; text-decoration: none; padding: 2rem; border-radius: 12px; border: 1px solid #e2e8f0; background: white; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
                         <div class="unit-card-header">
                             <span class="unit-number" style="font-size: 2rem;">📚</span>
                             <h3 style="font-size: 1.8rem; margin: 1rem 0; color: #1e293b;">Start Course</h3>
-                            <p style="font-size: 1.1rem; color: #64748b;">Complete Course (Units 1 - 8)</p>
+                            <p style="font-size: 1.1rem; color: #64748b;">Complete Course (Units 1 - 24)</p>
                         </div>
                     </a>
                     
-                    <a href="#" onclick="navigateUnitTo(4); setTimeout(() => { document.getElementById('progress-test').scrollIntoView(); }, 100); return false;" class="unit-card" style="text-align: center; text-decoration: none; padding: 2rem; border-radius: 12px; border: 2px solid #ef4444; background: white; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
-                        <div class="unit-card-header" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 1.5rem; border-radius: 8px;">
-                            <span class="unit-number" style="font-size: 2.5rem;">📝</span>
-                            <h3 style="font-size: 1.6rem; margin: 0.5rem 0; color: white;">Progress Test (Units 1–4)</h3>
+                    <a href="#" onclick="navigateUnitTo(4); setTimeout(() => { document.getElementById('progress-test-1').scrollIntoView(); }, 100); return false;" class="unit-card" style="text-align: center; text-decoration: none; padding: 1.5rem; border-radius: 12px; border: 2px solid #ef4444; background: white; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                        <div class="unit-card-header" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 1.2rem; border-radius: 8px;">
+                            <span class="unit-number" style="font-size: 2rem;">📝</span>
+                            <h3 style="font-size: 1.4rem; margin: 0.5rem 0; color: white;">Test 1 (Units 1–4)</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" onclick="navigateUnitTo(8); setTimeout(() => { document.getElementById('progress-test-2').scrollIntoView(); }, 100); return false;" class="unit-card" style="text-align: center; text-decoration: none; padding: 1.5rem; border-radius: 12px; border: 2px solid #ef4444; background: white; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                        <div class="unit-card-header" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 1.2rem; border-radius: 8px;">
+                            <span class="unit-number" style="font-size: 2rem;">📝</span>
+                            <h3 style="font-size: 1.4rem; margin: 0.5rem 0; color: white;">Test 2 (Units 5–8)</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" onclick="navigateUnitTo(12); setTimeout(() => { document.getElementById('progress-test-3').scrollIntoView(); }, 100); return false;" class="unit-card" style="text-align: center; text-decoration: none; padding: 1.5rem; border-radius: 12px; border: 2px solid #ef4444; background: white; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                        <div class="unit-card-header" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 1.2rem; border-radius: 8px;">
+                            <span class="unit-number" style="font-size: 2rem;">📝</span>
+                            <h3 style="font-size: 1.4rem; margin: 0.5rem 0; color: white;">Test 3 (Units 9–12)</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" onclick="navigateUnitTo(16); setTimeout(() => { document.getElementById('progress-test-4').scrollIntoView(); }, 100); return false;" class="unit-card" style="text-align: center; text-decoration: none; padding: 1.5rem; border-radius: 12px; border: 2px solid #ef4444; background: white; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                        <div class="unit-card-header" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 1.2rem; border-radius: 8px;">
+                            <span class="unit-number" style="font-size: 2rem;">📝</span>
+                            <h3 style="font-size: 1.4rem; margin: 0.5rem 0; color: white;">Test 4 (Units 13–16)</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" onclick="navigateUnitTo(20); setTimeout(() => { document.getElementById('progress-test-5').scrollIntoView(); }, 100); return false;" class="unit-card" style="text-align: center; text-decoration: none; padding: 1.5rem; border-radius: 12px; border: 2px solid #ef4444; background: white; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                        <div class="unit-card-header" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 1.2rem; border-radius: 8px;">
+                            <span class="unit-number" style="font-size: 2rem;">📝</span>
+                            <h3 style="font-size: 1.4rem; margin: 0.5rem 0; color: white;">Test 5 (Units 17–20)</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" onclick="navigateUnitTo(24); setTimeout(() => { document.getElementById('progress-test-6').scrollIntoView(); }, 100); return false;" class="unit-card" style="text-align: center; text-decoration: none; padding: 1.5rem; border-radius: 12px; border: 2px solid #ef4444; background: white; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                        <div class="unit-card-header" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 1.2rem; border-radius: 8px;">
+                            <span class="unit-number" style="font-size: 2rem;">📝</span>
+                            <h3 style="font-size: 1.4rem; margin: 0.5rem 0; color: white;">Test 6 (Units 21–24)</h3>
                         </div>
                     </a>
                 </div>
@@ -2344,7 +2400,7 @@
 
 
             <!-- TEST -->
-            <section class="practice-section" id="progress-test" style="margin-top: 2.5rem;">
+            <section class="practice-section" id="progress-test-1" style="margin-top: 2.5rem;">
                 <span class="section-label grammar" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; font-weight: bold; font-size: 1.1rem; padding: 0.4rem 1rem; border-radius: 6px; display: inline-block;">📝 TEST</span>
                 <h2 class="section-title">Unit 4 Progress Test (Units 1–4)</h2>
                 <div style="background: white; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 20px;">
@@ -2541,7 +2597,7 @@
             </section>
 
 <!-- ===== PROGRESS TEST (UNITS 1-4) ===== -->
-            <section class="section-wrapper" id="progress-test" style="border: 2px solid #ef4444; background: rgba(239, 68, 68, 0.05); margin-top: 3rem;">
+            <section class="section-wrapper" id="progress-test-old" style="border: 2px solid #ef4444; background: rgba(239, 68, 68, 0.05); margin-top: 3rem;">
                 <span class="section-label" style="background: #ef4444; color: white;">📝 Progress Test</span>
                 <h2 class="section-title">Units 1–4 Evaluation</h2>
                 <p style="margin-bottom: 2rem; font-size: 1.1rem;">This test covers vocabulary, grammar, and skills from Units 1 to 4. Good luck!</p>
@@ -3580,7 +3636,7 @@
         </section>
 
         <!-- FINAL PROGRESS TEST -->
-        <section class="practice-section" id="progress-test" style="border: 2px solid #00c8ff; background: rgba(0, 200, 255, 0.05); margin-top: 2rem;">
+        <section class="practice-section" id="progress-test-2" style="border: 2px solid #00c8ff; background: rgba(0, 200, 255, 0.05); margin-top: 2rem;">
             <span class="section-label" style="background: rgba(0, 200, 255, 0.2); color: #00c8ff;">Final Progress Test 📝</span>
             <h2 class="section-title">Final Progress Test (Units 1-8)</h2>
             <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
@@ -3620,6 +3676,1920 @@
             </div>
         </section>
 
+    </div>
+</div>
+
+<div id="unit-9" class="course-unit" style="display: none;">
+    <div class="container">
+        <!-- ===== UNIT 9 VOCABULARY ===== -->
+        <section class="section-wrapper" id="vocabulary-section-9">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Abilities and Talents</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card">
+                    <div class="vocab-word">Swim</div>
+                    <div class="vocab-definition">To move through water</div>
+                    <div class="vocab-example">"I can swim very fast."</div>
+                    <button class="audio-btn small" onclick="speakText('I can swim very fast.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Sing</div>
+                    <div class="vocab-definition">To make musical sounds with the voice</div>
+                    <div class="vocab-example">"She can sing beautifully."</div>
+                    <button class="audio-btn small" onclick="speakText('She can sing beautifully.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Drive</div>
+                    <div class="vocab-definition">To operate a car</div>
+                    <div class="vocab-example">"He can drive a truck."</div>
+                    <button class="audio-btn small" onclick="speakMaleText('He can drive a truck.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Cook</div>
+                    <div class="vocab-definition">To prepare food</div>
+                    <div class="vocab-example">"My brother can cook Italian food."</div>
+                    <button class="audio-btn small" onclick="speakMaleText('My brother can cook Italian food.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Play the guitar</div>
+                    <div class="vocab-definition">To make music with a guitar</div>
+                    <div class="vocab-example">"Can you play the guitar?"</div>
+                    <button class="audio-btn small" onclick="speakText('Can you play the guitar?')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Speak Japanese</div>
+                    <div class="vocab-definition">To talk in the Japanese language</div>
+                    <div class="vocab-example">"I cannot speak Japanese."</div>
+                    <button class="audio-btn small" onclick="speakText('I cannot speak Japanese.')">🔊</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== UNIT 9 GRAMMAR ===== -->
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Modal Verb "Can / Can't"</h2>
+            <div class="grammar-rule">
+                <strong>Affirmative:</strong> Subject + can + verb<br>
+                <span class="grammar-example">I can swim. He can play tennis.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Negative:</strong> Subject + cannot (can't) + verb<br>
+                <span class="grammar-example">She can't drive. We can't speak Chinese.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Questions:</strong> Can + Subject + verb?<br>
+                <span class="grammar-example">Can you cook? Yes, I can. / No, I can't.</span>
+            </div>
+            <div style="margin-top:1rem">
+                <button class="audio-btn" onclick="speakText('I can swim. He can play tennis. She cannot drive. We cannot speak Chinese. Can you cook? Yes, I can. No, I cannot.')">🔊 Listen to all examples</button>
+                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+            </div>
+        </section>
+
+        <!-- ===== UNIT 9 LISTENING ===== -->
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">The Talent Show Audition</h2>
+            <div class="listening-exercise">
+                <h3>🔊 Audio: David's Audition</h3>
+                <div class="audio-player">
+                    <p>🎵 <strong>Listen to the dialogue:</strong></p>
+                    <button class="audio-btn" onclick="speakMaleText('Hello, I am David. I am here for the talent show. Welcome, David. What can you do? Can you sing? No, I cannot sing. I am terrible! Can you dance? No, I cannot dance. But I can play the guitar very well. I can also do magic tricks! Wow, magic tricks! Let us see one.')">🔊 Listen</button>
+                    <button class="audio-btn" onclick="speakMaleText('Hello, I am David. I am here for the talent show. Welcome, David. What can you do? Can you sing? No, I cannot sing. I am terrible! Can you dance? No, I cannot dance. But I can play the guitar very well. I can also do magic tricks! Wow, magic tricks! Let us see one.', true)">🐢 Slow</button>
+                    <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>David:</strong> Hello, I am David. I am here for the talent show.</p>
+                    <p><strong>Judge (Tom):</strong> Welcome, David. What can you do? Can you sing?</p>
+                    <p><strong>David:</strong> No, I can't sing. I am terrible!</p>
+                    <p><strong>Judge (Tom):</strong> Can you dance?</p>
+                    <p><strong>David:</strong> No, I can't dance. But I can play the guitar very well. I can also do magic tricks!</p>
+                    <p><strong>Judge (Tom):</strong> Wow, magic tricks! Let's see one.</p>
+                </div>
+                <p><strong>True or False:</strong></p>
+                <ul style="margin:1rem 0;line-height:2.2">
+                    <li>1. David can sing. _____</li>
+                    <li>2. David can play the guitar. _____</li>
+                    <li>3. David can do magic tricks. _____</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== UNIT 9 SPEAKING ===== -->
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <h3 style="color:#9d174d;margin-bottom:1rem">Dialogue Practice: Finding Talents</h3>
+            <p>Practice this dialogue with a partner. Listen first, then repeat.</p>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <span class="speaker-label">Student A:</span>
+                    <span class="speaker-text">Can you play a musical instrument?</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">Student B:</span>
+                    <span class="speaker-text">Yes, I can play the piano. Can you?</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">Student A:</span>
+                    <span class="speaker-text">No, I can't. But I can sing.</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">Student B:</span>
+                    <span class="speaker-text">That's great! Can you sing in English?</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">Student A:</span>
+                    <span class="speaker-text">Yes, I can!</span>
+                </div>
+            </div>
+            <div style="margin-top:1.5rem">
+                <button class="audio-btn" onclick="speakText('Can you play a musical instrument? Yes, I can play the piano. Can you? No, I cannot. But I can sing. That is great! Can you sing in English? Yes, I can!')">🔊 Listen to Model Dialogue</button>
+                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+            </div>
+        </section>
+
+        <!-- ===== UNIT 9 READING ===== -->
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">Reading Comprehension</h2>
+            <h3 style="color:#065f46;margin-bottom:1rem">Read about unusual talents:</h3>
+            <div class="reading-passage">
+                <p><strong>Hi! My name is Clara.</strong> I have an unusual talent. I can speak five languages! I can speak English, Spanish, French, Italian, and Japanese. I can learn new words very fast.</p>
+                <br>
+                <p><strong>Hello! I am Mark.</strong> I am twelve years old. I can play the violin very well. I practice every day. I can also write my own music.</p>
+            </div>
+            <div style="margin:1.5rem 0">
+                <button class="audio-btn" onclick="speakText('Hi! My name is Clara. I have an unusual talent. I can speak five languages! I can speak English, Spanish, French, Italian, and Japanese. I can learn new words very fast.')">🔊 Listen to Clara</button>
+                <button class="audio-btn" onclick="speakMaleText('Hello! I am Mark. I am twelve years old. I can play the violin very well. I practice every day. I can also write my own music.')">🔊 Listen to Mark</button>
+                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+            </div>
+            <h3 style="color:#065f46;margin:1.5rem 0 1rem">Comprehension Questions:</h3>
+            <div class="reading-question">1. How many languages can Clara speak? _____</div>
+            <div class="reading-question">2. Can Clara speak Japanese? _____</div>
+            <div class="reading-question">3. What instrument can Mark play? _____</div>
+            <div class="reading-question">4. Can Mark write music? _____</div>
+        </section>
+
+        <!-- ===== UNIT 9 WRITING ===== -->
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <h3 style="color:#92400e;margin-bottom:1rem">Task: Write About Your Abilities</h3>
+            <div class="writing-template">
+                <h4>📝 Complete the sentences:</h4>
+                <p style="line-height:2.5">
+                    I can _______________ very well. <br>
+                    I can also _______________. <br>
+                    But, I can't _______________. <br>
+                    My best friend can _______________.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== UNIT 9 QUIZ ===== -->
+        <section class="practice-section" id="practice-section-9">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u9q1">
+                <p><strong>1.</strong> I _____ drive a car. I don't have a license.</p>
+                <div class="exercise-dropdown">
+                    <select data-correct="can't">
+                        <option value="">Choose...</option>
+                        <option value="can">can</option>
+                        <option value="can't">can't</option>
+                        <option value="do">do</option>
+                        <option value="am">am</option>
+                    </select>
+                </div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u9q1')">Check Answer</button>
+                <div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u9q2">
+                <p><strong>2.</strong> _____ you speak French?</p>
+                <div class="exercise-dropdown">
+                    <select data-correct="Can">
+                        <option value="">Choose...</option>
+                        <option value="Do">Do</option>
+                        <option value="Are">Are</option>
+                        <option value="Can">Can</option>
+                        <option value="Does">Does</option>
+                    </select>
+                </div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u9q2')">Check Answer</button>
+                <div class="feedback-message"></div>
+            </div>
+            <div style="margin-top:1.5rem;text-align:center">
+                <button onclick="checkAllExercises()" style="background:linear-gradient(135deg,#22c55e,#16a34a);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;margin-right:1rem">✓ Check All</button>
+                <button onclick="resetAllExercises()" style="background:linear-gradient(135deg,#64748b,#475569);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold">↻ Reset</button>
+            </div>
+        </section>
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+<div id="unit-10" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-10">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Travel and Holidays</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card">
+                    <div class="vocab-word">Beach</div>
+                    <div class="vocab-definition">A sandy area next to the sea</div>
+                    <div class="vocab-example">"We went to the beach in Miami."</div>
+                    <button class="audio-btn small" onclick="speakText('We went to the beach in Miami.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Plane</div>
+                    <div class="vocab-definition">A vehicle that flies</div>
+                    <div class="vocab-example">"I traveled to London by plane."</div>
+                    <button class="audio-btn small" onclick="speakMaleText('I traveled to London by plane.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Train</div>
+                    <div class="vocab-definition">Connected vehicles travelling on railways</div>
+                    <div class="vocab-example">"The train to Paris was very fast."</div>
+                    <button class="audio-btn small" onclick="speakText('The train to Paris was very fast.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Hotel</div>
+                    <div class="vocab-definition">A place to sleep when travelling</div>
+                    <div class="vocab-example">"Our hotel was near the city center."</div>
+                    <button class="audio-btn small" onclick="speakText('Our hotel was near the city center.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Ticket</div>
+                    <div class="vocab-definition">A piece of paper or electronic pass for travel</div>
+                    <div class="vocab-example">"I bought a bus ticket."</div>
+                    <button class="audio-btn small" onclick="speakMaleText('I bought a bus ticket.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Suitcase</div>
+                    <div class="vocab-definition">A bag for clothes when travelling</div>
+                    <div class="vocab-example">"My suitcase is very heavy."</div>
+                    <button class="audio-btn small" onclick="speakText('My suitcase is very heavy.')">🔊</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Past Simple: Verb "to be" (was / were)</h2>
+            <div class="grammar-rule">
+                <strong>I / He / She / It:</strong> was / was not (wasn't)<br>
+                <span class="grammar-example">I was tired. The hotel wasn't expensive.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>You / We / They:</strong> were / were not (weren't)<br>
+                <span class="grammar-example">You were late. They weren't at the beach.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Questions:</strong> Was / Were + Subject?<br>
+                <span class="grammar-example">Was it cold? Were you in Spain?</span>
+            </div>
+            <div style="margin-top:1rem">
+                <button class="audio-btn" onclick="speakText('I was tired. The hotel was not expensive. You were late. They were not at the beach. Was it cold? Were you in Spain?')">🔊 Listen to all examples</button>
+                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+            </div>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">A Recent Holiday</h2>
+            <div class="listening-exercise">
+                <h3>🔊 Audio: Carlos's Vacation</h3>
+                <div class="audio-player">
+                    <p>🎵 <strong>Listen to the dialogue:</strong></p>
+                    <button class="audio-btn" onclick="speakText('Hi, Carlos! How was your holiday? Oh, it was fantastic! Where were you? I was in Florida. The weather was beautiful. Were you with your family? Yes, I was with my wife and kids. The hotel was great, but the food was very expensive.')">🔊 Listen</button>
+                    <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Woman:</strong> Hi, Carlos! How was your holiday?</p>
+                    <p><strong>Carlos:</strong> Oh, it was fantastic!</p>
+                    <p><strong>Woman:</strong> Where were you?</p>
+                    <p><strong>Carlos:</strong> I was in Florida. The weather was beautiful.</p>
+                    <p><strong>Woman:</strong> Were you with your family?</p>
+                    <p><strong>Carlos:</strong> Yes, I was with my wife and kids. The hotel was great, but the food was very expensive.</p>
+                </div>
+                <p><strong>Complete the sentences:</strong></p>
+                <ul style="margin:1rem 0;line-height:2.2">
+                    <li>1. The holiday was __________.</li>
+                    <li>2. Carlos was in __________.</li>
+                    <li>3. The weather was __________.</li>
+                    <li>4. The food was __________.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <h3 style="color:#9d174d;margin-bottom:1rem">Role-play: At the Train Station</h3>
+            <p>Practice this dialogue with a partner.</p>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <span class="speaker-label">Customer:</span>
+                    <span class="speaker-text">Hello. I would like a ticket to London, please.</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">Agent:</span>
+                    <span class="speaker-text">Single or return?</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">Customer:</span>
+                    <span class="speaker-text">A return ticket, please. How much is it?</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">Agent:</span>
+                    <span class="speaker-text">That's fifty pounds.</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">Customer:</span>
+                    <span class="speaker-text">Here you are. What time is the train?</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">Agent:</span>
+                    <span class="speaker-text">It is at 10:30 from platform 4.</span>
+                </div>
+            </div>
+            <div style="margin-top:1.5rem">
+                <button class="audio-btn" onclick="speakText('Hello. I would like a ticket to London, please. Single or return? A return ticket, please. How much is it? That is fifty pounds. Here you are. What time is the train? It is at 10:30 from platform 4.')">🔊 Listen to Model Dialogue</button>
+                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+            </div>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">Reading Comprehension</h2>
+            <div class="reading-passage">
+                <p><strong>Dear Emma,</strong></p>
+                <p>Hello from Paris! My holiday is amazing. The weather is sunny and very hot. Yesterday, I was at the Eiffel Tower. It was beautiful, but there were a lot of people! The food here is delicious. Last night, I was in a small restaurant and the pizza was great.</p>
+                <p>See you next week!</p>
+                <p><strong>Love, Sarah</strong></p>
+            </div>
+            <div style="margin:1.5rem 0">
+                <button class="audio-btn" onclick="speakText('Dear Emma. Hello from Paris! My holiday is amazing. The weather is sunny and very hot. Yesterday, I was at the Eiffel Tower. It was beautiful, but there were a lot of people! The food here is delicious. Last night, I was in a small restaurant and the pizza was great. See you next week! Love, Sarah')">🔊 Listen to the text</button>
+                <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+            </div>
+            <h3 style="color:#065f46;margin:1.5rem 0 1rem">True or False?</h3>
+            <div class="reading-question">1. Sarah is in London. _____</div>
+            <div class="reading-question">2. The weather is hot. _____</div>
+            <div class="reading-question">3. She was at the Eiffel Tower today. _____</div>
+            <div class="reading-question">4. The food in the restaurant was terrible. _____</div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <div class="writing-template">
+                <h4>📝 Task: Write a short postcard to a friend.</h4>
+                <p style="line-height:2.5">
+                    Dear ____________, <br>
+                    Hello from ____________! <br>
+                    The weather is ____________. <br>
+                    Yesterday, I was at ____________. It was ____________. <br>
+                    See you soon! <br>
+                    Love, ____________
+                </p>
+            </div>
+        </section>
+
+        <section class="practice-section" id="practice-section-10">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u10q1">
+                <p><strong>1.</strong> Yesterday, they _____ at the beach.</p>
+                <div class="exercise-dropdown"><select data-correct="were"><option value="">Choose...</option><option value="was">was</option><option value="were">were</option><option value="are">are</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u10q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u10q2">
+                <p><strong>2.</strong> I _____ very tired last night.</p>
+                <div class="exercise-dropdown"><select data-correct="was"><option value="">Choose...</option><option value="was">was</option><option value="were">were</option><option value="is">is</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u10q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div style="margin-top:1.5rem;text-align:center">
+                <button onclick="checkAllExercises()" style="background:linear-gradient(135deg,#22c55e,#16a34a);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;margin-right:1rem">✓ Check All</button>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="unit-11" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-11">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Life Events</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card">
+                    <div class="vocab-word">Start school</div>
+                    <div class="vocab-definition">To begin education</div>
+                    <div class="vocab-example">"I started school in 2010."</div>
+                    <button class="audio-btn small" onclick="speakText('I started school in 2010.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Graduate</div>
+                    <div class="vocab-definition">To finish university or school</div>
+                    <div class="vocab-example">"He graduated last year."</div>
+                    <button class="audio-btn small" onclick="speakMaleText('He graduated last year.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Move</div>
+                    <div class="vocab-definition">To change where you live</div>
+                    <div class="vocab-example">"We moved to a new house."</div>
+                    <button class="audio-btn small" onclick="speakText('We moved to a new house.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Get married</div>
+                    <div class="vocab-definition">To become a husband or wife</div>
+                    <div class="vocab-example">"They got married in spring."</div>
+                    <button class="audio-btn small" onclick="speakText('They got married in spring.')">🔊</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Past Simple: Regular Verbs</h2>
+            <div class="grammar-rule">
+                <strong>Affirmative:</strong> verb + ed (e.g., play → played, work → worked)<br>
+                <span class="grammar-example">I worked yesterday. She played tennis.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Negative:</strong> did not (didn't) + base verb<br>
+                <span class="grammar-example">He didn't work. We didn't watch TV.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Questions:</strong> Did + Subject + base verb?<br>
+                <span class="grammar-example">Did you play? Yes, I did. / No, I didn't.</span>
+            </div>
+            <div style="margin-top:1rem">
+                <button class="audio-btn" onclick="speakText('I worked yesterday. She played tennis. He didn\'t work. We didn\'t watch TV. Did you play? Yes, I did. No, I didn\'t.')">🔊 Listen to all examples</button>
+            </div>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">A Life History</h2>
+            <div class="listening-exercise">
+                <h3>🔊 Audio: Grandpa's Story</h3>
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakMaleText('I lived in a small town when I was young. I started school in 1955. I liked school very much. When I was 18, I moved to the city. I worked in a factory for many years. I met your grandmother in 1960 and we married in 1962.')">🔊 Listen</button>
+                    <button class="audio-btn stop" onclick="stopAudio()">⏹️ Stop</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Grandpa:</strong> I lived in a small town when I was young. I started school in 1955. I liked school very much. When I was 18, I moved to the city. I worked in a factory for many years. I met your grandmother in 1960 and we married in 1962.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <div class="task-box" style="margin-top:1.5rem">
+                <h3>🎯 Task: Your Life Timeline</h3>
+                <p>Think about three important years in your life. Tell your partner what happened.</p>
+                <p><em>Example: "In 2015, I started high school. In 2019, I traveled to Spain. In 2022, I started my new job."</em></p>
+            </div>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">Reading Comprehension</h2>
+            <div class="reading-passage">
+                <p><strong>Marie Curie</strong></p>
+                <p>Marie Curie was a famous scientist. She lived in Poland, and then she moved to France. She worked very hard. She studied Physics and Chemistry. She discovered new elements, Radium and Polonium. She won two Nobel Prizes. She died in 1934, but people remember her today as an amazing woman.</p>
+            </div>
+            <div style="margin:1.5rem 0">
+                <button class="audio-btn" onclick="speakText('Marie Curie was a famous scientist. She lived in Poland, and then she moved to France. She worked very hard. She studied Physics and Chemistry. She discovered new elements, Radium and Polonium. She won two Nobel Prizes. She died in 1934, but people remember her today as an amazing woman.')">🔊 Listen</button>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <p>Write a short paragraph about what you did yesterday evening. Use regular past tense verbs: <em>watched, cleaned, cooked, studied, played</em>.</p>
+        </section>
+
+        <section class="practice-section" id="practice-section-11">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u11q1">
+                <p><strong>1.</strong> I _____ football yesterday.</p>
+                <div class="exercise-dropdown"><select data-correct="played"><option value="">Choose...</option><option value="play">play</option><option value="played">played</option><option value="plays">plays</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u11q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u11q2">
+                <p><strong>2.</strong> She _____ watch TV last night.</p>
+                <div class="exercise-dropdown"><select data-correct="didn't"><option value="">Choose...</option><option value="don't">don't</option><option value="doesn't">doesn't</option><option value="didn't">didn't</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u11q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="unit-12" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-12">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">An Amazing Weekend</h2>
+            <p style="font-size:1.1rem">Weekend Activities: go shopping, meet friends, have dinner, buy clothes, see a movie.</p>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Past Simple: Irregular Verbs</h2>
+            <div class="grammar-rule">
+                <strong>Irregular Past Tense forms must be memorized:</strong><br>
+                <ul style="line-height:2">
+                    <li>go → went</li>
+                    <li>see → saw</li>
+                    <li>have → had</li>
+                    <li>buy → bought</li>
+                    <li>eat → ate</li>
+                </ul>
+            </div>
+            <div style="margin-top:1rem">
+                <button class="audio-btn" onclick="speakText('go, went. see, saw. have, had. buy, bought. eat, ate.')">🔊 Listen to pronunciation</button>
+            </div>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">Weekend Stories</h2>
+            <div class="listening-exercise">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakMaleText('What did you do on Saturday, Paul? I went to the city center. I met my friends and we had lunch. Did you buy anything? Yes, I bought a new jacket. It was very cheap. In the evening, I saw a great movie. What about you? I stayed home and slept all day!')">🔊 Listen</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Woman:</strong> What did you do on Saturday, Paul?</p>
+                    <p><strong>Paul:</strong> I went to the city center. I met my friends and we had lunch.</p>
+                    <p><strong>Woman:</strong> Did you buy anything?</p>
+                    <p><strong>Paul:</strong> Yes, I bought a new jacket. It was very cheap. In the evening, I saw a great movie. What about you?</p>
+                    <p><strong>Woman:</strong> I stayed home and slept all day!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <span class="speaker-label">A:</span>
+                    <span class="speaker-text">What did you do last weekend?</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">B:</span>
+                    <span class="speaker-text">I went to the park. What about you?</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">A:</span>
+                    <span class="speaker-text">I went to a restaurant and ate pizza.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">A Disastrous Trip</h2>
+            <div class="reading-passage">
+                <p>Last weekend, my friends and I went to the mountains. It was terrible! We drove for three hours, but we lost the map. We didn't have GPS. Then, it rained a lot. We slept in the car because we didn't find the hotel. We ate cold sandwiches for dinner. We came back home on Sunday very tired.</p>
+            </div>
+            <div style="margin:1.5rem 0">
+                <button class="audio-btn" onclick="speakMaleText('Last weekend, my friends and I went to the mountains. It was terrible! We drove for three hours, but we lost the map. We didn\'t have GPS. Then, it rained a lot. We slept in the car because we didn\'t find the hotel. We ate cold sandwiches for dinner. We came back home on Sunday very tired.')">🔊 Listen</button>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <p>Write a diary entry for Sunday. Say where you went, what you ate, and who you saw.</p>
+        </section>
+
+        <section class="practice-section" id="practice-section-12">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u12q1">
+                <p><strong>1.</strong> Yesterday, I _____ my friends.</p>
+                <div class="exercise-dropdown"><select data-correct="saw"><option value="">Choose...</option><option value="see">see</option><option value="saw">saw</option><option value="seeing">seeing</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u12q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u12q2">
+                <p><strong>2.</strong> We _____ pizza for dinner last night.</p>
+                <div class="exercise-dropdown"><select data-correct="had"><option value="">Choose...</option><option value="have">have</option><option value="has">has</option><option value="had">had</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u12q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+        </section>
+
+        <section class="practice-section" id="progress-test-3" style="border: 2px solid #8b5cf6; background: rgba(139, 92, 246, 0.05); margin-top: 2rem;">
+            <span class="section-label" style="background: rgba(139, 92, 246, 0.2); color: #8b5cf6;">Progress Test 3 📝</span>
+            <h2 class="section-title">Test 3 (Units 9-12)</h2>
+            <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                <p style="margin: 0; color: #fff;">Test your knowledge of abilities and past tenses.</p>
+            </div>
+            <div class="exercise-question" data-question="pt3q1">
+                <p><strong>1.</strong> I _____ play the guitar, but I can sing.</p>
+                <div class="exercise-dropdown"><select data-correct="can't"><option value="">Choose...</option><option value="can">can</option><option value="can't">can't</option><option value="am not">am not</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt3q1')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="pt3q2">
+                <p><strong>2.</strong> The weather _____ terrible yesterday.</p>
+                <div class="exercise-dropdown"><select data-correct="was"><option value="">Choose...</option><option value="were">were</option><option value="was">was</option><option value="is">is</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt3q2')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="pt3q3">
+                <p><strong>3.</strong> She _____ TV all night.</p>
+                <div class="exercise-dropdown"><select data-correct="watched"><option value="">Choose...</option><option value="watch">watch</option><option value="watched">watched</option><option value="watching">watching</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt3q3')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="pt3q4">
+                <p><strong>4.</strong> We _____ to the cinema on Friday.</p>
+                <div class="exercise-dropdown"><select data-correct="went"><option value="">Choose...</option><option value="go">go</option><option value="went">went</option><option value="goed">goed</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt3q4')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div style="margin-top:1.5rem;text-align:center">
+                <button onclick="checkAllExercises()" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;">✓ Submit Test</button>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="unit-13" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-13">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Future Plans</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card">
+                    <div class="vocab-word">Travel</div>
+                    <div class="vocab-definition">To go from one place to another</div>
+                    <div class="vocab-example">"I am going to travel to Europe."</div>
+                    <button class="audio-btn small" onclick="speakText('I am going to travel to Europe.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Study</div>
+                    <div class="vocab-definition">To learn about a subject</div>
+                    <div class="vocab-example">"He is going to study medicine."</div>
+                    <button class="audio-btn small" onclick="speakMaleText('He is going to study medicine.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Tomorrow</div>
+                    <div class="vocab-definition">The day after today</div>
+                    <div class="vocab-example">"We are going to play tennis tomorrow."</div>
+                    <button class="audio-btn small" onclick="speakText('We are going to play tennis tomorrow.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Next week</div>
+                    <div class="vocab-definition">The week after this one</div>
+                    <div class="vocab-example">"She is going to visit her mom next week."</div>
+                    <button class="audio-btn small" onclick="speakText('She is going to visit her mom next week.')">🔊</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Future with "Going to"</h2>
+            <div class="grammar-rule">
+                <strong>Affirmative:</strong> Subject + am/is/are + going to + verb<br>
+                <span class="grammar-example">I am going to read. She is going to travel.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Negative:</strong> Subject + am not / isn't / aren't + going to + verb<br>
+                <span class="grammar-example">We aren't going to work. He isn't going to study.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Questions:</strong> Am/Is/Are + Subject + going to + verb?<br>
+                <span class="grammar-example">Are you going to cook? Yes, I am. / No, I'm not.</span>
+            </div>
+            <div style="margin-top:1rem">
+                <button class="audio-btn" onclick="speakText('I am going to read. She is going to travel. We are not going to work. He is not going to study. Are you going to cook? Yes, I am. No, I am not.')">🔊 Listen</button>
+            </div>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">Summer Plans</h2>
+            <div class="listening-exercise">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakText('Hi John! What are you going to do this summer? I am going to travel to Italy with my family. Wow, that is great! Are you going to visit Rome? Yes, we are going to spend a week in Rome and then go to the beach. What about you, Sarah? I am not going to travel. I am going to study for my exams and work part-time.')">🔊 Listen</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Sarah:</strong> Hi John! What are you going to do this summer?</p>
+                    <p><strong>John:</strong> I'm going to travel to Italy with my family.</p>
+                    <p><strong>Sarah:</strong> Wow, that's great! Are you going to visit Rome?</p>
+                    <p><strong>John:</strong> Yes, we're going to spend a week in Rome and then go to the beach. What about you, Sarah?</p>
+                    <p><strong>Sarah:</strong> I'm not going to travel. I'm going to study for my exams and work part-time.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <p>Ask a partner about their plans for the weekend.</p>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <span class="speaker-label">A:</span>
+                    <span class="speaker-text">What are you going to do this weekend?</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">B:</span>
+                    <span class="speaker-text">I'm going to meet my friends on Saturday. Are you going to do anything special?</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">A:</span>
+                    <span class="speaker-text">No, I'm just going to relax at home.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">Study Abroad</h2>
+            <div class="reading-passage">
+                <p><strong>From:</strong> Leo <br><strong>To:</strong> Anna</p>
+                <p>Hi Anna! Next month, I am going to start my study abroad program in London. I am very excited. I am going to live with a host family. I am going to study English every morning, and in the afternoon, I am going to visit museums and parks. I am not going to work because I want to focus on my studies.</p>
+                <p>Are you going to visit me? Let me know!</p>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <p>Write an email to a friend. Tell them three things you are going to do next year.</p>
+        </section>
+
+        <section class="practice-section" id="practice-section-13">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u13q1">
+                <p><strong>1.</strong> She _____ going to visit her grandmother tomorrow.</p>
+                <div class="exercise-dropdown"><select data-correct="is"><option value="">Choose...</option><option value="am">am</option><option value="is">is</option><option value="are">are</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u13q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u13q2">
+                <p><strong>2.</strong> _____ they going to buy a new car?</p>
+                <div class="exercise-dropdown"><select data-correct="Are"><option value="">Choose...</option><option value="Do">Do</option><option value="Is">Is</option><option value="Are">Are</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u13q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="unit-14" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-14">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">The Weather</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card">
+                    <div class="vocab-word">Sunny</div>
+                    <div class="vocab-definition">Full of sunlight ☀️</div>
+                    <div class="vocab-example">"It is going to be sunny tomorrow."</div>
+                    <button class="audio-btn small" onclick="speakText('It is going to be sunny tomorrow.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Rainy</div>
+                    <div class="vocab-definition">Having a lot of rain 🌧️</div>
+                    <div class="vocab-example">"Take an umbrella, it is rainy."</div>
+                    <button class="audio-btn small" onclick="speakText('Take an umbrella, it is rainy.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Cold</div>
+                    <div class="vocab-definition">Having a low temperature ❄️</div>
+                    <div class="vocab-example">"It is very cold in winter."</div>
+                    <button class="audio-btn small" onclick="speakMaleText('It is very cold in winter.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Hot</div>
+                    <div class="vocab-definition">Having a high temperature 🥵</div>
+                    <div class="vocab-example">"Summer is hot."</div>
+                    <button class="audio-btn small" onclick="speakText('Summer is hot.')">🔊</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Weather Predictions</h2>
+            <div class="grammar-rule">
+                <strong>It's going to + verb (rain, snow)</strong><br>
+                <span class="grammar-example">Look at those clouds! It's going to rain.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>It's going to be + adjective (sunny, hot, cold)</strong><br>
+                <span class="grammar-example">Tomorrow is going to be very hot.</span>
+            </div>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">Weather Forecast</h2>
+            <div class="listening-exercise">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakMaleText('Good morning! Here is the weather forecast for the weekend. On Saturday, it is going to be sunny and very hot. Remember to drink water! However, on Sunday, the weather is going to change. It is going to be cloudy in the morning, and it is going to rain in the afternoon. Have a great weekend!')">🔊 Listen</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Weatherman:</strong> Good morning! Here is the weather forecast for the weekend. On Saturday, it's going to be sunny and very hot. Remember to drink water! However, on Sunday, the weather is going to change. It's going to be cloudy in the morning, and it's going to rain in the afternoon. Have a great weekend!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <p>Role-play: Plan an activity based on the weather.</p>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <span class="speaker-label">A:</span>
+                    <span class="speaker-text">What's the weather going to be like tomorrow?</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">B:</span>
+                    <span class="speaker-text">It's going to be sunny and warm.</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">A:</span>
+                    <span class="speaker-text">Great! Let's go to the park and have a picnic.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">Different Climates</h2>
+            <div class="reading-passage">
+                <p>Welcome to my travel blog! I love travelling to different places. Right now, I am in Canada. It's winter here, so it is extremely cold and snowy. I need to wear a heavy coat. Next month, I'm going to travel to Brazil. It's going to be very hot and sunny there, so I'm going to pack t-shirts and shorts!</p>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <p>Imagine you are going on a holiday to a very cold place. Write 3 sentences about what the weather is going to be like, and what clothes you are going to pack.</p>
+        </section>
+
+        <section class="practice-section" id="practice-section-14">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u14q1">
+                <p><strong>1.</strong> Look at the dark clouds. It _____ going to rain.</p>
+                <div class="exercise-dropdown"><select data-correct="is"><option value="">Choose...</option><option value="am">am</option><option value="is">is</option><option value="are">are</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u14q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u14q2">
+                <p><strong>2.</strong> Wear a jacket. It's going to be _____ today.</p>
+                <div class="exercise-dropdown"><select data-correct="cold"><option value="">Choose...</option><option value="hot">hot</option><option value="sunny">sunny</option><option value="cold">cold</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u14q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="unit-15" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-15">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Food and Drink</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card">
+                    <div class="vocab-word">Apple</div>
+                    <div class="vocab-definition">A round fruit (Countable)</div>
+                    <div class="vocab-example">"I eat an apple every day."</div>
+                    <button class="audio-btn small" onclick="speakText('I eat an apple every day.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Rice</div>
+                    <div class="vocab-definition">Small white grains (Uncountable)</div>
+                    <div class="vocab-example">"We need some rice."</div>
+                    <button class="audio-btn small" onclick="speakText('We need some rice.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Milk</div>
+                    <div class="vocab-definition">A white liquid (Uncountable)</div>
+                    <div class="vocab-example">"Is there any milk in the fridge?"</div>
+                    <button class="audio-btn small" onclick="speakMaleText('Is there any milk in the fridge?')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Egg</div>
+                    <div class="vocab-definition">Food from chickens (Countable)</div>
+                    <div class="vocab-example">"I bought six eggs."</div>
+                    <button class="audio-btn small" onclick="speakText('I bought six eggs.')">🔊</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Some / Any</h2>
+            <div class="grammar-rule">
+                <strong>Affirmative (+):</strong> Use <em>some</em> with plural countable nouns and uncountable nouns.<br>
+                <span class="grammar-example">We have some apples. There is some milk.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Negative (-):</strong> Use <em>any</em>.<br>
+                <span class="grammar-example">We don't have any apples. There isn't any milk.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Questions (?):</strong> Use <em>any</em>.<br>
+                <span class="grammar-example">Do we have any apples? Is there any milk?</span>
+            </div>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">In the Supermarket</h2>
+            <div class="listening-exercise">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakText('Do we have any milk? No, there isn\'t any milk. Okay, let\'s buy some. Do we need any eggs? Yes, we need some eggs. What about fruit? We have some bananas, but we don\'t have any apples. I will get some apples then.')">🔊 Listen</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Man (Tom):</strong> Do we have any milk?</p>
+                    <p><strong>Woman (Lisa):</strong> No, there isn't any milk.</p>
+                    <p><strong>Tom:</strong> Okay, let's buy some. Do we need any eggs?</p>
+                    <p><strong>Lisa:</strong> Yes, we need some eggs. What about fruit?</p>
+                    <p><strong>Tom:</strong> We have some bananas, but we don't have any apples.</p>
+                    <p><strong>Lisa:</strong> I'll get some apples then.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <p>Practice making a shopping list with a partner.</p>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <span class="speaker-label">A:</span>
+                    <span class="speaker-text">What do we need from the supermarket?</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">B:</span>
+                    <span class="speaker-text">Let me check... We have some chicken, but we don't have any rice.</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">A:</span>
+                    <span class="speaker-text">Okay, I will write down rice. Do we need any vegetables?</span>
+                </div>
+                <div class="dialogue-line">
+                    <span class="speaker-label">B:</span>
+                    <span class="speaker-text">Yes, we need some tomatoes and carrots.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">A Simple Recipe</h2>
+            <div class="reading-passage">
+                <p><strong>How to make a quick omelet:</strong></p>
+                <p>You need some eggs, some butter, a little salt, and some cheese. First, break the eggs into a bowl. Don't add any milk. Put some butter in a pan and heat it. Pour the eggs into the pan. When it is almost ready, put some cheese on top. Enjoy your meal!</p>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <p>Write a list of things you have in your fridge right now using <em>some</em>, and things you don't have using <em>any</em>.</p>
+        </section>
+
+        <section class="practice-section" id="practice-section-15">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u15q1">
+                <p><strong>1.</strong> Is there _____ water in the bottle?</p>
+                <div class="exercise-dropdown"><select data-correct="any"><option value="">Choose...</option><option value="some">some</option><option value="any">any</option><option value="a">a</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u15q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u15q2">
+                <p><strong>2.</strong> I want to buy _____ apples.</p>
+                <div class="exercise-dropdown"><select data-correct="some"><option value="">Choose...</option><option value="some">some</option><option value="any">any</option><option value="an">an</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u15q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="unit-16" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-16">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Ordering Food</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card">
+                    <div class="vocab-word">Starter</div>
+                    <div class="vocab-definition">A small dish before the main meal</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Main Course</div>
+                    <div class="vocab-definition">The largest part of the meal</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Dessert</div>
+                    <div class="vocab-definition">Sweet food eaten after the main course</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Beverage</div>
+                    <div class="vocab-definition">A drink (water, juice, tea, coffee)</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Would Like</h2>
+            <div class="grammar-rule">
+                <strong>We use "would like" to politely ask for something or offer something.</strong><br>
+                <span class="grammar-example">I would like (I'd like) a coffee, please.<br>Would you like to order?</span>
+            </div>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">At the Restaurant</h2>
+            <div class="listening-exercise">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakMaleText('Good evening. Are you ready to order? Yes, I am. I would like the tomato soup for a starter. Excellent choice. And for your main course? I would like the grilled chicken with rice, please. Would you like anything to drink? Just water, please. Thank you.')">🔊 Listen</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Waiter:</strong> Good evening. Are you ready to order?</p>
+                    <p><strong>Customer:</strong> Yes, I am. I would like the tomato soup for a starter.</p>
+                    <p><strong>Waiter:</strong> Excellent choice. And for your main course?</p>
+                    <p><strong>Customer:</strong> I would like the grilled chicken with rice, please.</p>
+                    <p><strong>Waiter:</strong> Would you like anything to drink?</p>
+                    <p><strong>Customer:</strong> Just water, please. Thank you.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <p>Role-play a restaurant scene using the menu below:</p>
+            <ul style="margin-left:2rem;line-height:2">
+                <li><strong>Starters:</strong> Salad, Soup</li>
+                <li><strong>Mains:</strong> Steak, Pasta, Fish</li>
+                <li><strong>Desserts:</strong> Ice cream, Cake</li>
+            </ul>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">A Restaurant Review</h2>
+            <div class="reading-passage">
+                <p>⭐⭐⭐⭐⭐<br><strong>"The Best Italian Food!"</strong><br>We visited 'Luigi's' last night. The waiters were very polite. I had some pasta, and it was delicious. For dessert, I would like to recommend their chocolate cake. The atmosphere is fantastic. I am going to eat there again next weekend!</p>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <p>Write a short positive review (3-4 sentences) about a restaurant in your city.</p>
+        </section>
+
+        <section class="practice-section" id="practice-section-16">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u16q1">
+                <p><strong>1.</strong> I _____ like a cup of tea, please.</p>
+                <div class="exercise-dropdown"><select data-correct="would"><option value="">Choose...</option><option value="will">will</option><option value="would">would</option><option value="do">do</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u16q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u16q2">
+                <p><strong>2.</strong> _____ you like to see the dessert menu?</p>
+                <div class="exercise-dropdown"><select data-correct="Would"><option value="">Choose...</option><option value="Do">Do</option><option value="Are">Are</option><option value="Would">Would</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u16q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+        </section>
+
+        <section class="practice-section" id="progress-test-4" style="border: 2px solid #8b5cf6; background: rgba(139, 92, 246, 0.05); margin-top: 2rem;">
+            <span class="section-label" style="background: rgba(139, 92, 246, 0.2); color: #8b5cf6;">Progress Test 4 📝</span>
+            <h2 class="section-title">Test 4 (Units 13-16)</h2>
+            <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                <p style="margin: 0; color: #fff;">Test your knowledge of future plans, weather, and food.</p>
+            </div>
+            <div class="exercise-question" data-question="pt4q1">
+                <p><strong>1.</strong> Next year, I _____ travel to Japan.</p>
+                <div class="exercise-dropdown"><select data-correct="am going to"><option value="">Choose...</option><option value="going to">going to</option><option value="am going to">am going to</option><option value="am going">am going</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt4q1')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="pt4q2">
+                <p><strong>2.</strong> Tomorrow it's going to _____ sunny.</p>
+                <div class="exercise-dropdown"><select data-correct="be"><option value="">Choose...</option><option value="is">is</option><option value="be">be</option><option value="are">are</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt4q2')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="pt4q3">
+                <p><strong>3.</strong> We don't have _____ eggs in the fridge.</p>
+                <div class="exercise-dropdown"><select data-correct="any"><option value="">Choose...</option><option value="some">some</option><option value="any">any</option><option value="an">an</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt4q3')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="pt4q4">
+                <p><strong>4.</strong> _____ you like some coffee?</p>
+                <div class="exercise-dropdown"><select data-correct="Would"><option value="">Choose...</option><option value="Do">Do</option><option value="Would">Would</option><option value="Are">Are</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt4q4')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div style="margin-top:1.5rem;text-align:center">
+                <button onclick="checkAllExercises()" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;">✓ Submit Test</button>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="unit-17" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-17">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Clothes and Shopping</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card">
+                    <div class="vocab-word">Shirt</div>
+                    <div class="vocab-definition">A piece of clothing for the upper body</div>
+                    <button class="audio-btn small" onclick="speakText('I need a new shirt.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Pants</div>
+                    <div class="vocab-definition">Clothing for the legs</div>
+                    <button class="audio-btn small" onclick="speakMaleText('These pants are too long.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Dress</div>
+                    <div class="vocab-definition">A single piece of clothing for women or girls</div>
+                    <button class="audio-btn small" onclick="speakText('She is wearing a red dress.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Shoes</div>
+                    <div class="vocab-definition">Coverings for the feet</div>
+                    <button class="audio-btn small" onclick="speakMaleText('I bought black shoes.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Hat</div>
+                    <div class="vocab-definition">A head covering</div>
+                    <button class="audio-btn small" onclick="speakText('Wear a hat in the sun.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Jacket</div>
+                    <div class="vocab-definition">A short coat</div>
+                    <button class="audio-btn small" onclick="speakText('It is cold, take your jacket.')">🔊</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Present Continuous (Describing clothes)</h2>
+            <div class="grammar-rule">
+                <strong>We use the Present Continuous to say what someone is wearing RIGHT NOW.</strong><br>
+                <span class="grammar-example">Subject + am/is/are + wearing...</span>
+            </div>
+            <ul style="line-height:2">
+                <li>I <strong>am wearing</strong> a blue shirt.</li>
+                <li>He <strong>is wearing</strong> black pants.</li>
+                <li>They <strong>are wearing</strong> hats.</li>
+            </ul>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">At the Party</h2>
+            <div class="listening-exercise">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakText('Who is David? David is over there. He is wearing a blue shirt and black pants. Oh, I see him. And who is the woman next to him? That is Maria. She is wearing a beautiful red dress and white shoes.')">🔊 Listen</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Woman:</strong> Who is David?</p>
+                    <p><strong>Man (Tom):</strong> David is over there. He is wearing a blue shirt and black pants.</p>
+                    <p><strong>Woman:</strong> Oh, I see him. And who is the woman next to him?</p>
+                    <p><strong>Tom:</strong> That is Maria. She is wearing a beautiful red dress and white shoes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <p>Look at your partner. Describe what they are wearing today.</p>
+            <p><em>Example: "You are wearing a white t-shirt, blue jeans, and black shoes."</em></p>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">A Fashion Blog</h2>
+            <div class="reading-passage">
+                <p>Hello! Welcome to my fashion blog. Today, we are looking at street style in New York. The weather is cold today. In the photo, the woman is wearing a warm black jacket, blue jeans, and brown boots. She is also wearing a red hat. I love her style! It is comfortable but very chic.</p>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <p>Write a description of your favorite outfit. What clothes do you like to wear when you go out?</p>
+        </section>
+
+        <section class="practice-section" id="practice-section-17">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u17q1">
+                <p><strong>1.</strong> She _____ wearing a green dress.</p>
+                <div class="exercise-dropdown"><select data-correct="is"><option value="">Choose...</option><option value="am">am</option><option value="is">is</option><option value="are">are</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u17q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u17q2">
+                <p><strong>2.</strong> I need new _____ for my feet.</p>
+                <div class="exercise-dropdown"><select data-correct="shoes"><option value="">Choose...</option><option value="hat">hat</option><option value="shirt">shirt</option><option value="shoes">shoes</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u17q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="unit-18" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-18">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Actions Right Now</h2>
+            <p style="font-size:1.1rem">reading, eating, sleeping, working, playing, cooking, cleaning.</p>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Present Continuous vs. Present Simple</h2>
+            <div class="grammar-rule">
+                <strong>Present Continuous:</strong> Actions happening RIGHT NOW.<br>
+                <span class="grammar-example">I am reading a book (now).</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Present Simple:</strong> Routines, habits, facts.<br>
+                <span class="grammar-example">I read books every night.</span>
+            </div>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">A Phone Call</h2>
+            <div class="listening-exercise">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakMaleText('Hello? Hi Mark, it is Julia. Are you busy? Yes, I am cooking dinner. What are you doing? I am waiting for the bus. It is raining! Oh no! Do you want me to pick you up? No, it is fine. The bus is arriving now. See you later!')">🔊 Listen</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Julia:</strong> Hello?</p>
+                    <p><strong>Mark:</strong> Hi Mark, it's Julia. Are you busy?</p>
+                    <p><strong>Julia:</strong> Yes, I am cooking dinner. What are you doing?</p>
+                    <p><strong>Mark:</strong> I'm waiting for the bus. It is raining!</p>
+                    <p><strong>Julia:</strong> Oh no! Do you want me to pick you up?</p>
+                    <p><strong>Mark:</strong> No, it's fine. The bus is arriving now. See you later!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <p>Mime an action (e.g., pretend to eat). Your partner asks: "Are you eating?" Answer: "Yes, I am." or "No, I'm not."</p>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">A Busy Office</h2>
+            <div class="reading-passage">
+                <p>It is 10:00 AM in the office. Everyone is very busy. Mr. Smith is talking on the phone. Sarah and John are having a meeting in the conference room. The receptionist is typing an email. Only Peter is not working. He is drinking coffee and looking out the window!</p>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <p>Imagine what your family or friends are doing right now. Write 4 sentences.</p>
+        </section>
+
+        <section class="practice-section" id="practice-section-18">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u18q1">
+                <p><strong>1.</strong> I _____ TV right now.</p>
+                <div class="exercise-dropdown"><select data-correct="am watching"><option value="">Choose...</option><option value="watch">watch</option><option value="am watching">am watching</option><option value="watches">watches</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u18q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u18q2">
+                <p><strong>2.</strong> He usually _____ at 7 AM.</p>
+                <div class="exercise-dropdown"><select data-correct="wakes up"><option value="">Choose...</option><option value="wakes up">wakes up</option><option value="is waking up">is waking up</option><option value="wake up">wake up</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u18q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="unit-19" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-19">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Body Parts and Health</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card"><div class="vocab-word">Head</div></div>
+                <div class="vocab-card"><div class="vocab-word">Arm / Hand</div></div>
+                <div class="vocab-card"><div class="vocab-word">Leg / Foot</div></div>
+                <div class="vocab-card"><div class="vocab-word">Stomach</div></div>
+                <div class="vocab-card"><div class="vocab-word">Headache</div></div>
+                <div class="vocab-card"><div class="vocab-word">A Cold</div></div>
+            </div>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Have got / Has got</h2>
+            <div class="grammar-rule">
+                <strong>Affirmative:</strong> I/You/We/They <strong>have got</strong> (I've got). He/She/It <strong>has got</strong> (He's got).<br>
+                <span class="grammar-example">I've got a headache. She has got a cold.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Negative:</strong> haven't got / hasn't got.<br>
+                <span class="grammar-example">I haven't got a fever. He hasn't got medicine.</span>
+            </div>
+            <div style="margin-top:1rem">
+                <button class="audio-btn" onclick="speakText('I have got a headache. She has got a cold. I have not got a fever. He has not got medicine.')">🔊 Listen</button>
+            </div>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">At the Doctor</h2>
+            <div class="listening-exercise">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakMaleText('Good morning, doctor. Good morning. What is the problem? I feel terrible. I have got a bad headache and a sore throat. Do you have a fever? Yes, I think so. You have got a cold. You need to rest and drink plenty of water.')">🔊 Listen</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Patient (Male):</strong> Good morning, doctor.</p>
+                    <p><strong>Doctor (Male):</strong> Good morning. What is the problem?</p>
+                    <p><strong>Patient:</strong> I feel terrible. I've got a bad headache and a sore throat.</p>
+                    <p><strong>Doctor:</strong> Do you have a fever?</p>
+                    <p><strong>Patient:</strong> Yes, I think so.</p>
+                    <p><strong>Doctor:</strong> You've got a cold. You need to rest and drink plenty of water.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <p>Role-play a doctor and a patient. Use vocabulary like: stomachache, headache, rest, medicine.</p>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">Health Tips for Winter</h2>
+            <div class="reading-passage">
+                <p>Winter is very cold, and many people get sick. To stay healthy, you should eat a lot of fruit and vegetables. They have got vitamins. You should also wash your hands often. If you have got a cold, stay home and sleep. Don't go to work or school, because you can make other people sick.</p>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <p>Write a short email to your boss. Explain that you are sick (mention your symptoms) and you cannot go to work today.</p>
+        </section>
+
+        <section class="practice-section" id="practice-section-19">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u19q1">
+                <p><strong>1.</strong> He _____ a terrible headache.</p>
+                <div class="exercise-dropdown"><select data-correct="has got"><option value="">Choose...</option><option value="have got">have got</option><option value="has got">has got</option><option value="is got">is got</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u19q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u19q2">
+                <p><strong>2.</strong> I _____ any medicine in my bag.</p>
+                <div class="exercise-dropdown"><select data-correct="haven't got"><option value="">Choose...</option><option value="haven't got">haven't got</option><option value="hasn't got">hasn't got</option><option value="don't got">don't got</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u19q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="unit-20" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-20">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Directions and Places</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card"><div class="vocab-word">Bank</div></div>
+                <div class="vocab-card"><div class="vocab-word">Pharmacy</div></div>
+                <div class="vocab-card"><div class="vocab-word">Supermarket</div></div>
+                <div class="vocab-card"><div class="vocab-word">Turn left</div></div>
+                <div class="vocab-card"><div class="vocab-word">Turn right</div></div>
+                <div class="vocab-card"><div class="vocab-word">Go straight</div></div>
+            </div>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Imperatives & Prepositions of Place</h2>
+            <div class="grammar-rule">
+                <strong>Imperatives (Giving orders/directions):</strong> Use the base verb without a subject.<br>
+                <span class="grammar-example">Go straight. Turn left. Don't turn right.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Prepositions:</strong> next to, opposite, between, on the corner of.<br>
+                <span class="grammar-example">The bank is next to the pharmacy.</span>
+            </div>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">On the Street</h2>
+            <div class="listening-exercise">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakText('Excuse me, where is the nearest hospital? Go straight on this street. Then, turn left at the traffic lights. The hospital is opposite the park. Thank you very much!')">🔊 Listen</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Tourist:</strong> Excuse me, where is the nearest hospital?</p>
+                    <p><strong>Local:</strong> Go straight on this street. Then, turn left at the traffic lights. The hospital is opposite the park.</p>
+                    <p><strong>Tourist:</strong> Thank you very much!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <p>Work with a partner. Give them directions from your classroom to the nearest supermarket.</p>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">Directions to the Party</h2>
+            <div class="reading-passage">
+                <p>Hi guys! Here are the directions to my house for the party. Take bus number 12 and get off at Main Street. Walk straight for two blocks. Turn right at the big supermarket. My house is number 45. It is between the bakery and the bank. See you at 8 PM!</p>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <p>Write an email inviting a friend to your house, and give them clear directions.</p>
+        </section>
+
+        <section class="practice-section" id="practice-section-20">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u20q1">
+                <p><strong>1.</strong> _____ straight and then turn left.</p>
+                <div class="exercise-dropdown"><select data-correct="Go"><option value="">Choose...</option><option value="Going">Going</option><option value="Go">Go</option><option value="Goes">Goes</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u20q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u20q2">
+                <p><strong>2.</strong> The pharmacy is _____ the supermarket.</p>
+                <div class="exercise-dropdown"><select data-correct="next to"><option value="">Choose...</option><option value="next to">next to</option><option value="between">between</option><option value="on">on</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u20q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+        </section>
+
+        <section class="practice-section" id="progress-test-5" style="border: 2px solid #8b5cf6; background: rgba(139, 92, 246, 0.05); margin-top: 2rem;">
+            <span class="section-label" style="background: rgba(139, 92, 246, 0.2); color: #8b5cf6;">Progress Test 5 📝</span>
+            <h2 class="section-title">Test 5 (Units 17-20)</h2>
+            <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                <p style="margin: 0; color: #fff;">Test your knowledge of present continuous, health, and directions.</p>
+            </div>
+            <div class="exercise-question" data-question="pt5q1">
+                <p><strong>1.</strong> She _____ wearing a blue dress today.</p>
+                <div class="exercise-dropdown"><select data-correct="is"><option value="">Choose...</option><option value="is">is</option><option value="are">are</option><option value="am">am</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt5q1')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="pt5q2">
+                <p><strong>2.</strong> Right now, I _____ a book.</p>
+                <div class="exercise-dropdown"><select data-correct="am reading"><option value="">Choose...</option><option value="read">read</option><option value="am reading">am reading</option><option value="reading">reading</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt5q2')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="pt5q3">
+                <p><strong>3.</strong> I _____ got a terrible headache.</p>
+                <div class="exercise-dropdown"><select data-correct="have"><option value="">Choose...</option><option value="has">has</option><option value="have">have</option><option value="am">am</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt5q3')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="pt5q4">
+                <p><strong>4.</strong> _____ right at the traffic lights.</p>
+                <div class="exercise-dropdown"><select data-correct="Turn"><option value="">Choose...</option><option value="Turning">Turning</option><option value="Turn">Turn</option><option value="Turns">Turns</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt5q4')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div style="margin-top:1.5rem;text-align:center">
+                <button onclick="checkAllExercises()" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;">✓ Submit Test</button>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="unit-21" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-21">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Abilities and Talents</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card">
+                    <div class="vocab-word">Swim</div>
+                    <div class="vocab-definition">To move through water</div>
+                    <button class="audio-btn small" onclick="speakText('I can swim very fast.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Play guitar</div>
+                    <div class="vocab-definition">To make music with a guitar</div>
+                    <button class="audio-btn small" onclick="speakMaleText('He can play the guitar.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Speak French</div>
+                    <div class="vocab-definition">To talk in the French language</div>
+                    <button class="audio-btn small" onclick="speakText('She can speak French.')">🔊</button>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Ride a bike</div>
+                    <div class="vocab-definition">To travel on a bicycle</div>
+                    <button class="audio-btn small" onclick="speakMaleText('They can ride a bike.')">🔊</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Can / Can't for Ability</h2>
+            <div class="grammar-rule">
+                <strong>Affirmative:</strong> Subject + can + base verb.<br>
+                <span class="grammar-example">I can swim. She can sing.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Negative:</strong> Subject + can't (cannot) + base verb.<br>
+                <span class="grammar-example">He can't cook. We can't speak Japanese.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Questions:</strong> Can + subject + base verb?<br>
+                <span class="grammar-example">Can you play tennis? Yes, I can. / No, I can't.</span>
+            </div>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">Talent Show Audition</h2>
+            <div class="listening-exercise">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakMaleText('Hello, what is your name? My name is Lisa. What can you do, Lisa? I can sing and I can play the piano. Can you dance? No, I cannot dance very well. That is okay. Let us hear you sing!')">🔊 Listen</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Judge (Male):</strong> Hello, what is your name?</p>
+                    <p><strong>Lisa (Female):</strong> My name is Lisa.</p>
+                    <p><strong>Judge:</strong> What can you do, Lisa?</p>
+                    <p><strong>Lisa:</strong> I can sing and I can play the piano.</p>
+                    <p><strong>Judge:</strong> Can you dance?</p>
+                    <p><strong>Lisa:</strong> No, I can't dance very well.</p>
+                    <p><strong>Judge:</strong> That's okay. Let's hear you sing!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <p>Interview your partner. Ask them 3 things they can do and 3 things they can't do.</p>
+            <p><em>Example: "Can you speak Italian?" - "No, I can't. But I can speak Spanish."</em></p>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">Amazing Animals</h2>
+            <div class="reading-passage">
+                <p>Animals have amazing abilities. For example, cheetahs can run very fast. They can reach speeds of 100 km/h. Dolphins are very intelligent. They can communicate with each other underwater, and they can learn tricks. Penguins are birds, but they can't fly. However, they can swim beautifully in freezing water.</p>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <p>Write a short paragraph (3-4 sentences) about your hidden talents. What can you do that surprises people?</p>
+        </section>
+
+        <section class="practice-section" id="practice-section-21">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u21q1">
+                <p><strong>1.</strong> I _____ speak three languages.</p>
+                <div class="exercise-dropdown"><select data-correct="can"><option value="">Choose...</option><option value="can">can</option><option value="am">am</option><option value="is">is</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u21q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u21q2">
+                <p><strong>2.</strong> _____ you play the piano?</p>
+                <div class="exercise-dropdown"><select data-correct="Can"><option value="">Choose...</option><option value="Do">Do</option><option value="Are">Are</option><option value="Can">Can</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u21q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="unit-22" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-22">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Past Time Expressions</h2>
+            <p style="font-size:1.1rem; line-height: 1.8;">yesterday, last night, last week, last year, two days ago, a month ago.</p>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Past Simple: Was / Were</h2>
+            <div class="grammar-rule">
+                <strong>Was (I, He, She, It) / Were (You, We, They)</strong><br>
+                <span class="grammar-example">I was at home yesterday. They were in Paris last week.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Negative:</strong> wasn't / weren't.<br>
+                <span class="grammar-example">She wasn't at work. We weren't happy.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Questions:</strong> Was / Were + subject... ?<br>
+                <span class="grammar-example">Were you tired? Yes, I was.</span>
+            </div>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">Where were you?</h2>
+            <div class="listening-exercise">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakMaleText('Hi Sarah! Where were you last night? I was at a concert. It was amazing! Who were you with? I was with my brother. The band was great. Where were you? I was at home. I was very tired.')">🔊 Listen</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Man (Tom):</strong> Hi Sarah! Where were you last night?</p>
+                    <p><strong>Sarah (Female):</strong> I was at a concert. It was amazing!</p>
+                    <p><strong>Tom:</strong> Who were you with?</p>
+                    <p><strong>Sarah:</strong> I was with my brother. The band was great. Where were you?</p>
+                    <p><strong>Tom:</strong> I was at home. I was very tired.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <p>Ask your partner: "Where were you..."</p>
+            <ul>
+                <li>...last Saturday at 8 PM?</li>
+                <li>...yesterday morning?</li>
+                <li>...two hours ago?</li>
+            </ul>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">Albert Einstein</h2>
+            <div class="reading-passage">
+                <p>Albert Einstein was a very famous scientist. He was born in Germany in 1879. He was a quiet child, but he was very smart in math and physics. Later in his life, he was a professor in Switzerland and the United States. His ideas were very important for modern science. He was one of the greatest minds of the 20th century.</p>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <p>Write 4 sentences about where you were on your last birthday. Who were you with? Was it fun?</p>
+        </section>
+
+        <section class="practice-section" id="practice-section-22">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u22q1">
+                <p><strong>1.</strong> I _____ at the cinema yesterday.</p>
+                <div class="exercise-dropdown"><select data-correct="was"><option value="">Choose...</option><option value="was">was</option><option value="were">were</option><option value="am">am</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u22q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u22q2">
+                <p><strong>2.</strong> They _____ at home last night.</p>
+                <div class="exercise-dropdown"><select data-correct="weren't"><option value="">Choose...</option><option value="wasn't">wasn't</option><option value="weren't">weren't</option><option value="aren't">aren't</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u22q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="unit-23" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-23">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Regular Verbs in the Past</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card"><div class="vocab-word">Play → Played</div></div>
+                <div class="vocab-card"><div class="vocab-word">Watch → Watched</div></div>
+                <div class="vocab-card"><div class="vocab-word">Work → Worked</div></div>
+                <div class="vocab-card"><div class="vocab-word">Study → Studied</div></div>
+                <div class="vocab-card"><div class="vocab-word">Visit → Visited</div></div>
+            </div>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Past Simple (Regular Verbs)</h2>
+            <div class="grammar-rule">
+                <strong>Affirmative:</strong> Add -ed or -d to the verb.<br>
+                <span class="grammar-example">I walked to the park. She lived in Spain.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Negative:</strong> didn't + base verb.<br>
+                <span class="grammar-example">I didn't walk to the park. She didn't live in Spain.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Questions:</strong> Did + subject + base verb?<br>
+                <span class="grammar-example">Did you play tennis? Yes, I did. / No, I didn't.</span>
+            </div>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">A Busy Weekend</h2>
+            <div class="listening-exercise">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakText('Did you have a good weekend? Yes, I did. On Saturday, I cleaned my apartment and washed my car. What did you do on Sunday? I visited my grandparents. We cooked dinner together and talked for hours. Did you study for the test? Oh no, I did not study at all!')">🔊 Listen</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Man (Tom):</strong> Did you have a good weekend?</p>
+                    <p><strong>Woman (Lisa):</strong> Yes, I did. On Saturday, I cleaned my apartment and washed my car.</p>
+                    <p><strong>Tom:</strong> What did you do on Sunday?</p>
+                    <p><strong>Lisa:</strong> I visited my grandparents. We cooked dinner together and talked for hours. Did you study for the test?</p>
+                    <p><strong>Tom:</strong> Oh no, I didn't study at all!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Speaking Practice</h2>
+            <p>Ask your partner: "Did you [verb] yesterday/last weekend?"</p>
+            <p><em>Example: "Did you watch TV yesterday?" - "Yes, I did. I watched a movie."</em></p>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">A Diary Entry</h2>
+            <div class="reading-passage">
+                <p><strong>Monday, 14th May</strong></p>
+                <p>Today was a very long day. I started work at 8 AM and finished at 6 PM. I worked very hard on a new project. After work, I walked to the gym and exercised for an hour. I arrived home at 8 PM. I cooked dinner, watched a little bit of TV, and then I rested. I was exhausted!</p>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <p>Write a short diary entry (4-5 sentences) about what you did yesterday.</p>
+        </section>
+
+        <section class="practice-section" id="practice-section-23">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u23q1">
+                <p><strong>1.</strong> She _____ TV last night.</p>
+                <div class="exercise-dropdown"><select data-correct="watched"><option value="">Choose...</option><option value="watch">watch</option><option value="watched">watched</option><option value="watches">watches</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u23q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u23q2">
+                <p><strong>2.</strong> _____ they play football yesterday?</p>
+                <div class="exercise-dropdown"><select data-correct="Did"><option value="">Choose...</option><option value="Do">Do</option><option value="Did">Did</option><option value="Are">Are</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u23q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div id="unit-24" class="course-unit" style="display: none;">
+    <div class="container">
+        <section class="section-wrapper" id="vocabulary-section-24">
+            <span class="section-label vocabulary">📚 Vocabulary</span>
+            <h2 class="section-title">Irregular Verbs in the Past</h2>
+            <div class="vocabulary-grid">
+                <div class="vocab-card"><div class="vocab-word">Go → Went</div></div>
+                <div class="vocab-card"><div class="vocab-word">Have → Had</div></div>
+                <div class="vocab-card"><div class="vocab-word">Eat → Ate</div></div>
+                <div class="vocab-card"><div class="vocab-word">See → Saw</div></div>
+                <div class="vocab-card"><div class="vocab-word">Take → Took</div></div>
+                <div class="vocab-card"><div class="vocab-word">Make → Made</div></div>
+            </div>
+        </section>
+
+        <section class="grammar-box">
+            <span class="section-label grammar">📝 Grammar</span>
+            <h2 class="section-title">Past Simple (Irregular Verbs)</h2>
+            <div class="grammar-rule">
+                <strong>Affirmative:</strong> Irregular verbs change completely. You must memorize them!<br>
+                <span class="grammar-example">I went to the store. We ate pizza.</span>
+            </div>
+            <div class="grammar-rule">
+                <strong>Negative & Questions:</strong> Use <em>didn't</em> or <em>did</em> + base verb, just like regular verbs.<br>
+                <span class="grammar-example">I didn't go to the store. Did you eat pizza?</span>
+            </div>
+        </section>
+
+        <section class="listening-section">
+            <span class="section-label listening">🎧 Listening</span>
+            <h2 style="color:white;margin-bottom:1.5rem">An Amazing Trip</h2>
+            <div class="listening-exercise">
+                <div class="audio-player">
+                    <button class="audio-btn" onclick="speakMaleText('Where did you go for your holiday? I went to Japan. It was incredible! What did you see? I saw beautiful temples and mountains. Did you eat sushi? Yes, I did. I ate a lot of delicious food. I had a great time.')">🔊 Listen</button>
+                </div>
+                <div class="transcript-box">
+                    <p><strong>📝 Transcript:</strong></p>
+                    <p><strong>Woman:</strong> Where did you go for your holiday?</p>
+                    <p><strong>Man (Tom):</strong> I went to Japan. It was incredible!</p>
+                    <p><strong>Woman:</strong> What did you see?</p>
+                    <p><strong>Tom:</strong> I saw beautiful temples and mountains.</p>
+                    <p><strong>Woman:</strong> Did you eat sushi?</p>
+                    <p><strong>Tom:</strong> Yes, I did. I ate a lot of delicious food. I had a great time.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="speaking-section">
+            <span class="section-label speaking">🗣️ Speaking</span>
+            <h2 class="section-title">Course Review</h2>
+            <p>Congratulations on finishing the A1 Course! Talk with a partner:</p>
+            <ul>
+                <li>What was your favorite unit?</li>
+                <li>What did you learn in this course?</li>
+                <li>What do you want to learn next?</li>
+            </ul>
+        </section>
+
+        <section class="reading-section">
+            <span class="section-label reading">📖 Reading</span>
+            <h2 class="section-title">A Postcard from Italy</h2>
+            <div class="reading-passage">
+                <p>Dear Mark,</p>
+                <p>Greetings from Rome! We are having a wonderful time. We arrived two days ago. Yesterday, we went to the Colosseum. We took many photos. For dinner, we ate real Italian pizza and drank wine. The weather is perfect. Today, we are going to visit the Vatican.</p>
+                <p>See you soon!</p>
+                <p>Love, Emma</p>
+            </div>
+        </section>
+
+        <section class="writing-section">
+            <span class="section-label writing">✍️ Writing</span>
+            <h2 class="section-title">Writing Practice</h2>
+            <p>Imagine you are on holiday. Write a short postcard to a friend. Tell them where you went, what you saw, and what you ate.</p>
+        </section>
+
+        <section class="practice-section" id="practice-section-24">
+            <span class="section-label vocabulary">🎯 Quiz</span>
+            <h2 class="section-title">Knowledge Check</h2>
+            <div class="exercise-question" data-question="u24q1">
+                <p><strong>1.</strong> I _____ to Paris last year.</p>
+                <div class="exercise-dropdown"><select data-correct="went"><option value="">Choose...</option><option value="go">go</option><option value="went">went</option><option value="goes">goes</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u24q1')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="u24q2">
+                <p><strong>2.</strong> _____ you see the new movie?</p>
+                <div class="exercise-dropdown"><select data-correct="Did"><option value="">Choose...</option><option value="Do">Do</option><option value="Are">Are</option><option value="Did">Did</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('u24q2')">Check Answer</button><div class="feedback-message"></div>
+            </div>
+        </section>
+
+        <section class="practice-section" id="progress-test-6" style="border: 2px solid #8b5cf6; background: rgba(139, 92, 246, 0.05); margin-top: 2rem;">
+            <span class="section-label" style="background: rgba(139, 92, 246, 0.2); color: #8b5cf6;">Progress Test 6 📝</span>
+            <h2 class="section-title">Test 6 (Units 21-24)</h2>
+            <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                <p style="margin: 0; color: #fff;">Test your knowledge of abilities and past tenses.</p>
+            </div>
+            <div class="exercise-question" data-question="pt6q1">
+                <p><strong>1.</strong> I _____ speak French, but I can speak English.</p>
+                <div class="exercise-dropdown"><select data-correct="can't"><option value="">Choose...</option><option value="can">can</option><option value="can't">can't</option><option value="am not">am not</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt6q1')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="pt6q2">
+                <p><strong>2.</strong> They _____ at the park yesterday.</p>
+                <div class="exercise-dropdown"><select data-correct="were"><option value="">Choose...</option><option value="was">was</option><option value="were">were</option><option value="are">are</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt6q2')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="pt6q3">
+                <p><strong>3.</strong> She _____ her grandmother last weekend.</p>
+                <div class="exercise-dropdown"><select data-correct="visited"><option value="">Choose...</option><option value="visit">visit</option><option value="visited">visited</option><option value="visiting">visiting</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt6q3')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div class="exercise-question" data-question="pt6q4">
+                <p><strong>4.</strong> We _____ to the beach on Sunday.</p>
+                <div class="exercise-dropdown"><select data-correct="went"><option value="">Choose...</option><option value="go">go</option><option value="went">went</option><option value="goed">goed</option></select></div>
+                <button class="check-answer-btn" onclick="checkDropdownAnswer('pt6q4')">Check</button><div class="feedback-message"></div>
+            </div>
+            <div style="margin-top:1.5rem;text-align:center">
+                <button onclick="checkAllExercises()" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);color:white;border:none;padding:0.8rem 1.5rem;border-radius:8px;cursor:pointer;font-weight:bold;">✓ Submit Test</button>
+            </div>
+        </section>
     </div>
 </div>
 

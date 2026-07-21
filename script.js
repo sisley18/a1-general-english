@@ -20,7 +20,7 @@ function initAudioEngine() {
 }
 document.addEventListener('DOMContentLoaded', initAudioEngine);
 
-function speakText(textIdOrText, slow) {
+function speakText(textIdOrText, slow, gender = 'female') {
     let text = document.getElementById(textIdOrText) ? (document.getElementById(textIdOrText).textContent || document.getElementById(textIdOrText).innerText) : textIdOrText;
     text = (text || '').trim();
     if (!text) return;
@@ -30,8 +30,12 @@ function speakText(textIdOrText, slow) {
 
     // Chunk text for Google TTS limit (approx 200 chars max)
     const chunks = _splitText(text, 150);
-    audioQueue = chunks.map(c => ({ text: c, slow: slow }));
+    audioQueue = chunks.map(c => ({ text: c, slow: slow, gender: gender }));
     _processQueue();
+}
+
+function speakMaleText(textIdOrText, slow) {
+    speakText(textIdOrText, slow, 'male');
 }
 
 function _processQueue() {
@@ -41,6 +45,12 @@ function _processQueue() {
     }
     isPlaying = true;
     const item = audioQueue.shift();
+    
+    // If male voice requested, skip Google Translate TTS (which is female) and use fallback Web Speech API directly
+    if (item.gender === 'male') {
+        _fallbackSpeak(item.text, item.slow, 'male');
+        return;
+    }
     
     // Use Google Translate TTS for guaranteed high-quality American English
     const url = 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en-US&q=' + encodeURIComponent(item.text);
@@ -60,12 +70,12 @@ function _processQueue() {
     
     audio.onerror = () => {
         console.warn("Google TTS failed, falling back to Web Speech API");
-        _fallbackSpeak(item.text, item.slow);
+        _fallbackSpeak(item.text, item.slow, 'female');
     };
     
     audio.play().catch(e => {
         console.warn("Audio play blocked or failed, falling back to Web Speech API", e);
-        _fallbackSpeak(item.text, item.slow);
+        _fallbackSpeak(item.text, item.slow, 'female');
     });
 }
 
@@ -91,7 +101,7 @@ function speakTextSlow(text) {
 }
 
 // Fallback logic for Web Speech API
-function _fallbackSpeak(text, slow) {
+function _fallbackSpeak(text, slow, gender = 'female') {
     if (!('speechSynthesis' in window)) {
         setTimeout(_processQueue, 300);
         return;
@@ -102,9 +112,16 @@ function _fallbackSpeak(text, slow) {
     
     if (voices.length === 0) voices = window.speechSynthesis.getVoices();
     
-    const usVoice = voices.find(v => v.lang.toLowerCase().startsWith('en-us') && (v.name.includes('Google') || v.name.includes('Online') || v.name.includes('Premium')));
-    if (usVoice) {
-        u.voice = usVoice;
+    let selectedVoice = null;
+    if (gender === 'male') {
+        selectedVoice = voices.find(v => v.lang.toLowerCase().startsWith('en-us') && (v.name.toLowerCase().includes('male') || v.name.toLowerCase().includes('david') || v.name.toLowerCase().includes('guy')));
+        if (!selectedVoice) selectedVoice = voices.find(v => v.lang.toLowerCase().startsWith('en') && v.name.toLowerCase().includes('male'));
+    } else {
+        selectedVoice = voices.find(v => v.lang.toLowerCase().startsWith('en-us') && (v.name.includes('Google') || v.name.includes('Online') || v.name.includes('Premium') || v.name.toLowerCase().includes('female') || v.name.toLowerCase().includes('zira')));
+    }
+    
+    if (selectedVoice) {
+        u.voice = selectedVoice;
     } else {
         const anyEng = voices.find(v => v.lang.toLowerCase().startsWith('en'));
         if (anyEng) u.voice = anyEng;
@@ -282,6 +299,7 @@ function printSection(sectionId) {
 
 // --- EXPOSE FUNCTIONS GLOBALLY ---
 window.speakText = speakText;
+window.speakMaleText = speakMaleText;
 window.speakTextSlow = speakTextSlow;
 window.stopAudio = stopAudio;
 window.pauseSpeech = pauseSpeech;
@@ -478,7 +496,7 @@ window.sendToTeacherWhatsApp = sendToTeacherWhatsApp;
 
 // --- SINGLE PAGE APPLICATION NAVIGATION ---
 let currentUnit = 0;
-const totalUnits = 8;
+const totalUnits = 24;
 
 function navigateUnitTo(unitNum) {
     document.querySelectorAll('.course-unit').forEach(el => el.style.display = 'none');
