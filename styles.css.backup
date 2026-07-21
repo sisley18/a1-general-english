@@ -1,39 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&display=swap');
 
 :root {
-    --bg-primary: #fffdfa;
-    --bg-secondary: rgba(255, 255, 255, 0.85);
-    --bg-warm: #fff8f0;
-    --text-primary: #2d3748;
-    --text-secondary: #718096;
-    --accent-teal: #14b8a6;
-    --accent-teal-light: #5eead4;
-    --accent-indigo: #8b5cf6;
-    --accent-indigo-light: #c4b5fd;
-    --accent-orange: #f97316;
-    --accent-green: #10b981;
-    --accent-blue: #3b82f6;
+    --bg-primary: #faf8f5;
+    --bg-secondary: #ffffff;
+    --bg-warm: #fff9f0;
+    --text-primary: #1a2332;
+    --text-secondary: #475569;
+    --accent-teal: #0d9488;
+    --accent-teal-light: #2dd4bf;
+    --accent-indigo: #5a3fd6;
+    --accent-indigo-light: #818cf8;
+    --accent-orange: #d95f24;
+    --accent-green: #059669;
+    --accent-blue: #4facfe;
     --font-body: 'Inter', sans-serif;
     --font-heading: 'Outfit', sans-serif;
-    --border-radius: 20px;
-    --shadow-light: 0 4px 20px rgba(0,0,0,0.04);
-    --shadow-medium: 0 15px 35px rgba(0,0,0,0.08);
-    --glass-border: 1px solid rgba(255, 255, 255, 0.8);
-    --glass-bg: rgba(255, 255, 255, 0.65);
+    --border-radius: 12px;
+    --shadow-light: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+    --shadow-medium: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background-color: var(--bg-primary);
-    background-image: 
-        radial-gradient(at 0% 0%, hsla(38, 100%, 93%, 1) 0, transparent 50%), 
-        radial-gradient(at 100% 0%, hsla(331, 74%, 93%, 1) 0, transparent 50%),
-        radial-gradient(at 100% 100%, hsla(180, 100%, 93%, 1) 0, transparent 50%);
-    background-attachment: fixed;
+    background: var(--bg-primary);
     color: var(--text-primary);
     font-family: var(--font-body);
-    line-height: 1.8;
+    line-height: 1.7;
     min-height: 100vh;
 }
 
@@ -52,17 +45,14 @@ a { text-decoration: none; color: inherit; }
 
 /* ============ HEADER ============ */
 .header {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: var(--glass-border);
-    color: var(--text-primary);
-    padding: 16px 0;
+    background: linear-gradient(135deg, var(--accent-indigo) 0%, #764ba2 100%);
+    color: white;
+    padding: 18px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: var(--shadow-light);
+    box-shadow: 0 4px 20px rgba(90,63,214,0.3);
 }
 
 .header .container {
@@ -74,16 +64,13 @@ a { text-decoration: none; color: inherit; }
 }
 
 .logo {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 800;
     font-family: var(--font-heading);
-    color: var(--text-primary);
-    background: linear-gradient(90deg, var(--accent-orange), var(--accent-indigo));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
 }
 
-.logo span { color: var(--accent-teal); }
+.logo span { color: var(--accent-teal-light); }
 
 .navigation {
     display: flex;
@@ -898,230 +885,3 @@ footer a {
     .section-title { font-size: 1.4rem; }
     .logo { font-size: 1.1rem; }
 }
-
-/* ============ PREMIUM UI ENHANCEMENTS ============ */
-.section-wrapper, .listening-section, .collocations-section,
-.practice-section, .writing-section, .speaking-section, .reading-section, .unit-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: var(--glass-border);
-    box-shadow: var(--shadow-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.unit-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-medium);
-}
-
-.audio-btn {
-    background: linear-gradient(135deg, var(--accent-indigo), var(--accent-teal)) !important;
-    border: none !important;
-    color: white !important;
-    box-shadow: 0 4px 15px rgba(90, 63, 214, 0.4) !important;
-    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-}
-
-.audio-btn:hover {
-    transform: translateY(-2px) scale(1.02) !important;
-    box-shadow: 0 6px 20px rgba(90, 63, 214, 0.6) !important;
-}
-
-.nav-link, .dropdown-btn {
-    color: var(--text-primary);
-}
-
-.spa-nav .nav-btn {
-    background: linear-gradient(90deg, var(--accent-orange), #ff9a44) !important;
-    color: white !important;
-    border: none !important;
-    box-shadow: var(--shadow-glow) !important;
-    transition: all 0.3s ease !important;
-}
-
-.spa-nav .nav-btn:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.5) !important;
-}
-
-/* ============ YOUTUBE & AMERICAN ENGLISH SECTION ============ */
-.culture-section {
-    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(253, 231, 249, 0.6));
-    border-radius: var(--border-radius);
-    padding: 2.5rem;
-    margin-top: 3rem;
-    border: var(--glass-border);
-    box-shadow: var(--shadow-medium);
-    position: relative;
-    overflow: hidden;
-}
-
-.culture-section::before {
-    content: '🇺🇸';
-    position: absolute;
-    top: -20px;
-    right: -10px;
-    font-size: 8rem;
-    opacity: 0.05;
-    pointer-events: none;
-}
-
-.youtube-container {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: var(--shadow-medium);
-    margin: 2rem 0;
-    background: #000;
-    display: block;
-}
-
-.youtube-container iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    display: block;
-}
-
-    .american-dialogue {
-        background: rgba(255, 255, 255, 0.7);
-        border-radius: 12px;
-        padding: 1.5rem;
-        border-left: 4px solid var(--accent-orange);
-        margin-top: 1.5rem;
-    }
-
-    /* ============ MOCKUP UI EXACT STYLING ============ */
-    .course-unit > .container {
-        display: grid;
-        grid-template-columns: 1.6fr 1fr; /* 60/40 split */
-        grid-template-areas: 
-            "culture vocabulary"
-            "collocations vocabulary"
-            "grammar listening"
-            "reading speaking"
-            "writing practice"
-            "test test";
-        gap: 2.5rem;
-        align-items: start;
-        background: rgba(255,255,255,0.6);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        padding: 2.5rem;
-        border-radius: 24px;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-        border: 1px solid rgba(255,255,255,0.8);
-    }
-
-    @media (max-width: 1000px) {
-        .course-unit > .container {
-            grid-template-columns: 1fr;
-            grid-template-areas: 
-                "culture"
-                "vocabulary"
-                "collocations"
-                "grammar"
-                "listening"
-                "reading"
-                "speaking"
-                "writing"
-                "practice"
-                "test";
-        }
-    }
-
-    #unit-0 > .container {
-        display: block;
-        background: transparent;
-        box-shadow: none;
-        backdrop-filter: none;
-        border: none;
-    }
-
-    /* Assign sections to grid areas */
-    .culture-section { grid-area: culture; margin-top: 0 !important; height: auto; display: flex; flex-direction: column; background: transparent !important; border: none !important; box-shadow: none !important; padding: 0 !important; }
-    .culture-section::before { display: none; }
-    
-    .youtube-container {
-        border-radius: 20px;
-        box-shadow: 0 15px 40px rgba(255, 90, 90, 0.25); /* warm red glow */
-        margin-top: 0;
-        display: block;
-    }
-
-    #vocabulary-section { grid-area: vocabulary; background: transparent !important; border: none !important; box-shadow: none !important; padding: 0 !important; }
-    
-    /* Ensure all text is dark inside the collocations card */
-    .collocations-section { grid-area: collocations; }
-    .collocation-card { color: #222 !important; }
-    .collocation-card * { color: inherit !important; }
-    
-    /* Fix the audio button inside collocation card to not be affected by inheritance */
-    .collocation-card .audio-btn { color: white !important; }
-
-    #grammar-section, .grammar-section, .grammar-box { grid-area: grammar; }
-    
-    /* Mockup-style Vocabulary Cards */
-    .vocab-card {
-        background: #ffffff !important;
-        border-radius: 16px !important;
-        padding: 1.2rem !important;
-        display: grid !important;
-        grid-template-columns: auto 1fr auto !important;
-        gap: 1rem !important;
-        align-items: center !important;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.04) !important;
-        border: 1px solid rgba(0,0,0,0.05) !important;
-        margin-bottom: 1rem;
-    }
-
-    .vocab-card::before {
-        content: '🎙️';
-        font-size: 1.5rem;
-        background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
-        padding: 0.8rem;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .vocab-word { font-weight: 700 !important; font-size: 1.15rem !important; color: #222 !important; margin-bottom: 0.2rem !important; }
-    .vocab-definition { font-size: 0.95rem !important; color: #666 !important; }
-    .vocab-example { display: none !important; } /* Hidden to match mockup compactness */
-
-    .vocab-card .audio-btn {
-        width: 48px !important;
-        height: 48px !important;
-        border-radius: 50% !important;
-        background: linear-gradient(135deg, #ff9a44, #fc6076) !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        color: white !important;
-        font-size: 1.2rem !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        box-shadow: 0 8px 20px rgba(252, 96, 118, 0.4) !important;
-    }
-
-    .vocabulary-grid {
-        grid-template-columns: 1fr !important;
-        gap: 0 !important;
-    }
-
-    #grammar-section, .grammar-section { grid-area: grammar; }
-    .listening-section { grid-area: listening; }
-    .reading-section { grid-area: reading; }
-    .speaking-section { grid-area: speaking; }
-    .writing-section { grid-area: writing; }
-    .practice-section { grid-area: practice; }
-    [id^="progress-test"] { grid-area: test; width: 100%; }
-
-    /* Fix unit title size to match mockup */
-    .section-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; color: #222; }
-
-
-
