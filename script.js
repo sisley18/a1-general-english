@@ -201,6 +201,11 @@ function checkDropdownAnswer(questionId) {
         feedback.className = 'feedback-message incorrect';
         select.style.borderColor = '#ef4444';
     }
+    
+    // Disable the select element so they can only answer once
+    select.disabled = true;
+    var checkBtn = container.querySelector('.check-answer-btn');
+    if(checkBtn) checkBtn.disabled = true;
 }
 
 function checkAllExercises() {
@@ -328,7 +333,11 @@ function checkMC(questionName) {
         if (r === selected && !isCorrect) {
             optDiv.classList.add('incorrect');
         }
+        r.disabled = true; // Disable radio button so they can only answer once
     });
+    
+    var checkBtn = container.querySelector('.mc-check-btn');
+    if(checkBtn) checkBtn.disabled = true;
 
     if (feedback) {
         if (isCorrect) {
