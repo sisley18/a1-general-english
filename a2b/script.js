@@ -31,6 +31,7 @@ const courseData = {
         ],
         conv_spot: {
             video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+            youtube_id: "r6pQ5W01-8k",
             q: "According to the video lesson, what is a typical morning grab for Americans?",
             options: ["coffee", "tea", "milk", "soda"],
             correct: 0
@@ -67,6 +68,7 @@ const courseData = {
         ],
         conv_spot: {
             video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+            youtube_id: "B2J9T3P5a6o",
             q: "What did Carlos see while he was hiking in Trunk Bay?",
             options: ["turtles", "sharks", "birds", "crabs"],
             correct: 0
@@ -102,6 +104,7 @@ const courseData = {
         ],
         conv_spot: {
             video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+            youtube_id: "c2M9K8L6x7y",
             q: "How long has the user in the dialogue used the new software?",
             options: ["two days", "one week", "one month", "one year"],
             correct: 0
@@ -137,6 +140,7 @@ const courseData = {
         ],
         conv_spot: {
             video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+            youtube_id: "B2J9T3P5a6o",
             q: "Where is the student planning to work as a software engineer after graduating?",
             options: ["St. Thomas", "Seattle", "Miami", "Boston"],
             correct: 0
@@ -172,6 +176,7 @@ const courseData = {
         ],
         conv_spot: {
             video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+            youtube_id: "r6pQ5W01-8k",
             q: "What does the doctor advise the patient to do for their recovery?",
             options: ["rest for two days and drink warm tea", "exercise in the gym", "go to work", "go shopping"],
             correct: 0
@@ -208,6 +213,7 @@ const courseData = {
         ],
         conv_spot: {
             video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+            youtube_id: "G2sT23a07t8",
             q: "Where would the speaker buy a house if they won the lottery?",
             options: ["St. John", "Seattle", "Florida", "California"],
             correct: 0
@@ -243,6 +249,7 @@ const courseData = {
         ],
         conv_spot: {
             video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+            youtube_id: "4G4Cg_3G4l4",
             q: "When was the product in the dialogue purchased by the customer?",
             options: ["yesterday", "today", "last week", "one month ago"],
             correct: 0
@@ -278,6 +285,7 @@ const courseData = {
         ],
         conv_spot: {
             video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+            youtube_id: "s2_yV7P_K0A",
             q: "Who is the actor that Friend A wants to know about?",
             options: ["the one who won the award last year", "the director of the movie", "the writer of the screenplay", "none"],
             correct: 0
@@ -313,6 +321,7 @@ const courseData = {
         ],
         conv_spot: {
             video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+            youtube_id: "c2M9K8L6x7y",
             q: "What does the runner prefer eating before their workout?",
             options: ["a banana", "a sandwich", "a pizza", "a cookie"],
             correct: 0
@@ -348,6 +357,7 @@ const courseData = {
         ],
         conv_spot: {
             video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+            youtube_id: "B2J9T3P5a6o",
             q: "Had they collected the artifacts before the museum opened?",
             options: ["yes, they had", "no, they hadn't", "they didn't collect any", "not mentioned"],
             correct: 0
@@ -371,6 +381,7 @@ function speakText(text) {
     }
 }
 
+// Stop Audio
 function stopAudio() {
     if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
@@ -483,11 +494,13 @@ function loadUnit(unitId) {
     `;
     document.getElementById('quiz-container').innerHTML = quizHtml;
 
-    // Load Conversation Spot Video & Exercise
+    // Load Conversation Spot Video, Link & Exercise
     const videoEl = document.getElementById('conv-spot-video');
     const sourceEl = document.getElementById('conv-spot-video-source');
     sourceEl.src = data.conv_spot.video_url;
     videoEl.load();
+
+    document.getElementById('conv-spot-auth-link').href = `https://www.youtube.com/watch?v=${data.conv_spot.youtube_id}`;
     
     let convSpotHtml = `
         <div class="question-card" id="conv-spot-card">
