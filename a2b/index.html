@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2-B1 University Learning Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="portal-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="portal-header">
+                <h1 class="portal-title">🎓 EduPortal</h1>
+                <p class="portal-subtitle">A2-B1 Transition Course</p>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <span>Course Progress</span>
+                    <span id="progress-text">0% Complete</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+            </div>
+
+            <!-- Unit Selector -->
+            <ul class="unit-list">
+                <li class="unit-item active" onclick="loadUnit(1)">
+                    <div class="unit-info">
+                        <span class="unit-num">Unit 1</span>
+                        <span class="unit-name">People & Lifestyles</span>
+                    </div>
+                    <div class="unit-status"></div>
+                </li>
+                <li class="unit-item" onclick="loadUnit(2)">
+                    <div class="unit-info">
+                        <span class="unit-num">Unit 2</span>
+                        <span class="unit-name">Travel Adventures</span>
+                    </div>
+                    <div class="unit-status"></div>
+                </li>
+                <li class="unit-item" onclick="loadUnit(3)">
+                    <div class="unit-info">
+                        <span class="unit-num">Unit 3</span>
+                        <span class="unit-name">Tech & Innovation</span>
+                    </div>
+                    <div class="unit-status"></div>
+                </li>
+                <li class="unit-item" onclick="loadUnit(4)">
+                    <div class="unit-info">
+                        <span class="unit-num">Unit 4</span>
+                        <span class="unit-name">Future Possibilities</span>
+                    </div>
+                    <div class="unit-status"></div>
+                </li>
+                <li class="unit-item" onclick="loadUnit(5)">
+                    <div class="unit-info">
+                        <span class="unit-num">Unit 5</span>
+                        <span class="unit-name">Health & Wellness</span>
+                    </div>
+                    <div class="unit-status"></div>
+                </li>
+                <li class="unit-item" onclick="loadUnit(6)">
+                    <div class="unit-info">
+                        <span class="unit-num">Unit 6</span>
+                        <span class="unit-name">Dreams & Ambitions</span>
+                    </div>
+                    <div class="unit-status"></div>
+                </li>
+                <li class="unit-item" onclick="loadUnit(7)">
+                    <div class="unit-info">
+                        <span class="unit-num">Unit 7</span>
+                        <span class="unit-name">Consumer Society</span>
+                    </div>
+                    <div class="unit-status"></div>
+                </li>
+                <li class="unit-item" onclick="loadUnit(8)">
+                    <div class="unit-info">
+                        <span class="unit-num">Unit 8</span>
+                        <span class="unit-name">Entertainment & Media</span>
+                    </div>
+                    <div class="unit-status"></div>
+                </li>
+                <li class="unit-item" onclick="loadUnit(9)">
+                    <div class="unit-info">
+                        <span class="unit-num">Unit 9</span>
+                        <span class="unit-name">Active Lifestyles</span>
+                    </div>
+                    <div class="unit-status"></div>
+                </li>
+                <li class="unit-item" onclick="loadUnit(10)">
+                    <div class="unit-info">
+                        <span class="unit-num">Unit 10</span>
+                        <span class="unit-name">History & Mysteries</span>
+                    </div>
+                    <div class="unit-status"></div>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="workspace">
+            <header class="workspace-header">
+                <span id="active-unit-num" class="active-unit-num">Unit 1</span>
+                <h2 id="active-unit-title" class="active-unit-title">People and Lifestyles</h2>
+            </header>
+
+            <!-- Learning Tabs Selector -->
+            <nav class="tabs-container">
+                <button class="tab-button active" onclick="switchTab('tab-video')">📺 Video & Reading</button>
+                <button class="tab-button" onclick="switchTab('tab-vocab')">📚 Vocabulary</button>
+                <button class="tab-button" onclick="switchTab('tab-grammar')">📝 Grammar Box</button>
+                <button class="tab-button" onclick="switchTab('tab-quiz')">🎯 Practice & Quiz</button>
+            </nav>
+
+            <!-- Workspace Cards Container -->
+            <div class="glass-container">
+                
+                <!-- Tab 1: Video & Reading -->
+                <div id="tab-video" class="tab-panel active">
+                    <div class="two-column-layout">
+                        <!-- Left: video -->
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div class="video-container">
+                                <iframe id="yt-iframe" src="" allowfullscreen></iframe>
+                            </div>
+                            <div style="display: flex; gap: 10px;">
+                                <a id="tiktok-link" href="#" target="_blank" class="tiktok-btn">
+                                    🎵 Practice on TikTok
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Right: Reading and Dialogue -->
+                        <div class="reading-passage-box">
+                            <h3 id="reading-title" style="color: #1e293b; font-size: 1.35rem; margin-bottom: 1rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem;">American Lifestyles</h3>
+                            <p id="reading-body" class="reading-text"></p>
+                            <button id="reading-audio-btn" class="audio-btn primary">🔊 Listen to Text</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Vocabulary Grid -->
+                <div id="tab-vocab" class="tab-panel">
+                    <div id="vocab-container" class="vocab-grid"></div>
+                </div>
+
+                <!-- Tab 3: Grammar Rule Box -->
+                <div id="tab-grammar" class="tab-panel">
+                    <div class="grammar-box">
+                        <h3 id="grammar-title-text" style="font-size: 1.5rem; margin-bottom: 1rem; color: #1e293b;"></h3>
+                        <div id="grammar-rule-body" class="grammar-rule"></div>
+                        <div style="display: flex; gap: 10px;">
+                            <button id="grammar-audio-btn" class="audio-btn primary">🔊 Listen to Examples</button>
+                            <button class="audio-btn primary" style="background: #64748b;" onclick="stopAudio()">⏹️ Stop</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Practice Dialogue & Quizzes -->
+                <div id="tab-quiz" class="tab-panel">
+                    <div class="two-column-layout">
+                        <!-- Left: Dialogue role-play -->
+                        <div class="reading-passage-box">
+                            <h3 style="color: #1e293b; font-size: 1.35rem; margin-bottom: 1.5rem;">🗣️ Real World Conversation</h3>
+                            <div id="dialogue-lines" class="dialogue-box"></div>
+                            <button id="dialogue-audio-btn" class="audio-btn primary">🔊 Listen to Dialogue</button>
+                        </div>
+
+                        <!-- Right: Interactive Quiz -->
+                        <div id="quiz-container" class="quiz-section"></div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
