@@ -30,7 +30,7 @@ const courseData = {
             { q: "Fill in the blank: 'I _____ to Seattle next week for vacation.'", options: ["am traveling", "travels", "traveled", "travel"], correct: 0 }
         ],
         conv_spot: {
-            video_id: "r6pQ5W01-8k",
+            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
             q: "According to the video lesson, what is a typical morning grab for Americans?",
             options: ["coffee", "tea", "milk", "soda"],
             correct: 0
@@ -66,7 +66,7 @@ const courseData = {
             { q: "Choose: 'When the ferry arrived, we _____ in the harbor.'", options: ["were waiting", "waited", "was waiting", "wait"], correct: 0 }
         ],
         conv_spot: {
-            video_id: "B2J9T3P5a6o",
+            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
             q: "What did Carlos see while he was hiking in Trunk Bay?",
             options: ["turtles", "sharks", "birds", "crabs"],
             correct: 0
@@ -101,7 +101,7 @@ const courseData = {
             { q: "Choose: 'I _____ a smartphone since I was in university.'", options: ["have had", "had", "am having", "has had"], correct: 0 }
         ],
         conv_spot: {
-            video_id: "c2M9K8L6x7y",
+            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
             q: "How long has the user in the dialogue used the new software?",
             options: ["two days", "one week", "one month", "one year"],
             correct: 0
@@ -136,7 +136,7 @@ const courseData = {
             { q: "Choose: 'Oh, you need help? I _____ carry that suitcase for you.'", options: ["will", "am going to", "going to", "goes to"], correct: 0 }
         ],
         conv_spot: {
-            video_id: "B2J9T3P5a6o",
+            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
             q: "Where is the student planning to work as a software engineer after graduating?",
             options: ["St. Thomas", "Seattle", "Miami", "Boston"],
             correct: 0
@@ -171,7 +171,7 @@ const courseData = {
             { q: "Choose: 'We _____ wear masks inside the hospital. It is a strict rule.'", options: ["have to", "should", "might", "can"], correct: 0 }
         ],
         conv_spot: {
-            video_id: "r6pQ5W01-8k",
+            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
             q: "What does the doctor advise the patient to do for their recovery?",
             options: ["rest for two days and drink warm tea", "exercise in the gym", "go to work", "go shopping"],
             correct: 0
@@ -207,7 +207,7 @@ const courseData = {
             { q: "Choose: 'If she gets a promotion, she _____ a new car.'", options: ["will buy", "bought", "would buy", "buys"], correct: 0 }
         ],
         conv_spot: {
-            video_id: "G2sT23a07t8",
+            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
             q: "Where would the speaker buy a house if they won the lottery?",
             options: ["St. John", "Seattle", "Florida", "California"],
             correct: 0
@@ -242,7 +242,7 @@ const courseData = {
             { q: "Choose: 'Millions of credit card transactions _____ online daily.'", options: ["are made", "is made", "were make", "make"], correct: 0 }
         ],
         conv_spot: {
-            video_id: "4G4Cg_3G4l4",
+            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
             q: "When was the product in the dialogue purchased by the customer?",
             options: ["yesterday", "today", "last week", "one month ago"],
             correct: 0
@@ -277,7 +277,7 @@ const courseData = {
             { q: "Choose: 'Trunk Bay is the beach _____ we saw sea turtles.'", options: ["where", "which", "who", "that"], correct: 0 }
         ],
         conv_spot: {
-            video_id: "s2_yV7P_K0A",
+            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
             q: "Who is the actor that Friend A wants to know about?",
             options: ["the one who won the award last year", "the director of the movie", "the writer of the screenplay", "none"],
             correct: 0
@@ -312,7 +312,7 @@ const courseData = {
             { q: "Choose: 'You should avoid _____ coffee late at night.'", options: ["drinking", "to drink", "drink", "drank"], correct: 0 }
         ],
         conv_spot: {
-            video_id: "c2M9K8L6x7y",
+            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
             q: "What does the runner prefer eating before their workout?",
             options: ["a banana", "a sandwich", "a pizza", "a cookie"],
             correct: 0
@@ -347,7 +347,7 @@ const courseData = {
             { q: "Choose: 'She realized that she _____ her passport at the hotel.'", options: ["had forgotten", "forgot", "has forgotten", "forget"], correct: 0 }
         ],
         conv_spot: {
-            video_id: "B2J9T3P5a6o",
+            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
             q: "Had they collected the artifacts before the museum opened?",
             options: ["yes, they had", "no, they hadn't", "they didn't collect any", "not mentioned"],
             correct: 0
@@ -406,7 +406,7 @@ function loadUnit(unitId) {
     document.getElementById('active-unit-title').innerText = data.title;
 
     // Load Tab 1: Video & Reading
-    document.getElementById('yt-iframe').src = `https://www.youtube.com/embed/${data.video_id}?rel=0`;
+    document.getElementById('yt-iframe').src = `https://www.youtube.com/embed/${data.video_id}?rel=0&enablejsapi=1`;
     document.getElementById('tiktok-link').href = data.tiktok_url;
     document.getElementById('reading-title').innerText = data.reading_title;
     document.getElementById('reading-body').innerText = data.reading_text;
@@ -484,7 +484,10 @@ function loadUnit(unitId) {
     document.getElementById('quiz-container').innerHTML = quizHtml;
 
     // Load Conversation Spot Video & Exercise
-    document.getElementById('conv-spot-iframe').src = `https://www.youtube.com/embed/${data.conv_spot.video_id}?rel=0`;
+    const videoEl = document.getElementById('conv-spot-video');
+    const sourceEl = document.getElementById('conv-spot-video-source');
+    sourceEl.src = data.conv_spot.video_url;
+    videoEl.load();
     
     let convSpotHtml = `
         <div class="question-card" id="conv-spot-card">
