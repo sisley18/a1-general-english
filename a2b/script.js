@@ -3,7 +3,7 @@ const courseData = {
     1: {
         num: "Unit 1",
         title: "People and Lifestyles",
-        video_id: "r6pQ5W01-8k",
+        video_id: "51kO3-Jm5-s",
         tiktok_url: "https://www.tiktok.com/@speakenglishwithvanessa",
         reading_title: "American Lifestyles",
         reading_text: "In the United States, lifestyles vary depending on where people live. City residents often have fast-paced routines and rely on public transportation. In suburban areas, families typically enjoy spacious homes and drive cars to commute. Most Americans value their free time, spent attending barbecues, practicing sports, or visiting local community centers on weekends.",
@@ -25,15 +25,21 @@ const courseData = {
         grammar_rule: "Use the **Present Simple** for habits, routines, and permanent situations. Use the **Present Continuous** for actions happening right now, at the moment of speaking.<br><br>• <strong>Present Simple:</strong> I commute by train every day.<br>• <strong>Present Continuous:</strong> I am walking to the diner right now.",
         grammar_listen: "I commute by train every day. I am walking to the diner right now. He works in Seattle. They are visiting a park at the moment.",
         quiz: [
-            { q: "Choose the correct verb: 'She usually _____ breakfast at a local diner.'", options: ["eats", "is eating", "eating", "eat"], correct: 0 },
-            { q: "Choose the correct verb: 'Look! They _____ a soccer game in the park.'", options: ["plays", "play", "are playing", "played"], correct: 2 },
-            { q: "Fill in the blank: 'I _____ to Seattle next week for vacation.'", options: ["am traveling", "travels", "traveled", "travel"], correct: 0 }
+            { q: "What is the definition of 'routine'?", options: ["A sequence of actions regularly followed", "A type of vehicle", "A restaurant style", "A fast commute"], correct: 0 },
+            { q: "What is the meaning of 'commute'?", options: ["To cook dinner at home", "To travel regularly to work or school", "To buy something quickly", "To live in a spacious house"], correct: 1 },
+            { q: "What does 'spacious' mean?", options: ["Tiny and cramped", "Having ample space", "Very expensive", "Located in the city"], correct: 1 },
+            { q: "What is the meaning of 'grab' in 'grab a coffee'?", options: ["To drop something", "To get or buy something quickly", "To throw away", "To make slowly"], correct: 1 },
+            { q: "What is a 'diner'?", options: ["A large hotel", "A small, informal restaurant", "A private kitchen", "A train station"], correct: 1 },
+            { q: "What does 'fast-paced' mean?", options: ["Slow and relaxed", "Moving or developing very quickly", "Quiet and silent", "Boring"], correct: 1 },
+            { q: "Which word describes a house with lots of rooms and yard space?", options: ["Cramped", "Spacious", "Tiny", "Fast-paced"], correct: 1 },
+            { q: "Which word means 'regularly traveling to work'?", options: ["Commute", "Grab", "Routine", "Diner"], correct: 0 },
+            { q: "Which word means 'a sequence of daily habits'?", options: ["Diner", "Commute", "Routine", "Spacious"], correct: 2 },
+            { q: "Complete: 'I usually _____ a quick snack at the corner shop.'", options: ["grab", "commute", "routine", "diner"], correct: 0 }
         ],
         conv_spot: {
-            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-            youtube_id: "r6pQ5W01-8k",
-            q: "According to the video lesson, what is a typical morning grab for Americans?",
-            options: ["coffee", "tea", "milk", "soda"],
+            tiktok_id: "7181056586071854341",
+            q: "In Vanessa's TikTok lesson, what daily action does she present?",
+            options: ["How to order at a diner", "How to describe your morning commute", "How to wash dishes", "How to buy clothes"],
             correct: 0
         }
     },
@@ -62,15 +68,21 @@ const courseData = {
         grammar_rule: "Use the **Past Continuous** (was/were + verb-ing) to describe an ongoing past action. Use the **Past Simple** to describe a completed action that interrupted it.<br><br>• <strong>Example:</strong> While I was hiking in Trunk Bay, I saw a sea turtle.",
         grammar_listen: "While I was hiking in Trunk Bay, I saw a sea turtle. They were traveling by plane when the storm started.",
         quiz: [
-            { q: "Complete the sentence: 'While I _____ on the beach, it started to rain.'", options: ["was sitting", "sat", "sitting", "were sitting"], correct: 0 },
-            { q: "Complete: 'They _____ beautiful birds while they were walking in the forest.'", options: ["saw", "was seeing", "were seeing", "see"], correct: 0 },
-            { q: "Choose: 'When the ferry arrived, we _____ in the harbor.'", options: ["were waiting", "waited", "was waiting", "wait"], correct: 0 }
+            { q: "What is the definition of 'destination'?", options: ["The starting point of a trip", "The place to which someone is going", "A type of vehicle", "A map outline"], correct: 1 },
+            { q: "What is the meaning of 'encounter'?", options: ["To avoid completely", "To meet or run into unexpectedly", "To plan in advance", "To invite someone"], correct: 1 },
+            { q: "What does 'unpredictable' mean?", options: ["Stable and certain", "Not able to be foreseen or known beforehand", "Very expensive", "Extremely hot"], correct: 1 },
+            { word: "What is a 'redwood'?", options: ["A red flower", "A giant coniferous tree", "A small desert plant", "A type of rock"], correct: 1 },
+            { q: "What is the meaning of 'waterfall'?", options: ["A dry riverbed", "A stream of water falling from a height", "A rain shower", "An indoor pool"], correct: 1 },
+            { q: "What is the definition of 'hiking'?", options: ["Sailing on a boat", "Walking in nature, mountains, or forests", "Flying in a plane", "Sleeping in a hotel"], correct: 1 },
+            { q: "Which word describes something that changes suddenly and cannot be guessed?", options: ["Predictable", "Unpredictable", "Spacious", "Fast-paced"], correct: 1 },
+            { q: "Which word means 'meeting wild animals unexpectedly'?", options: ["Commuting", "Encountering", "Graduating", "Streaming"], correct: 1 },
+            { q: "Which word means 'the final location of your vacation'?", options: ["Destination", "Routine", "Diner", "Ferry"], correct: 0 },
+            { q: "Complete: 'We went _____ in the National Park last Sunday.'", options: ["hiking", "destination", "encounter", "redwood"], correct: 0 }
         ],
         conv_spot: {
-            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-            youtube_id: "B2J9T3P5a6o",
-            q: "What did Carlos see while he was hiking in Trunk Bay?",
-            options: ["turtles", "sharks", "birds", "crabs"],
+            tiktok_id: "7215904562058775813",
+            q: "What travel advice does Vanessa offer in this short lesson?",
+            options: ["Useful travel phrases for asking directions", "How to pack a suitcase", "How to book a hotel room", "How to buy plane tickets"],
             correct: 0
         }
     },
@@ -98,15 +110,21 @@ const courseData = {
         grammar_rule: "Use the **Present Perfect** (have/has + past participle) to talk about actions that started in the past and continue in the present. Use **for** to express duration. Use **since** to express the starting point.<br><br>• <strong>Example:</strong> I have lived in St. John for five years.<br>• <strong>Example:</strong> She has used this software since Monday.",
         grammar_listen: "I have lived in St. John for five years. She has used this software since Monday. We have studied English since 2024.",
         quiz: [
-            { q: "Complete the sentence: 'She _____ this smartwatch since last year.'", options: ["has owned", "owned", "is owning", "have owned"], correct: 0 },
-            { q: "Complete: 'We have worked remotely _____ three months.'", options: ["for", "since", "during", "ago"], correct: 0 },
-            { q: "Choose: 'I _____ a smartphone since I was in university.'", options: ["have had", "had", "am having", "has had"], correct: 0 }
+            { q: "What is a 'platform' in technology?", options: ["A train station floor", "A digital system or software tool", "A hardware cable", "A type of desk"], correct: 1 },
+            { q: "What does 'wearable' mean?", options: ["Easy to wash", "A technological device worn on the body", "Heavy to carry", "Broken easily"], correct: 1 },
+            { q: "What is an 'assistant' in 'smart assistant'?", options: ["A human secretary", "A device or software helper", "A computer repairman", "A retail clerk"], correct: 1 },
+            { q: "What is the definition of 'remote' in 'remote work'?", options: ["Close by", "Distant, from a separate location", "Broken down", "Fast-paced"], correct: 1 },
+            { q: "What does 'integrate' mean?", options: ["To separate into parts", "To combine or make part of a whole", "To delete permanently", "To buy online"], correct: 1 },
+            { q: "What is the meaning of 'software'?", options: ["Physical computer parts", "Programs used by a computer", "Soft plastic accessories", "Digital screens"], correct: 1 },
+            { q: "Which word means 'working from home or another distant location'?", options: ["Remote", "Spacious", "Severe", "Integrated"], correct: 0 },
+            { q: "Which word describes a smartwatch or smart ring?", options: ["Wearable", "Software", "Diner", "Platform"], correct: 0 },
+            { q: "Which word means 'combining different tools into one system'?", options: ["Separating", "Integrating", "Commuting", "Escaping"], correct: 1 },
+            { q: "Complete: 'We updated the computer _____ yesterday.'", options: ["software", "remote", "wearable", "assistant"], correct: 0 }
         ],
         conv_spot: {
-            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-            youtube_id: "c2M9K8L6x7y",
-            q: "How long has the user in the dialogue used the new software?",
-            options: ["two days", "one week", "one month", "one year"],
+            tiktok_id: "7198503810011565318",
+            q: "What is the main topic of Rachel's English technology lesson?",
+            options: ["Pronouncing technology and software terms", "How to build a website", "How to repair a computer screen", "Using smart home gadgets"],
             correct: 0
         }
     },
@@ -134,22 +152,28 @@ const courseData = {
         grammar_rule: "Use **going to** for planned future actions and intentions. Use **will** for predictions, instant decisions, and offers.<br><br>• <strong>Intention (going to):</strong> I am going to study tonight.<br>• <strong>Prediction (will):</strong> I think it will rain tomorrow.",
         grammar_listen: "I am going to study tonight. I think it will rain tomorrow. We are going to buy a new laptop.",
         quiz: [
-            { q: "Complete: 'My brother _____ study biology at university next semester.'", options: ["is going to", "will", "shall", "goes to"], correct: 0 },
-            { q: "Complete: 'I think the tech sector _____ create more jobs in the future.'", options: ["will", "is going to", "going to", "shall"], correct: 0 },
-            { q: "Choose: 'Oh, you need help? I _____ carry that suitcase for you.'", options: ["will", "am going to", "going to", "goes to"], correct: 0 }
+            { q: "What is a 'career'?", options: ["A hobby", "An occupation undertaken for a significant period", "A short vacation", "A school course"], correct: 1 },
+            { q: "What does it mean to 'graduate'?", options: ["To start high school", "To complete a course of study at a school or college", "To fail an exam", "To look for a job"], correct: 1 },
+            { q: "What is a 'sector'?", options: ["A small town", "A distinct part or branch of an economy", "A math equation", "A business partner"], correct: 1 },
+            { q: "What is the definition of 'predict'?", options: ["To remember the past", "To say or estimate what will happen in the future", "To tell a joke", "To buy online"], correct: 1 },
+            { q: "What does 'emerging' mean?", options: ["Disappearing completely", "Becoming apparent, important, or prominent", "Old and traditional", "Damaged"], correct: 1 },
+            { q: "What is a 'business'?", options: ["A school campus", "An organization engaged in commercial activities", "A park area", "A government office"], correct: 1 },
+            { q: "Which word means 'new industries that are growing quickly'?", options: ["Emerging", "Declining", "Traditional", "Spacious"], correct: 0 },
+            { q: "Which word describes finishing college and receiving a degree?", options: ["Graduating", "Commuting", "Encoutering", "Reading"], correct: 0 },
+            { q: "Which word means 'guessing what technology will look like in ten years'?", options: ["Remembering", "Predicting", "Integrating", "Achieving"], correct: 1 },
+            { q: "Complete: 'He wants to have a successful _____ in medicine.'", options: ["career", "graduate", "sector", "predict"], correct: 0 }
         ],
         conv_spot: {
-            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-            youtube_id: "B2J9T3P5a6o",
-            q: "Where is the student planning to work as a software engineer after graduating?",
-            options: ["St. Thomas", "Seattle", "Miami", "Boston"],
+            tiktok_id: "7204005696030919941",
+            q: "In this TikTok lesson, how does Vanessa explain talking about your future goals?",
+            options: ["Using planned 'going to' structures naturally", "Discussing travel itineraries", "How to write a business resume", "How to order food"],
             correct: 0
         }
     },
     5: {
         num: "Unit 5",
         title: "Health and Wellness",
-        video_id: "r6pQ5W01-8k",
+        video_id: "aPzY5_9zO2A",
         tiktok_url: "https://www.tiktok.com/@speakenglishwithvanessa",
         reading_title: "Healthy Lifestyles in America",
         reading_text: "American health institutes advise that physical activity is essential. You must drink enough water, eat vegetables, and exercise three times a week. If you have a headache or a cold, you should rest. If symptoms are severe, you must visit a doctor at the local hospital.",
@@ -170,13 +194,19 @@ const courseData = {
         grammar_rule: "Use **should** for mild advice or suggestions. Use **must** and **have to** for strong obligations or rules.<br><br>• <strong>Advice:</strong> You should drink water.<br>• <strong>Obligation:</strong> You must wear a seatbelt.",
         grammar_listen: "You should drink water. You must wear a seatbelt. She has to work tomorrow.",
         quiz: [
-            { q: "Complete: 'You have a high fever. You _____ see a doctor.'", options: ["must", "shouldn't", "have", "might"], correct: 0 },
-            { q: "Complete: 'You _____ eat more fruit. It is good for your health.'", options: ["should", "mustn't", "have to", "has to"], correct: 0 },
-            { q: "Choose: 'We _____ wear masks inside the hospital. It is a strict rule.'", options: ["have to", "should", "might", "can"], correct: 0 }
+            { q: "What is a 'symptom'?", options: ["A type of medicine", "A physical sign of an illness", "A healthy recipe", "A fitness workout"], correct: 1 },
+            { q: "What does 'advise' mean?", options: ["To force someone to do something", "To offer suggestions about the best action", "To ignore warnings", "To get sick"], correct: 1 },
+            { q: "What does 'severe' mean?", options: ["Mild and light", "Very intense, serious, or painful", "Cheap", "Fast-paced"], correct: 1 },
+            { q: "What is the definition of a 'pill'?", options: ["A liquid syrup", "A small round piece of medicine to swallow", "A bandage", "A type of fruit"], correct: 1 },
+            { q: "What does it mean to 'rest'?", options: ["To exercise heavily", "To relax, sleep, or recover strength", "To go to work", "To study all night"], correct: 1 },
+            { q: "What is a 'fever'?", options: ["A common cold", "An abnormally high body temperature", "A muscle pain", "A stomach ache"], correct: 1 },
+            { q: "Which word describes a very strong, painful headache?", options: ["Mild", "Severe", "Spacious", "Wearable"], correct: 1 },
+            { q: "Which word means 'offering health recommendations'?", options: ["Advising", "Predicting", "Encountering", "Delivering"], correct: 0 },
+            { q: "Which word means 'resting to recover from an illness'?", options: ["Commuting", "Resting", "Integrate", "Achieve"], correct: 1 },
+            { q: "Complete: 'A cough is a typical _____ of a cold.'", options: ["symptom", "pill", "fever", "rest"], correct: 0 }
         ],
         conv_spot: {
-            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
-            youtube_id: "r6pQ5W01-8k",
+            tiktok_id: "7181056586071854341",
             q: "What does the doctor advise the patient to do for their recovery?",
             options: ["rest for two days and drink warm tea", "exercise in the gym", "go to work", "go shopping"],
             correct: 0
@@ -207,13 +237,19 @@ const courseData = {
         grammar_rule: "Use the **First Conditional** (If + Present, Will + Verb) for realistic future situations. Use the **Second Conditional** (If + Past, Would + Verb) for imaginary, unlikely, or impossible situations.<br><br>• <strong>Realistic (First):</strong> If it rains, I will stay home.<br>• <strong>Imaginary (Second):</strong> If I were rich, I would buy a beach resort.",
         grammar_listen: "If it rains, I will stay home. If I were rich, I would buy a beach resort.",
         quiz: [
-            { q: "Complete: 'If he _____ hard, he will pass the test.'", options: ["studies", "studied", "will study", "study"], correct: 0 },
-            { q: "Complete: 'If I _____ more money, I would travel to Europe.'", options: ["had", "have", "will have", "would have"], correct: 0 },
-            { q: "Choose: 'If she gets a promotion, she _____ a new car.'", options: ["will buy", "bought", "would buy", "buys"], correct: 0 }
+            { q: "What is 'ambition'?", options: ["A fear of failure", "A strong desire to achieve success", "A lazy attitude", "A university class"], correct: 1 },
+            { q: "What does 'achieve' mean?", options: ["To give up on a task", "To reach or attain a goal by effort", "To start a new hobby", "To fail an exam"], correct: 1 },
+            { q: "What does it mean to 'network'?", options: ["To watch television online", "To connect with people for career support", "To play computer games", "To work alone"], correct: 1 },
+            { q: "What is the definition of an 'opportunity'?", options: ["A difficult problem", "A set of circumstances that makes it possible to do something", "A business loss", "A boring routine"], correct: 1 },
+            { q: "What is a 'dream' in the context of ambitions?", options: ["Sleeping at night", "A cherished aspiration, ambition, or ideal", "A false story", "A past memory"], correct: 1 },
+            { q: "What is 'success'?", options: ["A total failure", "The accomplishment of an aim or purpose", "A heavy workload", "A remote job"], correct: 1 },
+            { q: "Which word describes having a strong drive to get a better job?", options: ["Spacious", "Ambition", "Restroom", "Fever"], correct: 1 },
+            { q: "Which word means meeting professionals to help your career?", options: ["Networking", "Commuting", "Hiking", "Streaming"], correct: 0 },
+            { q: "Which word means reaching your personal goals?", options: ["Achieving", "Encountering", "Predicting", "Advising"], correct: 0 },
+            { q: "Complete: 'This internship is a wonderful _____ for your career.'", options: ["opportunity", "success", "dream", "network"], correct: 0 }
         ],
         conv_spot: {
-            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
-            youtube_id: "G2sT23a07t8",
+            tiktok_id: "7218305695029013765",
             q: "Where would the speaker buy a house if they won the lottery?",
             options: ["St. John", "Seattle", "Florida", "California"],
             correct: 0
@@ -243,13 +279,19 @@ const courseData = {
         grammar_rule: "Use the **Passive Voice** when the focus is on the action or the object receiving the action, rather than the person performing it.<br><br>• <strong>Present Passive:</strong> Online transactions **are processed** by software.<br>• <strong>Past Passive:</strong> This smartphone **was invented** in 2007.",
         grammar_listen: "Online transactions are processed by software. This smartphone was invented in 2007. The package was delivered to St. John.",
         quiz: [
-            { q: "Complete: 'Many packages _____ to St. John every week.'", options: ["are delivered", "delivered", "is delivered", "deliver"], correct: 0 },
-            { q: "Complete: 'This website _____ created in 2024.'", options: ["was", "were", "is", "has"], correct: 0 },
-            { q: "Choose: 'Millions of credit card transactions _____ online daily.'", options: ["are made", "is made", "were make", "make"], correct: 0 }
+            { q: "What is a 'consumer'?", options: ["A seller of goods", "A person who purchases goods and services", "A store manager", "A delivery driver"], correct: 1 },
+            { q: "What does 'retail' mean?", options: ["Wholesale manufacturing", "The sale of goods to the public", "Trading stocks", "Importing goods"], correct: 1 },
+            { q: "What is a 'transaction'?", options: ["A commercial advertisement", "An instance of buying or selling something", "A product return", "A shopping list"], correct: 1 },
+            { q: "What is the definition of 'purchase'?", options: ["To sell at a loss", "To acquire something by paying money for it", "To rent temporarily", "To borrow money"], correct: 1 },
+            { q: "What does it mean to 'deliver'?", options: ["To make products", "To bring and hand over letters, goods, or mail", "To throw away packages", "To buy items"], correct: 1 },
+            { q: "What does it mean to 'process' a payment?", options: ["To cancel the order", "To perform systematic operations to handle it", "To pay in cash", "To delay shipment"], correct: 1 },
+            { q: "Which word describes the final customer in an economy?", options: ["Seller", "Consumer", "Developer", "Historian"], correct: 1 },
+            { q: "Which word refers to physical shopping stores open to the public?", options: ["Retail", "Platform", "Software", "Ferry"], correct: 0 },
+            { q: "Which word means bringing a package to your front door?", options: ["Delivering", "Purchasing", "Commuting", "Encoutering"], correct: 0 },
+            { q: "Complete: 'The bank approved the online credit card _____.'", options: ["transaction", "retail", "consumer", "deliver"], correct: 0 }
         ],
         conv_spot: {
-            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-            youtube_id: "4G4Cg_3G4l4",
+            tiktok_id: "7223605698031021317",
             q: "When was the product in the dialogue purchased by the customer?",
             options: ["yesterday", "today", "last week", "one month ago"],
             correct: 0
@@ -279,13 +321,19 @@ const courseData = {
         grammar_rule: "Use **who** for people, **which** or **that** for things, and **where** for places to add detail without starting a new sentence.<br><br>• <strong>People (who):</strong> He is the student who won the spelling bee.<br>• <strong>Things (that/which):</strong> This is the book that I bought.<br>• <strong>Places (where):</strong> This is the school where I study.",
         grammar_listen: "He is the student who won the spelling bee. This is the book that I bought. This is the school where I study.",
         quiz: [
-            { q: "Complete: 'This is the movie _____ I watched last night.'", options: ["that", "who", "where", "whom"], correct: 0 },
-            { q: "Complete: 'She is the teacher _____ helped me learn English.'", options: ["who", "which", "where", "whose"], correct: 0 },
-            { q: "Choose: 'Trunk Bay is the beach _____ we saw sea turtles.'", options: ["where", "which", "who", "that"], correct: 0 }
+            { q: "What is 'streaming' in media?", options: ["Downloading files completely", "Transmitting or receiving data over the internet in real time", "A type of camera lens", "A film studio"], correct: 1 },
+            { q: "What is a 'subscription'?", options: ["A one-time donation", "An agreement to pay recurringly for a service", "A free trial", "A user password"], correct: 1 },
+            { q: "What is 'cable' in television context?", options: ["A wireless signal", "Traditional television transmission system", "A phone charger", "A streaming app"], correct: 1 },
+            { q: "What is the definition of a 'documentary'?", options: ["A fictional action movie", "A movie or TV show documenting real facts", "A musical show", "A children's cartoon"], correct: 1 },
+            { q: "Who are 'viewers'?", options: ["The actors in a show", "People who watch a television program or video", "The film directors", "Sound engineers"], correct: 1 },
+            { q: "What does it mean to 'recommend'?", options: ["To criticize negatively", "To advise as being good or suitable", "To ignore a book", "To delete a show"], correct: 1 },
+            { q: "Which word means paying a monthly fee for Netflix or Spotify?", options: ["Subscription", "Transaction", "Ambition", "Ferry"], correct: 0 },
+            { q: "Which word describes a show about real space exploration history?", options: ["Documentary", "Redwood", "Diner", "Routine"], correct: 0 },
+            { q: "Which word means watching a video live without downloading first?", options: ["Streaming", "Commuting", "Hiking", "Integrating"], correct: 0 },
+            { q: "Complete: 'My friend _____ this movie, so I watched it.'", options: ["recommended", "streamed", "purchased", "delivered"], correct: 0 }
         ],
         conv_spot: {
-            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
-            youtube_id: "s2_yV7P_K0A",
+            tiktok_id: "7228905691028019461",
             q: "Who is the actor that Friend A wants to know about?",
             options: ["the one who won the award last year", "the director of the movie", "the writer of the screenplay", "none"],
             correct: 0
@@ -315,13 +363,19 @@ const courseData = {
         grammar_rule: "Some verbs are followed by **gerunds** (verb-ing), while others are followed by **infinitives** (to + verb).<br><br>• **Followed by Gerund (enjoy, avoid, practice):** I enjoy swimming in Trunk Bay. Avoid eating sugar.<br>• **Followed by Infinitive (want, hope, plan, decide):** I want to swim in the pool. She plans to run a marathon.",
         grammar_listen: "I enjoy swimming in Trunk Bay. Avoid eating sugar. I want to swim in the pool. She plans to run a marathon.",
         quiz: [
-            { q: "Complete: 'They decided _____ to the gym instead of the beach.'", options: ["to go", "going", "go", "went"], correct: 0 },
-            { q: "Complete: 'I really enjoy _____ soccer with my friends on Saturdays.'", options: ["playing", "to play", "play", "played"], correct: 0 },
-            { q: "Choose: 'You should avoid _____ coffee late at night.'", options: ["drinking", "to drink", "drink", "drank"], correct: 0 }
+            { q: "What is 'fitness'?", options: ["A type of diet", "The condition of being physically fit and healthy", "A medical symptom", "A sleep disorder"], correct: 1 },
+            { q: "What is a 'commitment'?", options: ["A broken promise", "The state or quality of being dedicated to a cause", "A casual suggestion", "A vacation plan"], correct: 1 },
+            { q: "What is the definition of 'jogging'?", options: ["Sprinting at top speed", "Running at a gentle, slow pace", "Walking slowly", "Climbing stairs"], correct: 1 },
+            { q: "What is the meaning of 'nutrition'?", options: ["Eating fast food", "Providing or obtaining the food necessary for health", "Diet pills", "Starving"], correct: 1 },
+            { q: "What does it mean to 'stretch'?", options: ["To sit down on a sofa", "To straighten or extend one's body or limbs", "To lift heavy weights", "To run fast"], correct: 1 },
+            { q: "What does 'avoid' mean?", options: ["To seek out actively", "To keep away from or stop doing something", "To enjoy doing", "To purchase online"], correct: 1 },
+            { q: "Which word means staying dedicated to a daily workout routine?", options: ["Commitment", "Fever", "Routine", "Ambition"], correct: 0 },
+            { q: "Which word refers to healthy eating habits and food science?", options: ["Nutrition", "Fitness", "Symptom", "Diner"], correct: 0 },
+            { q: "Which word means running slowly in the park every morning?", options: ["Jogging", "Hiking", "Commuting", "Streaming"], correct: 0 },
+            { q: "Complete: 'You should _____ eating heavy meals right before you sleep.'", options: ["avoid", "commit", "stretch", "jog"], correct: 0 }
         ],
         conv_spot: {
-            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-            youtube_id: "c2M9K8L6x7y",
+            tiktok_id: "7234205694030018821",
             q: "What does the runner prefer eating before their workout?",
             options: ["a banana", "a sandwich", "a pizza", "a cookie"],
             correct: 0
@@ -351,13 +405,19 @@ const courseData = {
         grammar_rule: "Use the **Past Perfect** (had + past participle) to describe an action that happened before another action in the past.<br><br>• **Past Perfect:** When the police arrived, the thief **had escaped**.<br>• **Past Simple:** When we arrived, the movie **started**.",
         grammar_listen: "When the police arrived, the thief had escaped. Before the museum opened, we had collected hundreds of artifacts.",
         quiz: [
-            { q: "Complete: 'Before they excavated the site, they _____ historical records.'", options: ["had read", "read", "have read", "reading"], correct: 0 },
-            { q: "Complete: 'When we arrived at the harbor, the ferry _____ already left.'", options: ["had", "has", "did", "was"], correct: 0 },
-            { q: "Choose: 'She realized that she _____ her passport at the hotel.'", options: ["had forgotten", "forgot", "has forgotten", "forget"], correct: 0 }
+            { q: "What are 'ruins'?", options: ["Brand new buildings", "The remains of a building or city that has suffered destruction", "Digital software tools", "Underground subways"], correct: 1 },
+            { q: "What is an 'artifact'?", options: ["A modern smartphone", "An object made by a human being, typically of historical interest", "A heavy suitcase", "A new clothing item"], correct: 1 },
+            { q: "What does 'excavate' mean?", options: ["To build a wall", "To make a hole or channel by digging", "To paint a picture", "To read historical books"], correct: 1 },
+            { q: "What is a 'civilization'?", options: ["A small wild forest", "The stage of human social development and organization", "A private company", "A local community center"], correct: 1 },
+            { q: "What is the definition of a 'mystery'?", options: ["A clear explanation", "Something that is difficult or impossible to understand or explain", "A historical timeline", "A school quiz"], correct: 1 },
+            { q: "Who is a 'historian'?", options: ["A medical doctor", "An expert in or student of history", "A tour guide", "A video editor"], correct: 1 },
+            { q: "Which word refers to ancient collapsed temples visited by tourists?", options: ["Ruins", "Malls", "Hospitals", "Dinners"], correct: 0 },
+            { q: "Which word means digging into the earth to find ancient bones or objects?", options: ["Excavating", "Delivering", "Commuting", "Hiking"], correct: 0 },
+            { q: "Which word describes a historical object like a 1000-year-old clay pot?", options: ["Artifact", "Symptom", "Ferry", "Redwood"], correct: 0 },
+            { q: "Complete: 'The origin of the ancient gold coins remains a _____.'", options: ["mystery", "historian", "ruins", "excavate"], correct: 0 }
         ],
         conv_spot: {
-            video_url: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-            youtube_id: "B2J9T3P5a6o",
+            tiktok_id: "7239505697029019397",
             q: "Had they collected the artifacts before the museum opened?",
             options: ["yes, they had", "no, they hadn't", "they didn't collect any", "not mentioned"],
             correct: 0
@@ -494,13 +554,8 @@ function loadUnit(unitId) {
     `;
     document.getElementById('quiz-container').innerHTML = quizHtml;
 
-    // Load Conversation Spot Video, Link & Exercise
-    const videoEl = document.getElementById('conv-spot-video');
-    const sourceEl = document.getElementById('conv-spot-video-source');
-    sourceEl.src = data.conv_spot.video_url;
-    videoEl.load();
-
-    document.getElementById('conv-spot-auth-link').href = `https://www.youtube.com/watch?v=${data.conv_spot.youtube_id}`;
+    // Load Conversation Spot TikTok Video & Exercise
+    document.getElementById('conv-spot-iframe').src = `https://www.tiktok.com/player/v1/${data.conv_spot.tiktok_id}?music_info=0&description=0`;
     
     let convSpotHtml = `
         <div class="question-card" id="conv-spot-card">
