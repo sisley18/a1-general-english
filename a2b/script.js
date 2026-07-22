@@ -28,7 +28,13 @@ const courseData = {
             { q: "Choose the correct verb: 'She usually _____ breakfast at a local diner.'", options: ["eats", "is eating", "eating", "eat"], correct: 0 },
             { q: "Choose the correct verb: 'Look! They _____ a soccer game in the park.'", options: ["plays", "play", "are playing", "played"], correct: 2 },
             { q: "Fill in the blank: 'I _____ to Seattle next week for vacation.'", options: ["am traveling", "travels", "traveled", "travel"], correct: 0 }
-        ]
+        ],
+        conv_spot: {
+            video_id: "r6pQ5W01-8k",
+            q: "According to the video lesson, what is a typical morning grab for Americans?",
+            options: ["coffee", "tea", "milk", "soda"],
+            correct: 0
+        }
     },
     2: {
         num: "Unit 2",
@@ -58,7 +64,13 @@ const courseData = {
             { q: "Complete the sentence: 'While I _____ on the beach, it started to rain.'", options: ["was sitting", "sat", "sitting", "were sitting"], correct: 0 },
             { q: "Complete: 'They _____ beautiful birds while they were walking in the forest.'", options: ["saw", "was seeing", "were seeing", "see"], correct: 0 },
             { q: "Choose: 'When the ferry arrived, we _____ in the harbor.'", options: ["were waiting", "waited", "was waiting", "wait"], correct: 0 }
-        ]
+        ],
+        conv_spot: {
+            video_id: "B2J9T3P5a6o",
+            q: "What did Carlos see while he was hiking in Trunk Bay?",
+            options: ["turtles", "sharks", "birds", "crabs"],
+            correct: 0
+        }
     },
     3: {
         num: "Unit 3",
@@ -73,7 +85,7 @@ const courseData = {
             { name: "Developer", text: "Great. We have worked on this update since last January." }
         ],
         vocab: [
-            { word: "Platform", def: "A digital system or software tool", ex: "We use a video call platform for classes." },
+            { word: "Platform", def: "A digital system or software tool", ex: "We use a video call platform for classrooms." },
             { word: "Wearable", def: "A technological device worn on the body", ex: "My wearable watch monitors my heart rate." },
             { word: "Assistant", def: "A device or software helper", ex: "The smart assistant turned off the lights." },
             { word: "Remote", def: "Distant, from a separate location", ex: "She works from a remote office." },
@@ -87,7 +99,13 @@ const courseData = {
             { q: "Complete the sentence: 'She _____ this smartwatch since last year.'", options: ["has owned", "owned", "is owning", "have owned"], correct: 0 },
             { q: "Complete: 'We have worked remotely _____ three months.'", options: ["for", "since", "during", "ago"], correct: 0 },
             { q: "Choose: 'I _____ a smartphone since I was in university.'", options: ["have had", "had", "am having", "has had"], correct: 0 }
-        ]
+        ],
+        conv_spot: {
+            video_id: "c2M9K8L6x7y",
+            q: "How long has the user in the dialogue used the new software?",
+            options: ["two days", "one week", "one month", "one year"],
+            correct: 0
+        }
     },
     4: {
         num: "Unit 4",
@@ -116,7 +134,13 @@ const courseData = {
             { q: "Complete: 'My brother _____ study biology at university next semester.'", options: ["is going to", "will", "shall", "goes to"], correct: 0 },
             { q: "Complete: 'I think the tech sector _____ create more jobs in the future.'", options: ["will", "is going to", "going to", "shall"], correct: 0 },
             { q: "Choose: 'Oh, you need help? I _____ carry that suitcase for you.'", options: ["will", "am going to", "going to", "goes to"], correct: 0 }
-        ]
+        ],
+        conv_spot: {
+            video_id: "B2J9T3P5a6o",
+            q: "Where is the student planning to work as a software engineer after graduating?",
+            options: ["St. Thomas", "Seattle", "Miami", "Boston"],
+            correct: 0
+        }
     },
     5: {
         num: "Unit 5",
@@ -145,7 +169,13 @@ const courseData = {
             { q: "Complete: 'You have a high fever. You _____ see a doctor.'", options: ["must", "shouldn't", "have", "might"], correct: 0 },
             { q: "Complete: 'You _____ eat more fruit. It is good for your health.'", options: ["should", "mustn't", "have to", "has to"], correct: 0 },
             { q: "Choose: 'We _____ wear masks inside the hospital. It is a strict rule.'", options: ["have to", "should", "might", "can"], correct: 0 }
-        ]
+        ],
+        conv_spot: {
+            video_id: "r6pQ5W01-8k",
+            q: "What does the doctor advise the patient to do for their recovery?",
+            options: ["rest for two days and drink warm tea", "exercise in the gym", "go to work", "go shopping"],
+            correct: 0
+        }
     },
     6: {
         num: "Unit 6",
@@ -175,7 +205,13 @@ const courseData = {
             { q: "Complete: 'If he _____ hard, he will pass the test.'", options: ["studies", "studied", "will study", "study"], correct: 0 },
             { q: "Complete: 'If I _____ more money, I would travel to Europe.'", options: ["had", "have", "will have", "would have"], correct: 0 },
             { q: "Choose: 'If she gets a promotion, she _____ a new car.'", options: ["will buy", "bought", "would buy", "buys"], correct: 0 }
-        ]
+        ],
+        conv_spot: {
+            video_id: "G2sT23a07t8",
+            q: "Where would the speaker buy a house if they won the lottery?",
+            options: ["St. John", "Seattle", "Florida", "California"],
+            correct: 0
+        }
     },
     7: {
         num: "Unit 7",
@@ -204,7 +240,13 @@ const courseData = {
             { q: "Complete: 'Many packages _____ to St. John every week.'", options: ["are delivered", "delivered", "is delivered", "deliver"], correct: 0 },
             { q: "Complete: 'This website _____ created in 2024.'", options: ["was", "were", "is", "has"], correct: 0 },
             { q: "Choose: 'Millions of credit card transactions _____ online daily.'", options: ["are made", "is made", "were make", "make"], correct: 0 }
-        ]
+        ],
+        conv_spot: {
+            video_id: "4G4Cg_3G4l4",
+            q: "When was the product in the dialogue purchased by the customer?",
+            options: ["yesterday", "today", "last week", "one month ago"],
+            correct: 0
+        }
     },
     8: {
         num: "Unit 8",
@@ -233,7 +275,13 @@ const courseData = {
             { q: "Complete: 'This is the movie _____ I watched last night.'", options: ["that", "who", "where", "whom"], correct: 0 },
             { q: "Complete: 'She is the teacher _____ helped me learn English.'", options: ["who", "which", "where", "whose"], correct: 0 },
             { q: "Choose: 'Trunk Bay is the beach _____ we saw sea turtles.'", options: ["where", "which", "who", "that"], correct: 0 }
-        ]
+        ],
+        conv_spot: {
+            video_id: "s2_yV7P_K0A",
+            q: "Who is the actor that Friend A wants to know about?",
+            options: ["the one who won the award last year", "the director of the movie", "the writer of the screenplay", "none"],
+            correct: 0
+        }
     },
     9: {
         num: "Unit 9",
@@ -262,7 +310,13 @@ const courseData = {
             { q: "Complete: 'They decided _____ to the gym instead of the beach.'", options: ["to go", "going", "go", "went"], correct: 0 },
             { q: "Complete: 'I really enjoy _____ soccer with my friends on Saturdays.'", options: ["playing", "to play", "play", "played"], correct: 0 },
             { q: "Choose: 'You should avoid _____ coffee late at night.'", options: ["drinking", "to drink", "drink", "drank"], correct: 0 }
-        ]
+        ],
+        conv_spot: {
+            video_id: "c2M9K8L6x7y",
+            q: "What does the runner prefer eating before their workout?",
+            options: ["a banana", "a sandwich", "a pizza", "a cookie"],
+            correct: 0
+        }
     },
     10: {
         num: "Unit 10",
@@ -291,7 +345,13 @@ const courseData = {
             { q: "Complete: 'Before they excavated the site, they _____ historical records.'", options: ["had read", "read", "have read", "reading"], correct: 0 },
             { q: "Complete: 'When we arrived at the harbor, the ferry _____ already left.'", options: ["had", "has", "did", "was"], correct: 0 },
             { q: "Choose: 'She realized that she _____ her passport at the hotel.'", options: ["had forgotten", "forgot", "has forgotten", "forget"], correct: 0 }
-        ]
+        ],
+        conv_spot: {
+            video_id: "B2J9T3P5a6o",
+            q: "Had they collected the artifacts before the museum opened?",
+            options: ["yes, they had", "no, they hadn't", "they didn't collect any", "not mentioned"],
+            correct: 0
+        }
     }
 };
 
@@ -369,13 +429,10 @@ function loadUnit(unitId) {
         // Include illustrations for the first 3 units
         let imgHtml = '';
         if (unitId === 1 && index === 2) {
-            // Unit 1 / Spacious (uses home illust)
             imgHtml = `<img src="images/unit5_home.png" alt="Spacious house illustration" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 0.75rem;">`;
         } else if (unitId === 2 && index === 5) {
-            // Unit 2 / Hiking (uses home/beach illust)
             imgHtml = `<img src="images/unit5_home.png" alt="Hiking beach illustration" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 0.75rem;">`;
         } else if (unitId === 3 && index === 0) {
-            // Unit 3 / Platform (uses town/map grid)
             imgHtml = `<img src="images/unit6_town.png" alt="Digital platform map illustration" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 0.75rem;">`;
         }
         
@@ -384,7 +441,7 @@ function loadUnit(unitId) {
                 ${imgHtml}
                 <div class="vocab-header">
                     <span class="vocab-word">${v.word}</span>
-                    <button class="audio-btn" onclick="speakText('${v.word}. ${v.ex.replace(/'/g, "\'")}')">🔊</button>
+                    <button class="audio-btn" onclick="speakText('${v.word}. ${v.ex.replace(/'/g, "\\'")}')">🔊</button>
                 </div>
                 <div class="vocab-def">${v.def}</div>
                 <div class="vocab-ex">"${v.ex}"</div>
@@ -425,6 +482,29 @@ function loadUnit(unitId) {
         <div id="quiz-feedback" class="feedback-msg"></div>
     `;
     document.getElementById('quiz-container').innerHTML = quizHtml;
+
+    // Load Conversation Spot Video & Exercise
+    document.getElementById('conv-spot-iframe').src = `https://www.youtube.com/embed/${data.conv_spot.video_id}?rel=0`;
+    
+    let convSpotHtml = `
+        <div class="question-card" id="conv-spot-card">
+            <div class="question-text">${data.conv_spot.q}</div>
+            <div class="options-grid" style="margin-top: 1rem;">
+    `;
+    data.conv_spot.options.forEach((opt, optIndex) => {
+        convSpotHtml += `
+            <button class="option-btn" onclick="selectConvSpotOption(${optIndex}, this)">
+                ${opt}
+            </button>
+        `;
+    });
+    convSpotHtml += `
+            </div>
+            <button class="submit-quiz-btn" style="margin-top: 1.5rem;" onclick="checkConvSpotAnswer()">Check Answer</button>
+            <div id="conv-spot-feedback" class="feedback-msg"></div>
+        </div>
+    `;
+    document.getElementById('conv-spot-exercise-container').innerHTML = convSpotHtml;
     
     // Reset workspace view to the first tab
     switchTab('tab-video');
@@ -433,11 +513,8 @@ function loadUnit(unitId) {
 // Select Quiz Option
 let selectedAnswers = {};
 function selectOption(qIndex, optIndex, btnElement) {
-    // Deselect other buttons in the same question card
     const questionCard = btnElement.closest('.question-card');
     questionCard.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
-    
-    // Select this button
     btnElement.classList.add('selected');
     selectedAnswers[qIndex] = optIndex;
 }
@@ -453,14 +530,10 @@ function submitQuiz() {
         
         buttons.forEach((btn, optIndex) => {
             btn.classList.remove('correct', 'incorrect');
-            
             if (optIndex === qData.correct) {
-                // Highlight correct answer
                 btn.classList.add('correct');
             }
-            
             if (selectedAnswers[qIndex] === optIndex && optIndex !== qData.correct) {
-                // Highlight incorrect answer selected by user
                 btn.classList.add('incorrect');
             }
         });
@@ -475,23 +548,58 @@ function submitQuiz() {
     feedback.innerText = `You scored ${correctCount}/${data.quiz.length}!`;
 
     if (correctCount === data.quiz.length) {
-        // Mark unit as completed
         markUnitCompleted(currentUnit);
+    }
+}
+
+// Conversation Spot Selection & Answer checking
+let selectedConvSpotAnswer = null;
+function selectConvSpotOption(optIndex, btnElement) {
+    const card = document.getElementById('conv-spot-card');
+    card.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
+    btnElement.classList.add('selected');
+    selectedConvSpotAnswer = optIndex;
+}
+
+function checkConvSpotAnswer() {
+    const data = courseData[currentUnit];
+    const card = document.getElementById('conv-spot-card');
+    const buttons = card.querySelectorAll('.option-btn');
+    const feedback = document.getElementById('conv-spot-feedback');
+    
+    if (selectedConvSpotAnswer === null) {
+        feedback.style.color = '#dc2626';
+        feedback.innerText = "Please select an answer first.";
+        return;
+    }
+    
+    buttons.forEach((btn, optIndex) => {
+        btn.classList.remove('correct', 'incorrect');
+        if (optIndex === data.conv_spot.correct) {
+            btn.classList.add('correct');
+        }
+        if (selectedConvSpotAnswer === optIndex && optIndex !== data.conv_spot.correct) {
+            btn.classList.add('incorrect');
+        }
+    });
+
+    if (selectedConvSpotAnswer === data.conv_spot.correct) {
+        feedback.style.color = '#059669';
+        feedback.innerText = "Correct! Well done!";
+    } else {
+        feedback.style.color = '#dc2626';
+        feedback.innerText = "Try again!";
     }
 }
 
 // Mark Unit as Completed
 function markUnitCompleted(unitId) {
     completedUnits.add(unitId);
-    
-    // Update sidebar UI
     const unitItem = document.querySelector(`.unit-item[onclick="loadUnit(${unitId})"]`);
     if (unitItem) {
         unitItem.classList.add('completed');
         unitItem.querySelector('.unit-status').innerHTML = '✓';
     }
-    
-    // Update progress bar
     updateProgressBar();
 }
 
