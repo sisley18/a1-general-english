@@ -127,7 +127,7 @@
                             <div class="video-container">
                                 <iframe id="yt-iframe" src="" allowfullscreen></iframe>
                             </div>
-                            <div style="display: none; gap: 10px;">
+                            <div style="display: flex; gap: 10px;">
                                 <a id="tiktok-link" href="#" target="_blank" class="tiktok-btn">
                                     🎵 Practice on TikTok
                                 </a>
@@ -163,15 +163,25 @@
                 <!-- Tab 4: Practice Dialogue & Quizzes -->
                 <div id="tab-quiz" class="tab-panel">
                     <div class="two-column-layout">
-                        <!-- Left: Dialogue role-play -->
-                        <div class="reading-passage-box">
-                            <h3 style="color: #1e293b; font-size: 1.35rem; margin-bottom: 1.5rem;">🗣️ Real World Conversation</h3>
-                            <div id="dialogue-lines" class="dialogue-box"></div>
-                            <button id="dialogue-audio-btn" class="audio-btn primary">🔊 Listen to Dialogue</button>
+                        <!-- Left Column: Dialogue & Quiz -->
+                        <div style="display: flex; flex-direction: column; gap: 2rem;">
+                            <div class="reading-passage-box">
+                                <h3 style="color: #1e293b; font-size: 1.35rem; margin-bottom: 1.5rem;">🗣️ Real World Conversation</h3>
+                                <div id="dialogue-lines" class="dialogue-box"></div>
+                                <button id="dialogue-audio-btn" class="audio-btn primary">🔊 Listen to Dialogue</button>
+                            </div>
+                            <div id="quiz-container" class="quiz-section"></div>
                         </div>
 
-                        <!-- Right: Interactive Quiz -->
-                        <div id="quiz-container" class="quiz-section"></div>
+                        <!-- Right Column: Conversation Spot -->
+                        <div class="reading-passage-box" style="border-top: 4px solid #d97706;">
+                            <h3 style="color: #1e293b; font-size: 1.35rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">🎬 Conversation Spot</h3>
+                            <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 1rem;">Watch the video and complete the dialogue exercise below:</p>
+                            <div class="video-container" style="margin-bottom: 1.5rem; height: 180px;">
+                                <iframe id="conv-spot-iframe" src="" allowfullscreen></iframe>
+                            </div>
+                            <div id="conv-spot-exercise-container" class="quiz-section"></div>
+                        </div>
                     </div>
                 </div>
 
