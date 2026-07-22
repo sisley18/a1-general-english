@@ -50,93 +50,107 @@ a { text-decoration: none; color: inherit; }
     padding: 0 20px;
 }
 
-/* ============ HEADER ============ */
+/* ============ HEADER (FLOATING PILL NAV) ============ */
 .header {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: var(--glass-border);
-    color: var(--text-primary);
-    padding: 16px 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 0.8rem 2rem;
     position: fixed;
-    width: 100%;
-    top: 0;
+    width: calc(100% - 3rem);
+    max-width: 1200px;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
     z-index: 1000;
-    box-shadow: var(--shadow-light);
+    box-shadow: 0 10px 30px rgba(255, 154, 68, 0.08);
 }
 
 .header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
+    padding: 0;
 }
 
 .logo {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 800;
     font-family: var(--font-heading);
-    color: var(--text-primary);
-    background: linear-gradient(90deg, var(--accent-orange), var(--accent-indigo));
+    color: #2d3748;
+    background: linear-gradient(135deg, #ff9a44, #fc6076);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.logo span { color: var(--accent-teal); }
+.logo span {
+    color: #fc6076;
+    -webkit-text-fill-color: initial;
+}
 
 .navigation {
     display: flex;
     align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .nav-link {
-    color: rgba(255,255,255,0.9);
+    color: #4a5568 !important;
     padding: 8px 16px;
-    border-radius: 8px;
+    border-radius: 20px;
     font-weight: 600;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
 }
 
 .nav-link:hover {
-    background: rgba(255,255,255,0.15);
-    color: white;
+    background: rgba(255, 154, 68, 0.1);
+    color: #ff9a44 !important;
 }
 
 /* Dropdown */
 .dropdown { position: relative; }
 
 .dropdown-btn {
-    background: rgba(255,255,255,0.15);
-    color: white;
-    border: 1px solid rgba(255,255,255,0.3);
+    background: #fff;
+    color: #4a5568 !important;
+    border: 1px solid rgba(0,0,0,0.08);
     padding: 8px 18px;
-    border-radius: 8px;
+    border-radius: 20px;
     cursor: pointer;
     font-weight: 600;
     font-family: var(--font-body);
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
 }
 
-.dropdown-btn:hover { background: rgba(255,255,255,0.25); }
+.dropdown-btn:hover {
+    background: rgba(255, 154, 68, 0.1);
+    color: #ff9a44 !important;
+    border-color: rgba(255, 154, 68, 0.3);
+}
 
 .dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
     min-width: 320px;
     background: white;
-    border-radius: 12px;
-    box-shadow: var(--shadow-medium);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     z-index: 1001;
     max-height: 60vh;
     overflow-y: auto;
-    margin-top: 8px;
+    margin-top: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .dropdown-item {
@@ -1070,13 +1084,6 @@ footer a {
     .course-unit > .container {
         display: grid;
         grid-template-columns: 1.6fr 1fr; /* 60/40 split */
-        grid-template-areas: 
-            "culture vocabulary"
-            "collocations vocabulary"
-            "grammar listening"
-            "reading speaking"
-            "writing practice"
-            "test test";
         gap: 2.5rem;
         align-items: start;
         background: rgba(255,255,255,0.6);
@@ -1088,20 +1095,19 @@ footer a {
         border: 1px solid rgba(255,255,255,0.8);
     }
 
+    /* By default, all sections span full width to prevent empty spaces/distortions */
+    .course-unit > .container > section,
+    .course-unit > .container > div {
+        grid-column: 1 / -1;
+    }
+
     @media (max-width: 1000px) {
         .course-unit > .container {
             grid-template-columns: 1fr;
-            grid-template-areas: 
-                "culture"
-                "vocabulary"
-                "collocations"
-                "grammar"
-                "listening"
-                "reading"
-                "speaking"
-                "writing"
-                "practice"
-                "test";
+        }
+        .culture-section, #vocabulary-section, [id^="vocabulary-section"] {
+            grid-column: 1 / -1 !important;
+            grid-row: auto !important;
         }
     }
 
@@ -1113,9 +1119,30 @@ footer a {
         border: none;
     }
 
-    /* Assign sections to grid areas */
-    .culture-section { grid-area: culture; margin-top: 0 !important; height: auto; display: flex; flex-direction: column; background: transparent !important; border: none !important; box-shadow: none !important; padding: 0 !important; }
+    /* Explicitly place video and vocab side-by-side in the top row */
+    .culture-section { 
+        grid-column: 1 / 2;
+        grid-row: 1;
+        margin-top: 0 !important; 
+        height: auto; 
+        display: flex; 
+        flex-direction: column; 
+        background: transparent !important; 
+        border: none !important; 
+        box-shadow: none !important; 
+        padding: 0 !important; 
+    }
     .culture-section::before { display: none; }
+
+    #vocabulary-section, [id^="vocabulary-section"] { 
+        grid-column: 2 / 3;
+        grid-row: 1;
+        background: transparent !important; 
+        border: none !important; 
+        box-shadow: none !important; 
+        padding: 0 !important; 
+    }
+    
     
     .youtube-container {
         border-radius: 20px;
@@ -1124,19 +1151,12 @@ footer a {
         display: block;
     }
 
-    #vocabulary-section { grid-area: vocabulary; background: transparent !important; border: none !important; box-shadow: none !important; padding: 0 !important; }
-    
     /* Ensure all text is dark inside the collocations card */
-    .collocations-section { grid-area: collocations; }
     .collocation-card { color: #222 !important; }
     .collocation-card * { color: inherit !important; }
     
     /* Fix the audio button inside collocation card to not be affected by inheritance */
     .collocation-card .audio-btn { color: white !important; }
-
-    #grammar-section, .grammar-section, .grammar-box { grid-area: grammar; }
-    
-    /* Mockup-style Vocabulary Cards */
     .vocab-card {
         background: #ffffff !important;
         border-radius: 16px !important;
@@ -1188,6 +1208,44 @@ footer a {
     .vocabulary-grid {
         grid-template-columns: 1fr !important;
         gap: 0 !important;
+    }
+
+    /* Header SPA Navigation Buttons Styling */
+    .spa-nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(0, 0, 0, 0.03);
+        padding: 4px;
+        border-radius: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .spa-nav .nav-btn {
+        background: white;
+        color: #4a5568;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    .spa-nav .nav-btn:hover {
+        background: #ff9a44;
+        color: white;
+        border-color: #ff9a44;
+        box-shadow: 0 4px 10px rgba(255, 154, 68, 0.2);
+    }
+
+    #current-unit-display {
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: #2d3748;
+        padding: 0 10px;
     }
 
     #grammar-section, .grammar-section { grid-area: grammar; }
