@@ -515,6 +515,16 @@ function navigateUnit(dir) {
     let nextUnit = currentUnit + dir;
     if(nextUnit < 0) nextUnit = 0;
     if(nextUnit > totalUnits) nextUnit = totalUnits;
+    
+    // Skip deleted units 1-4
+    if (nextUnit >= 1 && nextUnit <= 4) {
+        if (dir > 0) {
+            nextUnit = 5;
+        } else {
+            nextUnit = 0;
+        }
+    }
+    
     navigateUnitTo(nextUnit);
 }
 

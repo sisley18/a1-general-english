@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A2-B1 University Learning Portal</title>
+    <title>St. Mary's Learning Portal</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -13,7 +13,7 @@
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
             <div class="portal-header">
-                <h1 class="portal-title">🎓 EduPortal</h1>
+                <h1 class="portal-title">🎓 St. Mary's</h1>
                 <p class="portal-subtitle">A2-B1 Transition Course</p>
             </div>
 
@@ -144,6 +144,7 @@
                                 American Lifestyles</h3>
                             <p id="reading-body" class="reading-text"></p>
                             <button id="reading-audio-btn" class="audio-btn primary">🔊 Listen to Text</button>
+                            <div id="reading-exercise-container" class="quick-check-box" style="margin-top: 1.5rem; border-top: 1px dashed #cbd5e1; padding-top: 1.5rem;"></div>
                         </div>
                     </div>
                 </div>
@@ -151,6 +152,7 @@
                 <!-- Tab 2: Vocabulary Grid -->
                 <div id="tab-vocab" class="tab-panel">
                     <div id="vocab-container" class="vocab-grid"></div>
+                    <div id="vocab-exercise-container" class="quick-check-box" style="margin-top: 2rem; padding: 1.5rem; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);"></div>
                 </div>
 
                 <!-- Tab 3: Grammar Rule Box -->
@@ -159,11 +161,12 @@
                         <h3 id="grammar-title-text" style="font-size: 1.5rem; margin-bottom: 1rem; color: #1e293b;">
                         </h3>
                         <div id="grammar-rule-body" class="grammar-rule"></div>
-                        <div style="display: flex; gap: 10px;">
+                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem;">
                             <button id="grammar-audio-btn" class="audio-btn primary">🔊 Listen to Examples</button>
                             <button class="audio-btn primary" style="background: #64748b;" onclick="stopAudio()">⏹️
                                 Stop</button>
                         </div>
+                        <div id="grammar-exercise-container" class="quick-check-box" style="border-top: 1px dashed #cbd5e1; padding-top: 1.5rem;"></div>
                     </div>
                 </div>
 
@@ -189,7 +192,10 @@
                             <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 1rem;">Watch the video and
                                 complete the dialogue exercise below:</p>
                             <div class="video-container" style="margin-bottom: 1.5rem; height: 180px;">
-                                <iframe id="conv-spot-iframe" src="" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <video id="conv-spot-video" controls style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                                    <source id="conv-spot-video-source" src="" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                             <div id="conv-spot-exercise-container" class="quiz-section"></div>
                         </div>
